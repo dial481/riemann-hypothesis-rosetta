@@ -1,0 +1,3862 @@
+[
+  {
+    "id": 1,
+    "novel_modules": 17836,
+    "novel_lines": 1599144,
+    "directories": [
+      [
+        "Development",
+        17272
+      ],
+      [
+        "ReciprocityTheory",
+        378
+      ],
+      [
+        "CompanionTheory",
+        75
+      ],
+      [
+        "Formalism",
+        57
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        15217
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        1611
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        365
+      ],
+      [
+        "Development.WeilBound",
+        279
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        164
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "RingTheory",
+        15
+      ],
+      [
+        "AlgebraicGeometry",
+        13
+      ],
+      [
+        "Algebra",
+        3
+      ],
+      [
+        "FieldTheory",
+        3
+      ],
+      [
+        "CategoryTheory",
+        1
+      ]
+    ],
+    "specific_edges": 35,
+    "umbrella_edges": 16811,
+    "hub": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion"
+  },
+  {
+    "id": 2,
+    "novel_modules": 11539,
+    "novel_lines": 1095335,
+    "directories": [
+      [
+        "GroundTheory",
+        5767
+      ],
+      [
+        "Development",
+        5242
+      ],
+      [
+        "ReciprocityTheory",
+        509
+      ],
+      [
+        "Formalism",
+        13
+      ]
+    ],
+    "prefixes": [
+      [
+        "GroundTheory.HeightsAndTheta",
+        5737
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        4001
+      ],
+      [
+        "Development.WeilBound",
+        902
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        268
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        205
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        4
+      ],
+      [
+        "RingTheory",
+        3
+      ],
+      [
+        "MeasureTheory",
+        2
+      ]
+    ],
+    "specific_edges": 9,
+    "umbrella_edges": 10768,
+    "hub": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.PushInvertible"
+  },
+  {
+    "id": 3,
+    "novel_modules": 10979,
+    "novel_lines": 917294,
+    "directories": [
+      [
+        "Development",
+        10398
+      ],
+      [
+        "ReciprocityTheory",
+        517
+      ],
+      [
+        "Formalism",
+        49
+      ],
+      [
+        "Lemmata",
+        11
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        9488
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        424
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        384
+      ],
+      [
+        "Development.WeilBound",
+        265
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        221
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        2
+      ],
+      [
+        "AlgebraicGeometry",
+        1
+      ]
+    ],
+    "specific_edges": 3,
+    "umbrella_edges": 9877,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf"
+  },
+  {
+    "id": 4,
+    "novel_modules": 8962,
+    "novel_lines": 786970,
+    "directories": [
+      [
+        "Development",
+        8320
+      ],
+      [
+        "Formalism",
+        629
+      ],
+      [
+        "Lemmata",
+        7
+      ],
+      [
+        "CompanionTheory",
+        2
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        8158
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        509
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        78
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        73
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        71
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 8015,
+    "hub": "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow"
+  },
+  {
+    "id": 5,
+    "novel_modules": 8576,
+    "novel_lines": 1366574,
+    "directories": [
+      [
+        "Formalism",
+        5416
+      ],
+      [
+        "Development",
+        2452
+      ],
+      [
+        "CompanionTheory",
+        462
+      ],
+      [
+        "ReciprocityTheory",
+        220
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        2384
+      ],
+      [
+        "Formalism.HermitianCurvature",
+        1882
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        1561
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        1181
+      ],
+      [
+        "Formalism.SharpRestriction",
+        402
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        27
+      ],
+      [
+        "MeasureTheory",
+        7
+      ],
+      [
+        "Algebra",
+        3
+      ],
+      [
+        "LinearAlgebra",
+        2
+      ],
+      [
+        "Geometry",
+        2
+      ],
+      [
+        "Topology",
+        1
+      ],
+      [
+        "GroupTheory",
+        1
+      ]
+    ],
+    "specific_edges": 43,
+    "umbrella_edges": 4720,
+    "hub": "Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms"
+  },
+  {
+    "id": 6,
+    "novel_modules": 7593,
+    "novel_lines": 724608,
+    "directories": [
+      [
+        "Development",
+        6978
+      ],
+      [
+        "GroundTheory",
+        283
+      ],
+      [
+        "PositivityTheory",
+        146
+      ],
+      [
+        "CompanionTheory",
+        135
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        3139
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        1576
+      ],
+      [
+        "Development.WeilBound",
+        1127
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        970
+      ],
+      [
+        "GroundTheory.AutomorphicForms",
+        193
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        12
+      ],
+      [
+        "RepresentationTheory",
+        1
+      ]
+    ],
+    "specific_edges": 13,
+    "umbrella_edges": 5924,
+    "hub": "Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd"
+  },
+  {
+    "id": 7,
+    "novel_modules": 7331,
+    "novel_lines": 778263,
+    "directories": [
+      [
+        "Development",
+        6396
+      ],
+      [
+        "Formalism",
+        571
+      ],
+      [
+        "ReciprocityTheory",
+        353
+      ],
+      [
+        "Lemmata",
+        6
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        6339
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        335
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        312
+      ],
+      [
+        "Formalism.SharpRestriction",
+        147
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        96
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Algebra",
+        1
+      ],
+      [
+        "RingTheory",
+        1
+      ]
+    ],
+    "specific_edges": 2,
+    "umbrella_edges": 6486,
+    "hub": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.SecBaseChangeAnySt"
+  },
+  {
+    "id": 8,
+    "novel_modules": 7232,
+    "novel_lines": 610880,
+    "directories": [
+      [
+        "Development",
+        7179
+      ],
+      [
+        "Formalism",
+        32
+      ],
+      [
+        "GroundTheory",
+        12
+      ],
+      [
+        "CompanionTheory",
+        8
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        6693
+      ],
+      [
+        "Development.WeilBound",
+        207
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        148
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        131
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        22
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 7015,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone"
+  },
+  {
+    "id": 9,
+    "novel_modules": 6640,
+    "novel_lines": 703167,
+    "directories": [
+      [
+        "Development",
+        6381
+      ],
+      [
+        "PositivityTheory",
+        204
+      ],
+      [
+        "ReciprocityTheory",
+        16
+      ],
+      [
+        "GroundTheory",
+        15
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicArithmetic",
+        5816
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        359
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        204
+      ],
+      [
+        "PositivityTheory.AutomorphicForms",
+        204
+      ],
+      [
+        "ReciprocityTheory.CommutativeAlgebra",
+        14
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "RingTheory",
+        68
+      ],
+      [
+        "NumberTheory",
+        26
+      ],
+      [
+        "Topology",
+        21
+      ],
+      [
+        "LinearAlgebra",
+        18
+      ],
+      [
+        "Algebra",
+        7
+      ],
+      [
+        "FieldTheory",
+        7
+      ],
+      [
+        "GroupTheory",
+        7
+      ],
+      [
+        "Data",
+        5
+      ],
+      [
+        "Analysis",
+        3
+      ],
+      [
+        "RepresentationTheory",
+        2
+      ],
+      [
+        "Combinatorics",
+        1
+      ]
+    ],
+    "specific_edges": 165,
+    "umbrella_edges": 1502,
+    "hub": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.DiscreteSeriesCoefficientsCuspidal"
+  },
+  {
+    "id": 10,
+    "novel_modules": 6395,
+    "novel_lines": 584736,
+    "directories": [
+      [
+        "Development",
+        6310
+      ],
+      [
+        "Formalism",
+        81
+      ],
+      [
+        "ReciprocityTheory",
+        2
+      ],
+      [
+        "Lemmata",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        5672
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        591
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        41
+      ],
+      [
+        "Development.WeilBound",
+        40
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        25
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        2
+      ],
+      [
+        "RingTheory",
+        2
+      ],
+      [
+        "NumberTheory",
+        1
+      ],
+      [
+        "FieldTheory",
+        1
+      ],
+      [
+        "LinearAlgebra",
+        1
+      ]
+    ],
+    "specific_edges": 7,
+    "umbrella_edges": 5721,
+    "hub": "Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels"
+  },
+  {
+    "id": 11,
+    "novel_modules": 6098,
+    "novel_lines": 615719,
+    "directories": [
+      [
+        "Development",
+        5269
+      ],
+      [
+        "Formalism",
+        800
+      ],
+      [
+        "ReciprocityTheory",
+        19
+      ],
+      [
+        "PositivityTheory",
+        3
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        4945
+      ],
+      [
+        "Formalism.SharpRestriction",
+        569
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        225
+      ],
+      [
+        "Formalism.AdmissibleDesigns",
+        93
+      ],
+      [
+        "Development.WeilBound",
+        53
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "RingTheory",
+        17
+      ],
+      [
+        "Analysis",
+        3
+      ],
+      [
+        "NumberTheory",
+        3
+      ],
+      [
+        "Data",
+        1
+      ],
+      [
+        "LinearAlgebra",
+        1
+      ]
+    ],
+    "specific_edges": 25,
+    "umbrella_edges": 5258,
+    "hub": "Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow"
+  },
+  {
+    "id": 12,
+    "novel_modules": 6025,
+    "novel_lines": 417916,
+    "directories": [
+      [
+        "Development",
+        5843
+      ],
+      [
+        "Formalism",
+        175
+      ],
+      [
+        "ReciprocityTheory",
+        4
+      ],
+      [
+        "Lemmata",
+        2
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        3305
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        2475
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        87
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        54
+      ],
+      [
+        "Development.WeilBound",
+        37
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 3319,
+    "hub": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered"
+  },
+  {
+    "id": 13,
+    "novel_modules": 5241,
+    "novel_lines": 608974,
+    "directories": [
+      [
+        "Development",
+        3495
+      ],
+      [
+        "Formalism",
+        1733
+      ],
+      [
+        "Lemmata",
+        10
+      ],
+      [
+        "ReciprocityTheory",
+        3
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        3453
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        926
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        363
+      ],
+      [
+        "Formalism.SharpRestriction",
+        115
+      ],
+      [
+        "Formalism.GradedWeylDivisibility",
+        102
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "LinearAlgebra",
+        2
+      ],
+      [
+        "RingTheory",
+        1
+      ],
+      [
+        "Algebra",
+        1
+      ],
+      [
+        "Data",
+        1
+      ]
+    ],
+    "specific_edges": 5,
+    "umbrella_edges": 3784,
+    "hub": "Formalism.GradedWeylDivisibility.FinalD"
+  },
+  {
+    "id": 14,
+    "novel_modules": 4776,
+    "novel_lines": 683224,
+    "directories": [
+      [
+        "Formalism",
+        3241
+      ],
+      [
+        "Development",
+        1432
+      ],
+      [
+        "ReciprocityTheory",
+        91
+      ],
+      [
+        "Lemmata",
+        12
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        1361
+      ],
+      [
+        "Formalism.SharpRestriction",
+        1151
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        1012
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        541
+      ],
+      [
+        "Formalism.ThetaLogCoordinates",
+        177
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "NumberTheory",
+        3
+      ]
+    ],
+    "specific_edges": 3,
+    "umbrella_edges": 2265,
+    "hub": "Formalism.SharpRestriction.ParConsts"
+  },
+  {
+    "id": 15,
+    "novel_modules": 3911,
+    "novel_lines": 336667,
+    "directories": [
+      [
+        "Development",
+        3875
+      ],
+      [
+        "CompanionTheory",
+        18
+      ],
+      [
+        "Formalism",
+        7
+      ],
+      [
+        "GroundTheory",
+        5
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        1807
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        927
+      ],
+      [
+        "Development.WeilBound",
+        658
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        450
+      ],
+      [
+        "Development.DiscreteGroups",
+        33
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        1
+      ],
+      [
+        "LinearAlgebra",
+        1
+      ]
+    ],
+    "specific_edges": 2,
+    "umbrella_edges": 2854,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Divisors.IsUnifAt"
+  },
+  {
+    "id": 16,
+    "novel_modules": 3881,
+    "novel_lines": 547422,
+    "directories": [
+      [
+        "Development",
+        1920
+      ],
+      [
+        "Formalism",
+        1669
+      ],
+      [
+        "CompanionTheory",
+        258
+      ],
+      [
+        "Lemmata",
+        31
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        1502
+      ],
+      [
+        "Formalism.SharpRestriction",
+        322
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        304
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        190
+      ],
+      [
+        "CompanionTheory.SpectralGeometry",
+        190
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        6
+      ],
+      [
+        "Tactic",
+        4
+      ],
+      [
+        "Data",
+        3
+      ],
+      [
+        "NumberTheory",
+        2
+      ],
+      [
+        "Algebra",
+        2
+      ],
+      [
+        "LinearAlgebra",
+        2
+      ]
+    ],
+    "specific_edges": 19,
+    "umbrella_edges": 2531,
+    "hub": "Formalism.SatakeDualWeyl.Statement"
+  },
+  {
+    "id": 17,
+    "novel_modules": 3689,
+    "novel_lines": 258660,
+    "directories": [
+      [
+        "Development",
+        3683
+      ],
+      [
+        "GroundTheory",
+        6
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        1534
+      ],
+      [
+        "Development.EtaleCohomology",
+        1329
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        782
+      ],
+      [
+        "Development.WeilBound",
+        38
+      ],
+      [
+        "GroundTheory.ArithmeticGeometry",
+        4
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "AlgebraicGeometry",
+        19
+      ],
+      [
+        "RingTheory",
+        19
+      ],
+      [
+        "Algebra",
+        11
+      ],
+      [
+        "CategoryTheory",
+        7
+      ],
+      [
+        "Topology",
+        3
+      ],
+      [
+        "NumberTheory",
+        1
+      ],
+      [
+        "FieldTheory",
+        1
+      ]
+    ],
+    "specific_edges": 61,
+    "umbrella_edges": 1929,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Divisors.DivisorSupportCondition"
+  },
+  {
+    "id": 18,
+    "novel_modules": 3672,
+    "novel_lines": 249584,
+    "directories": [
+      [
+        "Development",
+        3584
+      ],
+      [
+        "ReciprocityTheory",
+        54
+      ],
+      [
+        "Formalism",
+        29
+      ],
+      [
+        "CompanionTheory",
+        3
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        3247
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        261
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        47
+      ],
+      [
+        "Development.WeilBound",
+        38
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        38
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 3440,
+    "hub": "Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing"
+  },
+  {
+    "id": 19,
+    "novel_modules": 3356,
+    "novel_lines": 329668,
+    "directories": [
+      [
+        "Development",
+        1743
+      ],
+      [
+        "Formalism",
+        992
+      ],
+      [
+        "CompanionTheory",
+        611
+      ],
+      [
+        "ReciprocityTheory",
+        4
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.PeriodIntegrals",
+        921
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        795
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        779
+      ],
+      [
+        "CompanionTheory.SpectralGeometry",
+        591
+      ],
+      [
+        "Development.WeilBound",
+        140
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 3122,
+    "hub": "Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes"
+  },
+  {
+    "id": 20,
+    "novel_modules": 3341,
+    "novel_lines": 335528,
+    "directories": [
+      [
+        "Development",
+        3300
+      ],
+      [
+        "CompanionTheory",
+        17
+      ],
+      [
+        "Formalism",
+        15
+      ],
+      [
+        "GroundTheory",
+        6
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.WeilBound",
+        1547
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        734
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        677
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        342
+      ],
+      [
+        "CompanionTheory.ThickeningEstimates",
+        15
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        1
+      ],
+      [
+        "RingTheory",
+        1
+      ]
+    ],
+    "specific_edges": 2,
+    "umbrella_edges": 1481,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing"
+  },
+  {
+    "id": 21,
+    "novel_modules": 3124,
+    "novel_lines": 259704,
+    "directories": [
+      [
+        "Development",
+        3081
+      ],
+      [
+        "Formalism",
+        42
+      ],
+      [
+        "CompanionTheory",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        2032
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        634
+      ],
+      [
+        "Development.WeilBound",
+        405
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        30
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        12
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "MeasureTheory",
+        3
+      ],
+      [
+        "Topology",
+        2
+      ],
+      [
+        "Analysis",
+        1
+      ]
+    ],
+    "specific_edges": 6,
+    "umbrella_edges": 2612,
+    "hub": "Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm"
+  },
+  {
+    "id": 22,
+    "novel_modules": 2609,
+    "novel_lines": 318781,
+    "directories": [
+      [
+        "Development",
+        2250
+      ],
+      [
+        "GroundTheory",
+        332
+      ],
+      [
+        "Formalism",
+        22
+      ],
+      [
+        "Lemmata",
+        2
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicArithmetic",
+        2037
+      ],
+      [
+        "GroundTheory.AutomorphicForms",
+        285
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        91
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        77
+      ],
+      [
+        "Development.WeilBound",
+        44
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        6
+      ],
+      [
+        "Topology",
+        3
+      ],
+      [
+        "FieldTheory",
+        1
+      ],
+      [
+        "RingTheory",
+        1
+      ],
+      [
+        "NumberTheory",
+        1
+      ]
+    ],
+    "specific_edges": 12,
+    "umbrella_edges": 956,
+    "hub": "Development.AutomorphicArithmetic.Foundations.Convolution.RealGroupAnalysis.Smooth"
+  },
+  {
+    "id": 23,
+    "novel_modules": 2350,
+    "novel_lines": 321462,
+    "directories": [
+      [
+        "Development",
+        1199
+      ],
+      [
+        "GroundTheory",
+        1112
+      ],
+      [
+        "PositivityTheory",
+        28
+      ],
+      [
+        "ReciprocityTheory",
+        7
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        912
+      ],
+      [
+        "GroundTheory.ProfiniteCohomology",
+        446
+      ],
+      [
+        "GroundTheory.GlobalFields",
+        261
+      ],
+      [
+        "GroundTheory.LocalFields",
+        147
+      ],
+      [
+        "Development.WeilBound",
+        131
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "NumberTheory",
+        2
+      ]
+    ],
+    "specific_edges": 2,
+    "umbrella_edges": 2208,
+    "hub": "ReciprocityTheory.Hypotheses.GalCoh"
+  },
+  {
+    "id": 24,
+    "novel_modules": 1966,
+    "novel_lines": 126683,
+    "directories": [
+      [
+        "Development",
+        1954
+      ],
+      [
+        "ReciprocityTheory",
+        7
+      ],
+      [
+        "CompanionTheory",
+        2
+      ],
+      [
+        "Lemmata",
+        2
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        1888
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        44
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        16
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        6
+      ],
+      [
+        "Development.WeilBound",
+        6
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 1909,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.CobOneEqZeroOfConnecting"
+  },
+  {
+    "id": 25,
+    "novel_modules": 1934,
+    "novel_lines": 170596,
+    "directories": [
+      [
+        "Development",
+        1758
+      ],
+      [
+        "ReciprocityTheory",
+        142
+      ],
+      [
+        "GroundTheory",
+        21
+      ],
+      [
+        "Formalism",
+        9
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        946
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        812
+      ],
+      [
+        "ReciprocityTheory.ClassFieldTheory",
+        85
+      ],
+      [
+        "ReciprocityTheory.GroupCohomology",
+        56
+      ],
+      [
+        "GroundTheory.Brauer",
+        20
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Topology",
+        1
+      ],
+      [
+        "Algebra",
+        1
+      ]
+    ],
+    "specific_edges": 2,
+    "umbrella_edges": 1570,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Divisors.ExistsRootSelectionUnitaryRankOne"
+  },
+  {
+    "id": 26,
+    "novel_modules": 1904,
+    "novel_lines": 152148,
+    "directories": [
+      [
+        "Development",
+        1891
+      ],
+      [
+        "ReciprocityTheory",
+        11
+      ],
+      [
+        "GroundTheory",
+        1
+      ],
+      [
+        "CompanionTheory",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        1614
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        277
+      ],
+      [
+        "ReciprocityTheory.NeutralLocalFields",
+        9
+      ],
+      [
+        "GroundTheory.ProfiniteCohomology",
+        1
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        1
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "RingTheory",
+        2
+      ]
+    ],
+    "specific_edges": 2,
+    "umbrella_edges": 1530,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Foundations.EigenOfTwoStep"
+  },
+  {
+    "id": 27,
+    "novel_modules": 1834,
+    "novel_lines": 197552,
+    "directories": [
+      [
+        "Development",
+        1587
+      ],
+      [
+        "GroundTheory",
+        246
+      ],
+      [
+        "BuildAid",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        1050
+      ],
+      [
+        "Development.WeilBound",
+        490
+      ],
+      [
+        "GroundTheory.PAdicHodge",
+        200
+      ],
+      [
+        "GroundTheory.HeightsAndTheta",
+        37
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        30
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 1706,
+    "hub": "Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.Imports"
+  },
+  {
+    "id": 28,
+    "novel_modules": 1790,
+    "novel_lines": 155032,
+    "directories": [
+      [
+        "Development",
+        1777
+      ],
+      [
+        "Formalism",
+        13
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        1395
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        368
+      ],
+      [
+        "Development.WeilBound",
+        11
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        10
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        3
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 1737,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace"
+  },
+  {
+    "id": 29,
+    "novel_modules": 1515,
+    "novel_lines": 143580,
+    "directories": [
+      [
+        "Development",
+        1472
+      ],
+      [
+        "GroundTheory",
+        25
+      ],
+      [
+        "CompanionTheory",
+        10
+      ],
+      [
+        "Formalism",
+        8
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        878
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        419
+      ],
+      [
+        "Development.WeilBound",
+        148
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        27
+      ],
+      [
+        "GroundTheory.AutomorphicForms",
+        25
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "LinearAlgebra",
+        2
+      ],
+      [
+        "RingTheory",
+        2
+      ],
+      [
+        "Algebra",
+        1
+      ]
+    ],
+    "specific_edges": 5,
+    "umbrella_edges": 1290,
+    "hub": "Formalism.RealPlaceAnalysis.StatementE"
+  },
+  {
+    "id": 30,
+    "novel_modules": 1451,
+    "novel_lines": 179267,
+    "directories": [
+      [
+        "Development",
+        984
+      ],
+      [
+        "Formalism",
+        343
+      ],
+      [
+        "ReciprocityTheory",
+        122
+      ],
+      [
+        "Lemmata",
+        2
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        843
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        242
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        115
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        100
+      ],
+      [
+        "Formalism.SharpRestriction",
+        65
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "RingTheory",
+        4
+      ]
+    ],
+    "specific_edges": 4,
+    "umbrella_edges": 1020,
+    "hub": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.CocycleRightZeroThd"
+  },
+  {
+    "id": 31,
+    "novel_modules": 1336,
+    "novel_lines": 152755,
+    "directories": [
+      [
+        "Development",
+        916
+      ],
+      [
+        "Formalism",
+        419
+      ],
+      [
+        "Lemmata",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        912
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        212
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        197
+      ],
+      [
+        "Formalism.SharpRestriction",
+        10
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        4
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 1203,
+    "hub": "Formalism.SharpRestriction.CuspSpanNormBounds.FractionFieldToGenericStalkAlgebraMapEq"
+  },
+  {
+    "id": 32,
+    "novel_modules": 1324,
+    "novel_lines": 181314,
+    "directories": [
+      [
+        "ReciprocityTheory",
+        810
+      ],
+      [
+        "Development",
+        288
+      ],
+      [
+        "CompanionTheory",
+        124
+      ],
+      [
+        "Formalism",
+        94
+      ]
+    ],
+    "prefixes": [
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        810
+      ],
+      [
+        "Development.WeilBound",
+        139
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        101
+      ],
+      [
+        "CompanionTheory.RealGroups",
+        53
+      ],
+      [
+        "CompanionTheory.SpectralGeometry",
+        48
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        10
+      ],
+      [
+        "LinearAlgebra",
+        7
+      ]
+    ],
+    "specific_edges": 17,
+    "umbrella_edges": 236,
+    "hub": "ReciprocityTheory.ReductiveGroups.DiscreteSeries.IsInfUnitary"
+  },
+  {
+    "id": 33,
+    "novel_modules": 1267,
+    "novel_lines": 154184,
+    "directories": [
+      [
+        "Development",
+        892
+      ],
+      [
+        "Formalism",
+        369
+      ],
+      [
+        "GroundTheory",
+        5
+      ],
+      [
+        "Lemmata",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        750
+      ],
+      [
+        "Formalism.GL3MeanSquares",
+        165
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        127
+      ],
+      [
+        "Formalism.LandauZeroFreeBounds",
+        58
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        51
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        4
+      ],
+      [
+        "NumberTheory",
+        1
+      ]
+    ],
+    "specific_edges": 5,
+    "umbrella_edges": 893,
+    "hub": "Formalism.CyclotomicNorms.StatementI"
+  },
+  {
+    "id": 34,
+    "novel_modules": 1188,
+    "novel_lines": 74351,
+    "directories": [
+      [
+        "Development",
+        1183
+      ],
+      [
+        "ReciprocityTheory",
+        2
+      ],
+      [
+        "GroundTheory",
+        1
+      ],
+      [
+        "Formalism",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        1174
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        5
+      ],
+      [
+        "Development.WeilBound",
+        3
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        2
+      ],
+      [
+        "GroundTheory.GlobalFields",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 1121,
+    "hub": "Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FirstIndexEqOfUnfolded"
+  },
+  {
+    "id": 35,
+    "novel_modules": 1126,
+    "novel_lines": 66775,
+    "directories": [
+      [
+        "Development",
+        963
+      ],
+      [
+        "CompanionTheory",
+        136
+      ],
+      [
+        "ReciprocityTheory",
+        19
+      ],
+      [
+        "Formalism",
+        4
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        960
+      ],
+      [
+        "CompanionTheory.SpectralGeometry",
+        136
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        10
+      ],
+      [
+        "ReciprocityTheory.CommutativeAlgebra",
+        9
+      ],
+      [
+        "Development.WeilBound",
+        3
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 1072,
+    "hub": "Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SumMulEqZeroOfSumToReal"
+  },
+  {
+    "id": 36,
+    "novel_modules": 962,
+    "novel_lines": 93416,
+    "directories": [
+      [
+        "Development",
+        831
+      ],
+      [
+        "Formalism",
+        114
+      ],
+      [
+        "CompanionTheory",
+        17
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicArithmetic",
+        569
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        235
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        82
+      ],
+      [
+        "Formalism.SharpRestriction",
+        23
+      ],
+      [
+        "CompanionTheory.HarishChandraModules",
+        17
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "RingTheory",
+        14
+      ],
+      [
+        "NumberTheory",
+        3
+      ],
+      [
+        "GroupTheory",
+        2
+      ],
+      [
+        "FieldTheory",
+        1
+      ],
+      [
+        "RepresentationTheory",
+        1
+      ],
+      [
+        "Analysis",
+        1
+      ],
+      [
+        "LinearAlgebra",
+        1
+      ],
+      [
+        "Algebra",
+        1
+      ]
+    ],
+    "specific_edges": 24,
+    "umbrella_edges": 443,
+    "hub": "Development.AbelianVarietyTheory.Definitions.AdelicHermitianForms.AdelicPair"
+  },
+  {
+    "id": 37,
+    "novel_modules": 827,
+    "novel_lines": 123614,
+    "directories": [
+      [
+        "Formalism",
+        765
+      ],
+      [
+        "Development",
+        54
+      ],
+      [
+        "Lemmata",
+        8
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.WachLatticeTwists",
+        231
+      ],
+      [
+        "Formalism.SharpRestriction",
+        160
+      ],
+      [
+        "Formalism.PadicSubsetSums",
+        74
+      ],
+      [
+        "Formalism.CharacterColumnKernels",
+        52
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        48
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 188,
+    "hub": "Formalism.CyclotomicNorms.StatementT"
+  },
+  {
+    "id": 38,
+    "novel_modules": 808,
+    "novel_lines": 53522,
+    "directories": [
+      [
+        "Development",
+        805
+      ],
+      [
+        "ReciprocityTheory",
+        3
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        805
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        3
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 734,
+    "hub": "Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ToroidalCompactificationBis"
+  },
+  {
+    "id": 39,
+    "novel_modules": 681,
+    "novel_lines": 47333,
+    "directories": [
+      [
+        "Development",
+        616
+      ],
+      [
+        "Formalism",
+        65
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        518
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        89
+      ],
+      [
+        "Formalism.PeriodIntegrals",
+        63
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        5
+      ],
+      [
+        "Development.WeilBound",
+        3
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 636,
+    "hub": "Development.AbelianVarietyTheory.Definitions.CommutativeAlgebra.InvariantSubspaceMobiusInverseRecEqOfFinrankLt"
+  },
+  {
+    "id": 40,
+    "novel_modules": 629,
+    "novel_lines": 60022,
+    "directories": [
+      [
+        "Development",
+        615
+      ],
+      [
+        "Formalism",
+        14
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        615
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        7
+      ],
+      [
+        "Formalism.SharpRestriction",
+        4
+      ],
+      [
+        "Formalism.RealPlaceAnalysis",
+        1
+      ],
+      [
+        "Formalism.FormalDegreeBessel",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 600,
+    "hub": "Formalism.SharpRestriction.Divisibility.SchurIrreducible"
+  },
+  {
+    "id": 41,
+    "novel_modules": 607,
+    "novel_lines": 45896,
+    "directories": [
+      [
+        "Development",
+        603
+      ],
+      [
+        "PositivityTheory",
+        4
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        555
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        47
+      ],
+      [
+        "PositivityTheory.AutomorphicForms",
+        4
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 582,
+    "hub": "Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SiegelReframe"
+  },
+  {
+    "id": 42,
+    "novel_modules": 554,
+    "novel_lines": 148503,
+    "directories": [
+      [
+        "Development",
+        550
+      ],
+      [
+        "GroundTheory",
+        4
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.ResolutionOfSingularities",
+        499
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        39
+      ],
+      [
+        "Development.WeilBound",
+        12
+      ],
+      [
+        "GroundTheory.ArithmeticGeometry",
+        4
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 526,
+    "hub": "Development.ResolutionOfSingularities.Foundations.BlowupUniversalProperty"
+  },
+  {
+    "id": 43,
+    "novel_modules": 467,
+    "novel_lines": 46472,
+    "directories": [
+      [
+        "Development",
+        467
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        288
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        156
+      ],
+      [
+        "Development.WeilBound",
+        21
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        2
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 454,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Divisors.DlogRatioVolumeFormNeZero"
+  },
+  {
+    "id": 44,
+    "novel_modules": 461,
+    "novel_lines": 30905,
+    "directories": [
+      [
+        "Development",
+        461
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicArithmetic",
+        460
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        1
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        3
+      ],
+      [
+        "LinearAlgebra",
+        1
+      ],
+      [
+        "RepresentationTheory",
+        1
+      ],
+      [
+        "Geometry",
+        1
+      ]
+    ],
+    "specific_edges": 6,
+    "umbrella_edges": 13,
+    "hub": "Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.BorelHarmonicForms.DerivativeRightTranslateL2"
+  },
+  {
+    "id": 45,
+    "novel_modules": 445,
+    "novel_lines": 45709,
+    "directories": [
+      [
+        "Development",
+        218
+      ],
+      [
+        "GroundTheory",
+        211
+      ],
+      [
+        "ReciprocityTheory",
+        15
+      ],
+      [
+        "CompanionTheory",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "GroundTheory.HeightsAndTheta",
+        210
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        163
+      ],
+      [
+        "Development.WeilBound",
+        42
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        15
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        13
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 406,
+    "hub": "GroundTheory.HeightsAndTheta.Heights.FiniteCovolume.SecondCountableTopologyArchUnitary"
+  },
+  {
+    "id": 46,
+    "novel_modules": 440,
+    "novel_lines": 51735,
+    "directories": [
+      [
+        "Development",
+        252
+      ],
+      [
+        "ReciprocityTheory",
+        185
+      ],
+      [
+        "CompanionTheory",
+        1
+      ],
+      [
+        "Formalism",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        240
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        149
+      ],
+      [
+        "ReciprocityTheory.SemistableReduction",
+        36
+      ],
+      [
+        "Development.WeilBound",
+        11
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        1
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "NumberTheory",
+        1
+      ]
+    ],
+    "specific_edges": 1,
+    "umbrella_edges": 252,
+    "hub": "ReciprocityTheory.SemistableReduction.TorusL2CauchyInequality"
+  },
+  {
+    "id": 47,
+    "novel_modules": 419,
+    "novel_lines": 45419,
+    "directories": [
+      [
+        "Development",
+        249
+      ],
+      [
+        "GroundTheory",
+        170
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        240
+      ],
+      [
+        "GroundTheory.ArithmeticGeometry",
+        131
+      ],
+      [
+        "GroundTheory.HeightsAndTheta",
+        30
+      ],
+      [
+        "GroundTheory.FunctionField",
+        9
+      ],
+      [
+        "Development.WeilBound",
+        5
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 416,
+    "hub": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PowSubSuccLe"
+  },
+  {
+    "id": 48,
+    "novel_modules": 377,
+    "novel_lines": 55267,
+    "directories": [
+      [
+        "Development",
+        374
+      ],
+      [
+        "GroundTheory",
+        3
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicArithmetic",
+        374
+      ],
+      [
+        "GroundTheory.GlobalFields",
+        3
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Analysis",
+        2
+      ],
+      [
+        "Topology",
+        1
+      ]
+    ],
+    "specific_edges": 3,
+    "umbrella_edges": 15,
+    "hub": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.SymmetricPowerTransfer.GlobalUnitaryForms.HodgeTateFromSandwich"
+  },
+  {
+    "id": 49,
+    "novel_modules": 356,
+    "novel_lines": 38316,
+    "directories": [
+      [
+        "ReciprocityTheory",
+        193
+      ],
+      [
+        "Development",
+        159
+      ],
+      [
+        "Lemmata",
+        4
+      ]
+    ],
+    "prefixes": [
+      [
+        "ReciprocityTheory.L2DbarEstimates",
+        184
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        159
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        9
+      ],
+      [
+        "Lemmata.MiscLemmasF",
+        1
+      ],
+      [
+        "Lemmata.CofiniteContinuousBounds",
+        1
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "Topology",
+        1
+      ]
+    ],
+    "specific_edges": 1,
+    "umbrella_edges": 147,
+    "hub": "ReciprocityTheory.L2DbarEstimates.PlurisubharmonicCharts.FourSignHolds"
+  },
+  {
+    "id": 50,
+    "novel_modules": 340,
+    "novel_lines": 37079,
+    "directories": [
+      [
+        "Development",
+        266
+      ],
+      [
+        "ReciprocityTheory",
+        74
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        252
+      ],
+      [
+        "ReciprocityTheory.DualLattices",
+        68
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        11
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        6
+      ],
+      [
+        "Development.WeilBound",
+        3
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 273,
+    "hub": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.Clauses"
+  },
+  {
+    "id": 51,
+    "novel_modules": 325,
+    "novel_lines": 24913,
+    "directories": [
+      [
+        "Development",
+        265
+      ],
+      [
+        "ReciprocityTheory",
+        46
+      ],
+      [
+        "Formalism",
+        14
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        157
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        106
+      ],
+      [
+        "ReciprocityTheory.Chebotarev",
+        46
+      ],
+      [
+        "Formalism.LatticeTheta",
+        14
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 274,
+    "hub": "Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization"
+  },
+  {
+    "id": 52,
+    "novel_modules": 262,
+    "novel_lines": 20936,
+    "directories": [
+      [
+        "Development",
+        261
+      ],
+      [
+        "ReciprocityTheory",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        261
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 229,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Divisors.IsPolAVSectionInverseImage"
+  },
+  {
+    "id": 53,
+    "novel_modules": 254,
+    "novel_lines": 24355,
+    "directories": [
+      [
+        "Development",
+        253
+      ],
+      [
+        "Formalism",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        217
+      ],
+      [
+        "Development.AutomorphicSpectrum",
+        31
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        4
+      ],
+      [
+        "Development.WeilBound",
+        1
+      ],
+      [
+        "Formalism.GaloisCohomology",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 252,
+    "hub": "Formalism.GaloisCohomology.Statement"
+  },
+  {
+    "id": 54,
+    "novel_modules": 222,
+    "novel_lines": 18225,
+    "directories": [
+      [
+        "GroundTheory",
+        219
+      ],
+      [
+        "Development",
+        3
+      ]
+    ],
+    "prefixes": [
+      [
+        "GroundTheory.HeightsAndTheta",
+        219
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        2
+      ],
+      [
+        "Development.WeilBound",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 222,
+    "hub": "GroundTheory.HeightsAndTheta.Heights.RemainderTerms.Statements"
+  },
+  {
+    "id": 55,
+    "novel_modules": 181,
+    "novel_lines": 15194,
+    "directories": [
+      [
+        "CompanionTheory",
+        129
+      ],
+      [
+        "Development",
+        52
+      ]
+    ],
+    "prefixes": [
+      [
+        "CompanionTheory.SpectralGeometry",
+        120
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        48
+      ],
+      [
+        "CompanionTheory.RealGroups",
+        5
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        4
+      ],
+      [
+        "CompanionTheory.AutomorphicTheory",
+        3
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 177,
+    "hub": "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqZeroOfInnerSmooth"
+  },
+  {
+    "id": 56,
+    "novel_modules": 149,
+    "novel_lines": 15664,
+    "directories": [
+      [
+        "Formalism",
+        149
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.LocalToGlobal",
+        149
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 6,
+    "hub": "Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.RankPointCounts.LsDatumACut"
+  },
+  {
+    "id": 57,
+    "novel_modules": 148,
+    "novel_lines": 8374,
+    "directories": [
+      [
+        "Development",
+        148
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        148
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 144,
+    "hub": "Development.AbelianVarietyTheory.Definitions.Divisors.IsAdmissibleIntegralBasisChangeOne"
+  },
+  {
+    "id": 58,
+    "novel_modules": 146,
+    "novel_lines": 9062,
+    "directories": [
+      [
+        "Development",
+        146
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        105
+      ],
+      [
+        "Development.WeilBound",
+        39
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        1
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 103,
+    "hub": "Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsTransition"
+  },
+  {
+    "id": 59,
+    "novel_modules": 136,
+    "novel_lines": 8137,
+    "directories": [
+      [
+        "Development",
+        133
+      ],
+      [
+        "Formalism",
+        3
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        104
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        25
+      ],
+      [
+        "Development.WeilBound",
+        2
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        2
+      ],
+      [
+        "Formalism.UnipotentAdelicQuotients",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 130,
+    "hub": "Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet"
+  },
+  {
+    "id": 60,
+    "novel_modules": 126,
+    "novel_lines": 6850,
+    "directories": [
+      [
+        "Development",
+        126
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        112
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        14
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 126,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComapBcComp"
+  },
+  {
+    "id": 61,
+    "novel_modules": 101,
+    "novel_lines": 17591,
+    "directories": [
+      [
+        "Formalism",
+        62
+      ],
+      [
+        "Development",
+        35
+      ],
+      [
+        "ReciprocityTheory",
+        3
+      ],
+      [
+        "Lemmata",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.PeriodIntegrals",
+        61
+      ],
+      [
+        "Development.WeilBound",
+        35
+      ],
+      [
+        "ReciprocityTheory.ThetaSummability",
+        3
+      ],
+      [
+        "Lemmata.B1959r",
+        1
+      ],
+      [
+        "Formalism.LocalToGlobal",
+        1
+      ]
+    ],
+    "explicit_area_edges": [
+      [
+        "LinearAlgebra",
+        1
+      ]
+    ],
+    "specific_edges": 1,
+    "umbrella_edges": 19,
+    "hub": "Development.WeilBound.CoreStatements.GaussianSeminormBounds.RealSeminormFiltration.CoreDefs"
+  },
+  {
+    "id": 62,
+    "novel_modules": 91,
+    "novel_lines": 6377,
+    "directories": [
+      [
+        "Development",
+        91
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        91
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 91,
+    "hub": "Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeModelVacuumTranslateClassesIndependent"
+  },
+  {
+    "id": 63,
+    "novel_modules": 71,
+    "novel_lines": 5188,
+    "directories": [
+      [
+        "Development",
+        71
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        67
+      ],
+      [
+        "Development.WeilBound",
+        3
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 70,
+    "hub": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.JpUnif"
+  },
+  {
+    "id": 64,
+    "novel_modules": 60,
+    "novel_lines": 5126,
+    "directories": [
+      [
+        "Development",
+        60
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.EtaleCohomology",
+        56
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        4
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 5,
+    "hub": "Development.EtaleCohomology.DivisorCycles.CycleCount"
+  },
+  {
+    "id": 65,
+    "novel_modules": 59,
+    "novel_lines": 9583,
+    "directories": [
+      [
+        "PositivityTheory",
+        58
+      ],
+      [
+        "Development",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "PositivityTheory.AutomorphicForms",
+        58
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 6,
+    "hub": "PositivityTheory.AutomorphicForms.PublishedInputs.JacquetLanglands.TorusKernels.ComplexMinusRealLineMeasureCoordinates"
+  },
+  {
+    "id": 66,
+    "novel_modules": 50,
+    "novel_lines": 4294,
+    "directories": [
+      [
+        "Development",
+        50
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        47
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        3
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 50,
+    "hub": "Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SubPairRight"
+  },
+  {
+    "id": 67,
+    "novel_modules": 42,
+    "novel_lines": 6109,
+    "directories": [
+      [
+        "Formalism",
+        41
+      ],
+      [
+        "Development",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.PeriodIntegrals",
+        41
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 4,
+    "hub": "Formalism.PeriodIntegrals.OrbitalBoundsConclusion.LocMassTyp"
+  },
+  {
+    "id": 68,
+    "novel_modules": 41,
+    "novel_lines": 2639,
+    "directories": [
+      [
+        "Development",
+        41
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        41
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 41,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmHostUnitAddConjEqOne"
+  },
+  {
+    "id": 69,
+    "novel_modules": 40,
+    "novel_lines": 3014,
+    "directories": [
+      [
+        "Development",
+        40
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        37
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        3
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 40,
+    "hub": "Development.AutomorphicSpectrum.PublishedTheorems.Algebra₂.RegularHypothesesAndConclusion"
+  },
+  {
+    "id": 70,
+    "novel_modules": 38,
+    "novel_lines": 3982,
+    "directories": [
+      [
+        "Formalism",
+        38
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.PeriodIntegrals",
+        38
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 38,
+    "hub": "Formalism.PeriodIntegrals.ScRefExists"
+  },
+  {
+    "id": 71,
+    "novel_modules": 35,
+    "novel_lines": 3518,
+    "directories": [
+      [
+        "Formalism",
+        35
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.PeriodIntegrals",
+        35
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 3,
+    "hub": "Formalism.PeriodIntegrals.OrbitalBoundsConclusion.UnimodLocStd"
+  },
+  {
+    "id": 72,
+    "novel_modules": 31,
+    "novel_lines": 1374,
+    "directories": [
+      [
+        "Development",
+        31
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        31
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 28,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteCompOpenImmersionOfQuasiFinite"
+  },
+  {
+    "id": 73,
+    "novel_modules": 31,
+    "novel_lines": 1935,
+    "directories": [
+      [
+        "Development",
+        31
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        31
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 31,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCombIn"
+  },
+  {
+    "id": 74,
+    "novel_modules": 30,
+    "novel_lines": 1566,
+    "directories": [
+      [
+        "Development",
+        30
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        30
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 30,
+    "hub": "Development.AbelianVarietyTheory.Proofs.UniformizationProofs.ExistsSchemeOfThickenings"
+  },
+  {
+    "id": 75,
+    "novel_modules": 27,
+    "novel_lines": 1705,
+    "directories": [
+      [
+        "Development",
+        27
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        27
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 27,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ManyIndependentProductsInFunctionField"
+  },
+  {
+    "id": 76,
+    "novel_modules": 27,
+    "novel_lines": 1427,
+    "directories": [
+      [
+        "Formalism",
+        26
+      ],
+      [
+        "Development",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.PeriodIntegrals",
+        26
+      ],
+      [
+        "Development.AutomorphicArithmetic",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 26,
+    "hub": "Formalism.PeriodIntegrals.UMultOne"
+  },
+  {
+    "id": 77,
+    "novel_modules": 26,
+    "novel_lines": 1198,
+    "directories": [
+      [
+        "Development",
+        26
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        26
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 26,
+    "hub": "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoeffOfW"
+  },
+  {
+    "id": 78,
+    "novel_modules": 25,
+    "novel_lines": 1775,
+    "directories": [
+      [
+        "Development",
+        25
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        25
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 25,
+    "hub": "Development.AbelianVarietyTheory.Proofs.HeightProofs.InnerDRepSq"
+  },
+  {
+    "id": 79,
+    "novel_modules": 25,
+    "novel_lines": 1530,
+    "directories": [
+      [
+        "Development",
+        25
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        20
+      ],
+      [
+        "Development.WeilBound",
+        5
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 18,
+    "hub": "Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsOrthFull"
+  },
+  {
+    "id": 80,
+    "novel_modules": 24,
+    "novel_lines": 1654,
+    "directories": [
+      [
+        "Development",
+        24
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        24
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 24,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasTemperateGrowthElim"
+  },
+  {
+    "id": 81,
+    "novel_modules": 23,
+    "novel_lines": 1595,
+    "directories": [
+      [
+        "Development",
+        23
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        23
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 21,
+    "hub": "Development.AbelianVarietyTheory.Proofs.TwistedOperators.SimpleOver"
+  },
+  {
+    "id": 82,
+    "novel_modules": 22,
+    "novel_lines": 3017,
+    "directories": [
+      [
+        "ReciprocityTheory",
+        18
+      ],
+      [
+        "Development",
+        3
+      ],
+      [
+        "Lemmata",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "ReciprocityTheory.ReducedBases",
+        9
+      ],
+      [
+        "ReciprocityTheory.ReductiveGroups",
+        9
+      ],
+      [
+        "Development.AbelianVarietyTheory",
+        3
+      ],
+      [
+        "Lemmata.GeneralBFactExtra",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 8,
+    "hub": "ReciprocityTheory.ReducedBases.LatticeReduction"
+  },
+  {
+    "id": 83,
+    "novel_modules": 21,
+    "novel_lines": 1461,
+    "directories": [
+      [
+        "Formalism",
+        21
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.PeriodIntegrals",
+        21
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 21,
+    "hub": "Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ResidueLatticeCount.UnitPreserving"
+  },
+  {
+    "id": 84,
+    "novel_modules": 19,
+    "novel_lines": 954,
+    "directories": [
+      [
+        "Development",
+        19
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        19
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 19,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToEndDApply"
+  },
+  {
+    "id": 85,
+    "novel_modules": 18,
+    "novel_lines": 587,
+    "directories": [
+      [
+        "Development",
+        18
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        18
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 18,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicApproxAlgebraicPoint"
+  },
+  {
+    "id": 86,
+    "novel_modules": 15,
+    "novel_lines": 1975,
+    "directories": [
+      [
+        "Formalism",
+        15
+      ]
+    ],
+    "prefixes": [
+      [
+        "Formalism.LocalToGlobal",
+        15
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 0,
+    "hub": "Formalism.LocalToGlobal.GenusGluing.GenusApproximation.GlueExists"
+  },
+  {
+    "id": 87,
+    "novel_modules": 14,
+    "novel_lines": 511,
+    "directories": [
+      [
+        "Development",
+        14
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        14
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 14,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSeparablePointOfGeometricallyDomain"
+  },
+  {
+    "id": 88,
+    "novel_modules": 13,
+    "novel_lines": 666,
+    "directories": [
+      [
+        "Development",
+        13
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        13
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 13,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.SupMeas"
+  },
+  {
+    "id": 89,
+    "novel_modules": 12,
+    "novel_lines": 419,
+    "directories": [
+      [
+        "Development",
+        12
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        12
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 12,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsotropicGraphUnitaryIsUnitLowerBlock"
+  },
+  {
+    "id": 90,
+    "novel_modules": 11,
+    "novel_lines": 577,
+    "directories": [
+      [
+        "Development",
+        11
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AutomorphicSpectrum",
+        11
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 11,
+    "hub": "Development.AutomorphicSpectrum.Proofs.MetricProofs.RiemannFormPeriodDeterminant"
+  },
+  {
+    "id": 91,
+    "novel_modules": 10,
+    "novel_lines": 390,
+    "directories": [
+      [
+        "Development",
+        10
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        7
+      ],
+      [
+        "Development.WeilBound",
+        3
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 10,
+    "hub": "Development.WeilBound.CoreStatements.PublishedTheorems.NadelVanishingPairs.NadelVanishingLemmas.FiniteTypeToModPSquared"
+  },
+  {
+    "id": 92,
+    "novel_modules": 8,
+    "novel_lines": 220,
+    "directories": [
+      [
+        "Development",
+        8
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        8
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 8,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPowEqOfKaehlerDifferentialEqZeroOfSmoothDo"
+  },
+  {
+    "id": 93,
+    "novel_modules": 8,
+    "novel_lines": 471,
+    "directories": [
+      [
+        "Development",
+        7
+      ],
+      [
+        "PositivityTheory",
+        1
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.WeilBound",
+        7
+      ],
+      [
+        "PositivityTheory.PublishedTheorems",
+        1
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 7,
+    "hub": "Development.WeilBound.CoreStatements.AbelianHeightsDuality.ZarhinTrick.QiCoreDefs"
+  },
+  {
+    "id": 94,
+    "novel_modules": 6,
+    "novel_lines": 352,
+    "directories": [
+      [
+        "Development",
+        6
+      ]
+    ],
+    "prefixes": [
+      [
+        "Development.AbelianVarietyTheory",
+        6
+      ]
+    ],
+    "explicit_area_edges": [],
+    "specific_edges": 0,
+    "umbrella_edges": 6,
+    "hub": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodicSectionContinuousLimit"
+  }
+]

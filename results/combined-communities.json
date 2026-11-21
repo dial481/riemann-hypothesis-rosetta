@@ -1,0 +1,1894 @@
+{
+  "modularity": 0.7350750672242313,
+  "groups": [
+    {
+      "id": 1,
+      "novel_modules": 18221,
+      "mathlib_modules": 8824,
+      "novel_lines": 1706753,
+      "mathlib_lines": 2370959,
+      "mathlib_member_areas": [
+        [
+          "Algebra",
+          1346
+        ],
+        [
+          "CategoryTheory",
+          1089
+        ],
+        [
+          "Analysis",
+          798
+        ],
+        [
+          "RingTheory",
+          719
+        ],
+        [
+          "Topology",
+          676
+        ]
+      ],
+      "explicit_area_edges": [
+        [
+          "RingTheory",
+          71
+        ],
+        [
+          "Analysis",
+          33
+        ],
+        [
+          "LinearAlgebra",
+          20
+        ],
+        [
+          "AlgebraicGeometry",
+          17
+        ],
+        [
+          "Algebra",
+          13
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          9199
+        ],
+        [
+          "Formalism.PeriodIntegrals",
+          1989
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          1964
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "novel_modules": 14807,
+      "mathlib_modules": 0,
+      "novel_lines": 1366598,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "AlgebraicGeometry",
+          6
+        ],
+        [
+          "RingTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          13938
+        ],
+        [
+          "ReciprocityTheory.ReductiveGroups",
+          338
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          273
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "novel_modules": 13261,
+      "mathlib_modules": 0,
+      "novel_lines": 1219012,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "NumberTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          12415
+        ],
+        [
+          "Formalism.LocalToGlobal",
+          524
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          90
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "novel_modules": 9467,
+      "mathlib_modules": 0,
+      "novel_lines": 748687,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          2
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          8523
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          429
+        ],
+        [
+          "Development.WeilBound",
+          264
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "novel_modules": 8993,
+      "mathlib_modules": 0,
+      "novel_lines": 1406346,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          10
+        ],
+        [
+          "Geometry",
+          2
+        ],
+        [
+          "LinearAlgebra",
+          2
+        ],
+        [
+          "MeasureTheory",
+          2
+        ],
+        [
+          "Topology",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          3359
+        ],
+        [
+          "Formalism.HermitianCurvature",
+          1884
+        ],
+        [
+          "Formalism.LocalToGlobal",
+          1388
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "novel_modules": 8232,
+      "mathlib_modules": 0,
+      "novel_lines": 749288,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          12
+        ],
+        [
+          "NumberTheory",
+          4
+        ],
+        [
+          "RepresentationTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          3604
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          1489
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          1342
+        ]
+      ]
+    },
+    {
+      "id": 7,
+      "novel_modules": 7463,
+      "mathlib_modules": 0,
+      "novel_lines": 743200,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "RingTheory",
+          3
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "GroundTheory.HeightsAndTheta",
+          5239
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          1441
+        ],
+        [
+          "Development.WeilBound",
+          246
+        ]
+      ]
+    },
+    {
+      "id": 8,
+      "novel_modules": 7360,
+      "mathlib_modules": 0,
+      "novel_lines": 613218,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          6894
+        ],
+        [
+          "Development.WeilBound",
+          172
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          125
+        ]
+      ]
+    },
+    {
+      "id": 9,
+      "novel_modules": 6843,
+      "mathlib_modules": 0,
+      "novel_lines": 746467,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          3
+        ],
+        [
+          "NumberTheory",
+          2
+        ],
+        [
+          "RingTheory",
+          2
+        ],
+        [
+          "Data",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          4916
+        ],
+        [
+          "Formalism.SharpRestriction",
+          758
+        ],
+        [
+          "Formalism.WachLatticeTwists",
+          262
+        ]
+      ]
+    },
+    {
+      "id": 10,
+      "novel_modules": 6754,
+      "mathlib_modules": 0,
+      "novel_lines": 743667,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Algebra",
+          1
+        ],
+        [
+          "RingTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          5271
+        ],
+        [
+          "ReciprocityTheory.ReductiveGroups",
+          666
+        ],
+        [
+          "Formalism.LocalToGlobal",
+          289
+        ]
+      ]
+    },
+    {
+      "id": 11,
+      "novel_modules": 5900,
+      "mathlib_modules": 1,
+      "novel_lines": 635974,
+      "mathlib_lines": 88,
+      "mathlib_member_areas": [
+        [
+          "Topology",
+          1
+        ]
+      ],
+      "explicit_area_edges": [
+        [
+          "RingTheory",
+          48
+        ],
+        [
+          "Topology",
+          21
+        ],
+        [
+          "NumberTheory",
+          19
+        ],
+        [
+          "LinearAlgebra",
+          9
+        ],
+        [
+          "Algebra",
+          5
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicArithmetic",
+          5483
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          293
+        ],
+        [
+          "PositivityTheory.AutomorphicForms",
+          62
+        ]
+      ]
+    },
+    {
+      "id": 12,
+      "novel_modules": 5729,
+      "mathlib_modules": 0,
+      "novel_lines": 701307,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "LinearAlgebra",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          3246
+        ],
+        [
+          "Formalism.LocalToGlobal",
+          1576
+        ],
+        [
+          "Formalism.PeriodIntegrals",
+          246
+        ]
+      ]
+    },
+    {
+      "id": 13,
+      "novel_modules": 5340,
+      "mathlib_modules": 0,
+      "novel_lines": 831620,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          6
+        ],
+        [
+          "NumberTheory",
+          3
+        ],
+        [
+          "LinearAlgebra",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          1829
+        ],
+        [
+          "Formalism.SharpRestriction",
+          1171
+        ],
+        [
+          "Formalism.LocalToGlobal",
+          453
+        ]
+      ]
+    },
+    {
+      "id": 14,
+      "novel_modules": 5253,
+      "mathlib_modules": 0,
+      "novel_lines": 485156,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          4347
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          586
+        ],
+        [
+          "Formalism.PeriodIntegrals",
+          177
+        ]
+      ]
+    },
+    {
+      "id": 15,
+      "novel_modules": 4936,
+      "mathlib_modules": 0,
+      "novel_lines": 420096,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicSpectrum",
+          3719
+        ],
+        [
+          "Development.WeilBound",
+          794
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          255
+        ]
+      ]
+    },
+    {
+      "id": 16,
+      "novel_modules": 4866,
+      "mathlib_modules": 0,
+      "novel_lines": 321951,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicArithmetic",
+          2380
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          2327
+        ],
+        [
+          "Formalism.LocalToGlobal",
+          63
+        ]
+      ]
+    },
+    {
+      "id": 17,
+      "novel_modules": 4154,
+      "mathlib_modules": 0,
+      "novel_lines": 282631,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          3742
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          222
+        ],
+        [
+          "CompanionTheory.SpectralGeometry",
+          53
+        ]
+      ]
+    },
+    {
+      "id": 18,
+      "novel_modules": 3310,
+      "mathlib_modules": 0,
+      "novel_lines": 231271,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "RingTheory",
+          12
+        ],
+        [
+          "AlgebraicGeometry",
+          10
+        ],
+        [
+          "Algebra",
+          8
+        ],
+        [
+          "CategoryTheory",
+          5
+        ],
+        [
+          "NumberTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.EtaleCohomology",
+          1318
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          1302
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          670
+        ]
+      ]
+    },
+    {
+      "id": 19,
+      "novel_modules": 3172,
+      "mathlib_modules": 0,
+      "novel_lines": 266904,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          1
+        ],
+        [
+          "LinearAlgebra",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          1723
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          592
+        ],
+        [
+          "Development.WeilBound",
+          431
+        ]
+      ]
+    },
+    {
+      "id": 20,
+      "novel_modules": 2754,
+      "mathlib_modules": 0,
+      "novel_lines": 283080,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          1
+        ],
+        [
+          "RingTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.WeilBound",
+          1220
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          721
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          584
+        ]
+      ]
+    },
+    {
+      "id": 21,
+      "novel_modules": 2700,
+      "mathlib_modules": 0,
+      "novel_lines": 280217,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          7
+        ],
+        [
+          "RingTheory",
+          2
+        ],
+        [
+          "Topology",
+          2
+        ],
+        [
+          "Algebra",
+          1
+        ],
+        [
+          "Geometry",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicArithmetic",
+          2424
+        ],
+        [
+          "GroundTheory.AutomorphicForms",
+          128
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          75
+        ]
+      ]
+    },
+    {
+      "id": 22,
+      "novel_modules": 2121,
+      "mathlib_modules": 0,
+      "novel_lines": 192972,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicSpectrum",
+          843
+        ],
+        [
+          "CompanionTheory.SpectralGeometry",
+          575
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          389
+        ]
+      ]
+    },
+    {
+      "id": 23,
+      "novel_modules": 1944,
+      "mathlib_modules": 0,
+      "novel_lines": 190021,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "LinearAlgebra",
+          2
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          1070
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          390
+        ],
+        [
+          "Development.WeilBound",
+          193
+        ]
+      ]
+    },
+    {
+      "id": 24,
+      "novel_modules": 1661,
+      "mathlib_modules": 0,
+      "novel_lines": 137127,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "RingTheory",
+          2
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          1372
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          278
+        ],
+        [
+          "ReciprocityTheory.NeutralLocalFields",
+          9
+        ]
+      ]
+    },
+    {
+      "id": 25,
+      "novel_modules": 1564,
+      "mathlib_modules": 0,
+      "novel_lines": 220954,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          7
+        ],
+        [
+          "LinearAlgebra",
+          2
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "ReciprocityTheory.ReductiveGroups",
+          952
+        ],
+        [
+          "Development.WeilBound",
+          237
+        ],
+        [
+          "CompanionTheory.RealGroups",
+          67
+        ]
+      ]
+    },
+    {
+      "id": 26,
+      "novel_modules": 1499,
+      "mathlib_modules": 0,
+      "novel_lines": 130929,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicSpectrum",
+          946
+        ],
+        [
+          "Development.WeilBound",
+          467
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          74
+        ]
+      ]
+    },
+    {
+      "id": 27,
+      "novel_modules": 1421,
+      "mathlib_modules": 0,
+      "novel_lines": 112606,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicSpectrum",
+          569
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          454
+        ],
+        [
+          "Development.WeilBound",
+          379
+        ]
+      ]
+    },
+    {
+      "id": 28,
+      "novel_modules": 1247,
+      "mathlib_modules": 0,
+      "novel_lines": 121335,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicSpectrum",
+          792
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          158
+        ],
+        [
+          "PositivityTheory.AutomorphicForms",
+          142
+        ]
+      ]
+    },
+    {
+      "id": 29,
+      "novel_modules": 1209,
+      "mathlib_modules": 0,
+      "novel_lines": 77211,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          1189
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          15
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          2
+        ]
+      ]
+    },
+    {
+      "id": 30,
+      "novel_modules": 1156,
+      "mathlib_modules": 0,
+      "novel_lines": 108890,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicArithmetic",
+          718
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          404
+        ],
+        [
+          "Development.WeilBound",
+          31
+        ]
+      ]
+    },
+    {
+      "id": 31,
+      "novel_modules": 1147,
+      "mathlib_modules": 0,
+      "novel_lines": 144516,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          706
+        ],
+        [
+          "Formalism.LocalToGlobal",
+          238
+        ],
+        [
+          "ReciprocityTheory.ReductiveGroups",
+          103
+        ]
+      ]
+    },
+    {
+      "id": 32,
+      "novel_modules": 1040,
+      "mathlib_modules": 0,
+      "novel_lines": 126047,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          1
+        ],
+        [
+          "NumberTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          564
+        ],
+        [
+          "Formalism.GL3MeanSquares",
+          168
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          136
+        ]
+      ]
+    },
+    {
+      "id": 33,
+      "novel_modules": 1006,
+      "mathlib_modules": 0,
+      "novel_lines": 97933,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          726
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          86
+        ],
+        [
+          "Formalism.PadicSubsetSums",
+          79
+        ]
+      ]
+    },
+    {
+      "id": 34,
+      "novel_modules": 914,
+      "mathlib_modules": 0,
+      "novel_lines": 83401,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          603
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          265
+        ],
+        [
+          "Development.WeilBound",
+          33
+        ]
+      ]
+    },
+    {
+      "id": 35,
+      "novel_modules": 797,
+      "mathlib_modules": 0,
+      "novel_lines": 84956,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Algebra",
+          1
+        ],
+        [
+          "RingTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          380
+        ],
+        [
+          "ReciprocityTheory.DualLattices",
+          167
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          163
+        ]
+      ]
+    },
+    {
+      "id": 36,
+      "novel_modules": 742,
+      "mathlib_modules": 0,
+      "novel_lines": 51021,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          740
+        ],
+        [
+          "ReciprocityTheory.ReductiveGroups",
+          2
+        ]
+      ]
+    },
+    {
+      "id": 37,
+      "novel_modules": 647,
+      "mathlib_modules": 0,
+      "novel_lines": 41758,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          646
+        ],
+        [
+          "Formalism.DegreeFormula",
+          1
+        ]
+      ]
+    },
+    {
+      "id": 38,
+      "novel_modules": 595,
+      "mathlib_modules": 0,
+      "novel_lines": 64946,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          496
+        ],
+        [
+          "Formalism.PeriodIntegrals",
+          60
+        ],
+        [
+          "Development.WeilBound",
+          28
+        ]
+      ]
+    },
+    {
+      "id": 39,
+      "novel_modules": 553,
+      "mathlib_modules": 0,
+      "novel_lines": 148700,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.ResolutionOfSingularities",
+          499
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          38
+        ],
+        [
+          "Development.WeilBound",
+          12
+        ]
+      ]
+    },
+    {
+      "id": 40,
+      "novel_modules": 471,
+      "mathlib_modules": 0,
+      "novel_lines": 53248,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "NumberTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          278
+        ],
+        [
+          "ReciprocityTheory.ReductiveGroups",
+          145
+        ],
+        [
+          "ReciprocityTheory.SemistableReduction",
+          36
+        ]
+      ]
+    },
+    {
+      "id": 41,
+      "novel_modules": 446,
+      "mathlib_modules": 0,
+      "novel_lines": 26843,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          311
+        ],
+        [
+          "CompanionTheory.SpectralGeometry",
+          135
+        ]
+      ]
+    },
+    {
+      "id": 42,
+      "novel_modules": 432,
+      "mathlib_modules": 0,
+      "novel_lines": 60379,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Analysis",
+          2
+        ],
+        [
+          "Topology",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicArithmetic",
+          372
+        ],
+        [
+          "Formalism.PeriodIntegrals",
+          55
+        ],
+        [
+          "Formalism.LocalToGlobal",
+          3
+        ]
+      ]
+    },
+    {
+      "id": 43,
+      "novel_modules": 402,
+      "mathlib_modules": 0,
+      "novel_lines": 44511,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Topology",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "ReciprocityTheory.L2DbarEstimates",
+          207
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          179
+        ],
+        [
+          "ReciprocityTheory.ReductiveGroups",
+          13
+        ]
+      ]
+    },
+    {
+      "id": 44,
+      "novel_modules": 394,
+      "mathlib_modules": 0,
+      "novel_lines": 37177,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "GroundTheory.HeightsAndTheta",
+          228
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          133
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          16
+        ]
+      ]
+    },
+    {
+      "id": 45,
+      "novel_modules": 368,
+      "mathlib_modules": 0,
+      "novel_lines": 34546,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "GroundTheory.HeightsAndTheta",
+          178
+        ],
+        [
+          "Development.AutomorphicSpectrum",
+          153
+        ],
+        [
+          "Development.WeilBound",
+          24
+        ]
+      ]
+    },
+    {
+      "id": 46,
+      "novel_modules": 349,
+      "mathlib_modules": 0,
+      "novel_lines": 35258,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Algebra",
+          1
+        ],
+        [
+          "Analysis",
+          1
+        ],
+        [
+          "GroupTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicArithmetic",
+          327
+        ],
+        [
+          "Formalism.PeriodIntegrals",
+          22
+        ]
+      ]
+    },
+    {
+      "id": 47,
+      "novel_modules": 267,
+      "mathlib_modules": 0,
+      "novel_lines": 21700,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          266
+        ],
+        [
+          "ReciprocityTheory.ReductiveGroups",
+          1
+        ]
+      ]
+    },
+    {
+      "id": 48,
+      "novel_modules": 166,
+      "mathlib_modules": 0,
+      "novel_lines": 23088,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "Algebra",
+          1
+        ],
+        [
+          "Topology",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "ReciprocityTheory.ClassFieldTheory",
+          79
+        ],
+        [
+          "ReciprocityTheory.GroupCohomology",
+          56
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          16
+        ]
+      ]
+    },
+    {
+      "id": 49,
+      "novel_modules": 148,
+      "mathlib_modules": 0,
+      "novel_lines": 15384,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Formalism.LocalToGlobal",
+          148
+        ]
+      ]
+    },
+    {
+      "id": 50,
+      "novel_modules": 129,
+      "mathlib_modules": 0,
+      "novel_lines": 7759,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicSpectrum",
+          100
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          24
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          2
+        ]
+      ]
+    },
+    {
+      "id": 51,
+      "novel_modules": 124,
+      "mathlib_modules": 0,
+      "novel_lines": 8266,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AbelianVarietyTheory",
+          118
+        ],
+        [
+          "Formalism.DegreeFormula",
+          2
+        ],
+        [
+          "Formalism.SharpRestriction",
+          2
+        ]
+      ]
+    },
+    {
+      "id": 52,
+      "novel_modules": 108,
+      "mathlib_modules": 0,
+      "novel_lines": 9674,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicSpectrum",
+          106
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          1
+        ],
+        [
+          "Development.WeilBound",
+          1
+        ]
+      ]
+    },
+    {
+      "id": 53,
+      "novel_modules": 81,
+      "mathlib_modules": 0,
+      "novel_lines": 14133,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Formalism.SharpRestriction",
+          75
+        ],
+        [
+          "Formalism.ThetaLogCoordinates",
+          4
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          1
+        ]
+      ]
+    },
+    {
+      "id": 54,
+      "novel_modules": 72,
+      "mathlib_modules": 0,
+      "novel_lines": 10573,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [
+        [
+          "RingTheory",
+          6
+        ],
+        [
+          "FieldTheory",
+          1
+        ]
+      ],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicArithmetic",
+          49
+        ],
+        [
+          "Formalism.SharpRestriction",
+          23
+        ]
+      ]
+    },
+    {
+      "id": 55,
+      "novel_modules": 60,
+      "mathlib_modules": 0,
+      "novel_lines": 5126,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.EtaleCohomology",
+          56
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          4
+        ]
+      ]
+    },
+    {
+      "id": 56,
+      "novel_modules": 59,
+      "mathlib_modules": 0,
+      "novel_lines": 9583,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "PositivityTheory.AutomorphicForms",
+          58
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          1
+        ]
+      ]
+    },
+    {
+      "id": 57,
+      "novel_modules": 56,
+      "mathlib_modules": 0,
+      "novel_lines": 7631,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Formalism.PeriodIntegrals",
+          42
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          14
+        ]
+      ]
+    },
+    {
+      "id": 58,
+      "novel_modules": 47,
+      "mathlib_modules": 0,
+      "novel_lines": 4680,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicSpectrum",
+          37
+        ],
+        [
+          "Development.WeilBound",
+          9
+        ],
+        [
+          "Development.AutomorphicArithmetic",
+          1
+        ]
+      ]
+    },
+    {
+      "id": 59,
+      "novel_modules": 47,
+      "mathlib_modules": 0,
+      "novel_lines": 4976,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.WeilBound",
+          47
+        ]
+      ]
+    },
+    {
+      "id": 60,
+      "novel_modules": 40,
+      "mathlib_modules": 0,
+      "novel_lines": 3014,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Development.AutomorphicSpectrum",
+          37
+        ],
+        [
+          "Development.AbelianVarietyTheory",
+          3
+        ]
+      ]
+    },
+    {
+      "id": 61,
+      "novel_modules": 37,
+      "mathlib_modules": 0,
+      "novel_lines": 2559,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Formalism.PeriodIntegrals",
+          37
+        ]
+      ]
+    },
+    {
+      "id": 62,
+      "novel_modules": 35,
+      "mathlib_modules": 0,
+      "novel_lines": 3518,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Formalism.PeriodIntegrals",
+          35
+        ]
+      ]
+    },
+    {
+      "id": 63,
+      "novel_modules": 24,
+      "mathlib_modules": 0,
+      "novel_lines": 2487,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Formalism.PeriodIntegrals",
+          24
+        ]
+      ]
+    },
+    {
+      "id": 64,
+      "novel_modules": 19,
+      "mathlib_modules": 0,
+      "novel_lines": 2585,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "ReciprocityTheory.ReducedBases",
+          9
+        ],
+        [
+          "ReciprocityTheory.ReductiveGroups",
+          9
+        ],
+        [
+          "Lemmata.GeneralBFactExtra",
+          1
+        ]
+      ]
+    },
+    {
+      "id": 65,
+      "novel_modules": 15,
+      "mathlib_modules": 0,
+      "novel_lines": 1975,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "Formalism.LocalToGlobal",
+          15
+        ]
+      ]
+    },
+    {
+      "id": 66,
+      "novel_modules": 13,
+      "mathlib_modules": 0,
+      "novel_lines": 4776,
+      "mathlib_lines": 0,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": [
+        [
+          "GroundTheory.PAdicHodge",
+          13
+        ]
+      ]
+    },
+    {
+      "id": 67,
+      "novel_modules": 0,
+      "mathlib_modules": 11,
+      "novel_lines": 0,
+      "mathlib_lines": 4294,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 68,
+      "novel_modules": 0,
+      "mathlib_modules": 3,
+      "novel_lines": 0,
+      "mathlib_lines": 403,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 69,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 76,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 70,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 107,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 71,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 41,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 72,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 33,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 73,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 19,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 74,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 10,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 75,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 192,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 76,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 8,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 77,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 515,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 78,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 55,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 79,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 411,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 80,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 86,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    },
+    {
+      "id": 81,
+      "novel_modules": 0,
+      "mathlib_modules": 1,
+      "novel_lines": 0,
+      "mathlib_lines": 552,
+      "mathlib_member_areas": [],
+      "explicit_area_edges": [],
+      "novel_prefixes": []
+    }
+  ]
+}
