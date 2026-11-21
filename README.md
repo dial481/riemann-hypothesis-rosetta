@@ -10,6 +10,7 @@ AI drafted the mathematical reading notes from the pinned source. They are start
 |---|---|
 | How is the archive organized? | [Structural report and complete ranked list](results/REPORT.md) · [Import map](results/import-map.svg) |
 | Why read a particular file, and at what line? | [200 annotated modules](results/SPINE.md) · [Machine-readable ranks and evidence](results/spine.tsv) · [Complete RH witness chains](results/spine-witnesses.json.gz) |
+| What did the follow-up review find? | [Graph audit and resolver correction](results/review/2026-11-21.md) · [New community work and reading leads](results/surveys/2026-11-21.md) |
 | How well do the reading trails agree with compiled evidence? | [Cross-validation and investigation list](results/comparison.md) · [Checks for each of the 200](results/comparison-spine.tsv) |
 | What imports what? | [JSON adjacency list](results/imports.json.gz) · [Module inventory with paths, line counts and hashes](results/inventory.tsv.gz) |
 | Which files are hubs, bottlenecks or unreachable? | [Per-module graph metrics](results/metrics.tsv.gz) · [Longest paths](results/longest-paths.json) · [Unreachable files](results/unreachable.tsv.gz) |

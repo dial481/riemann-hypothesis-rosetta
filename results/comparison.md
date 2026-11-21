@@ -2,7 +2,7 @@
 
 **Both compiled RH datasets contain all 200 independently chosen starting declarations, at their cited source locations.** The Proofs & Reasons graph also contains every direct step in **198 of the 200** source trails. In the two exceptions the starting declaration is used by RH, and the particular route from our source scan includes one direct edge absent from that graph. [Per-entry results](comparison-spine.tsv) · [Direct-edge checks](comparison-witness-edges.tsv) · [Alternative compiled trails](comparison-alternative-paths.json)
 
-The source scan, graph partitions, ranking, annotations and witness paths were completed and committed in `aca7e1830b22c913bd9658c3f38e82128539beea` before these comparison inputs were downloaded. The comparison verifies every frozen checksum before and after it runs. The comparisons below leave the independent ranking intact. [Frozen hashes](independent-sha256.json) · [Comparison data and input hashes](comparison.json)
+The original independent results were committed before the comparison inputs were downloaded. A subsequent audit of explicitly global names in our own trace identified three misresolved references. The corrected source-only outputs were frozen in `05f7faa` and then compared afresh with the same four digest-pinned inputs. Both versions remain available. [Original independent snapshot](https://github.com/dial481/riemann-hypothesis-rosetta/tree/aca7e1830b22c913bd9658c3f38e82128539beea/results) · [Corrected independent snapshot](https://github.com/dial481/riemann-hypothesis-rosetta/tree/05f7faa030529eccafb8e48ef826960462606422/results) · [Audit and change in membership](review/2026-11-21.md) · [Comparison data and input hashes](comparison.json)
 
 ## Scope and identity
 
@@ -12,22 +12,22 @@ The independent source scan begins at the one declaration `riemannHypothesis`. S
 |---|---:|---:|---:|
 | Named project declarations reached | 641,100 | 804,891 | 806,982 |
 | Project files containing one of those declarations | 134,176 | 146,284 | 146,352 |
-| Named declarations shared with Rosetta | — | 638,751 | 638,818 |
-| Declarations in Rosetta only, relative to this comparator | — | 2,349 | 2,282 |
-| Declarations in the comparator only, relative to Rosetta | — | 166,140 | 168,164 |
+| Named declarations shared with Rosetta | — | 638,752 | 638,819 |
+| Declarations in Rosetta only, relative to this comparator | — | 2,348 | 2,281 |
+| Declarations in the comparator only, relative to Rosetta | — | 166,139 | 168,163 |
 | Comparator project files outside Main’s import closure | — | 0 | 0 |
 
 The import census accounts for **all 175,187 project files**. Shore identifies uses of Mathlib constants in **5,081** modules for RH, all inside Rosetta’s **8,312** reachable Mathlib source modules. Imported files can supply tactics, notation, transitive imports, declarations for other targets or declarations simply unused by RH. Module reachability alone cannot decide which reason applies. [Import inventory](inventory.tsv.gz) · [Shore v0.2.1 release](https://github.com/james-shore/rh-proof-dependencies/releases/tag/v0.2.1)
 
-Over **99.6%** of our named sites are present in each compiled dataset. The trace recovers **79.4%** of Shore’s RH set and **79.2%** of Proofs & Reasons’ RH set. Of the three-way discrepancies, **2,234** sites appear only in our trace and **166,099** appear in both compiled graphs but are missing from ours. The two compiled sets share **804,802** site identities, with **89** unique to Shore and **2,180** unique to Proofs & Reasons under our join. Possible contributors include auxiliary folding and source ownership. Individual disagreements remain available for investigation. [All discrepant site identities and membership flags](comparison-disagreements.tsv.gz)
+Over **99.6%** of our named sites are present in each compiled dataset. The trace recovers **79.4%** of Shore’s RH set and **79.2%** of Proofs & Reasons’ RH set. Of the three-way discrepancies, **2,233** sites appear only in our trace and **166,098** appear in both compiled graphs but are missing from ours. The two compiled sets share **804,802** site identities, with **89** unique to Shore and **2,180** unique to Proofs & Reasons under our join. Possible contributors include auxiliary folding and source ownership. Individual disagreements remain available for investigation. [All discrepant site identities and membership flags](comparison-disagreements.tsv.gz)
 
 | Shore target | Published declarations | Reconstructed from target mask | Shared with our RH-only trace |
 |---|---:|---:|---:|
-| riemannHypothesis | 804,891 | 804,891 | 638,751 |
-| riemannZeta_eq_zero_re | 804,892 | 804,892 | 638,750 |
-| LFunction_ne_zero_of_half_lt_re | 804,889 | 804,889 | 638,747 |
-| LFunction_eq_zero_re | 804,899 | 804,899 | 638,747 |
-| LFunction_eq_zero_re_of_isPrimitive | 804,892 | 804,892 | 638,747 |
+| riemannHypothesis | 804,891 | 804,891 | 638,752 |
+| riemannZeta_eq_zero_re | 804,892 | 804,892 | 638,751 |
+| LFunction_ne_zero_of_half_lt_re | 804,889 | 804,889 | 638,748 |
+| LFunction_eq_zero_re | 804,899 | 804,899 | 638,748 |
+| LFunction_eq_zero_re_of_isPrimitive | 804,892 | 804,892 | 638,748 |
 
 The overlap column uses the same independent RH trace in every row. The other four rows show how closely Shore’s five targets overlap with that one trace. [Published per-theorem counts](https://github.com/james-shore/rh-proof-dependencies/blob/v0.2.1/data/per-theorem.tsv)
 
@@ -56,6 +56,6 @@ The atlas labels 85 edges as calls. For **74**, both endpoints are in the Proofs
 ## Investigation list
 
 1. Inspect term-level ownership of the two disputed direct edges above. Both target anchors already have independently published compiled RH paths.
-2. Trace the source-only 2,234 sites and the 166,099 missed by the lexical resolver but reported by both compiled sources. The two atlas cases give reproducible fixtures for improving the next independent parser version.
+2. Trace the source-only 2,233 sites and the 166,098 missed by the lexical resolver but reported by both compiled sources. The two atlas cases give reproducible fixtures for improving the next independent parser version.
 3. Audit the **2,269** names on which the two compiled datasets differ before using either as a complete ground truth. The membership flags preserve both accounts.
 4. Review mathematical-area labels for communities dominated by umbrella imports. A centrality rank and a one-line source note are entry points for a mathematician’s review. [Independent community profiles](communities.json)

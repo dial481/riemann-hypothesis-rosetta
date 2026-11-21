@@ -8,6 +8,8 @@ import sys
 from array import array
 from collections import defaultdict
 from pathlib import Path
+from tempfile import TemporaryDirectory
+from urllib.request import urlretrieve
 
 from check import verify_frozen
 from common import PROJECT, RESULTS, digest, put_json, read_rows, table
@@ -36,6 +38,20 @@ def compare_sets(a, b):
             "theirs_only": len(b - a)}
 
 
+def check_input(file, sha, url, fetch):
+    if file.is_file() and digest(file) == sha:
+        return
+    if not fetch:
+        raise ValueError(f"Missing or incorrect comparison input: {file}")
+    file.parent.mkdir(parents=True, exist_ok=True)
+    with TemporaryDirectory(dir=file.parent) as temp:
+        downloaded = Path(temp) / "download"
+        urlretrieve(url, downloaded)
+        if digest(downloaded) != sha:
+            raise ValueError(f"Unexpected digest for downloaded input: {file.name}")
+        downloaded.replace(file)
+
+
 def main():
     cli = argparse.ArgumentParser()
     cli.add_argument("evidence_dir", type=Path)
@@ -43,13 +59,7 @@ def main():
     a = cli.parse_args()
     verify_frozen()
     for name, (sha, url) in URLS.items():
-        file = a.evidence_dir / name
-        if not file.exists() and a.fetch:
-            import urllib.request
-            file.parent.mkdir(parents=True, exist_ok=True)
-            urllib.request.urlretrieve(url, file)
-        if digest(file) != sha:
-            raise ValueError(f"Unexpected external artifact: {name}")
+        check_input(a.evidence_dir / name, sha, url, a.fetch)
     ours = {site(r["module"], r["name"]): int(r["line"]) for r in read_rows(RESULTS / "rh-trace.tsv.gz")}
     ours_set = set(ours)
     spine = list(read_rows(RESULTS / "spine.tsv"))
