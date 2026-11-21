@@ -114,18 +114,18 @@ def main():
                 by_name[key] = idx
     print(f"indexed {len(decls):,} named declaration sites", flush=True)
     def resolve(token, cur):
-        token = token.removeprefix("_root_.")
-        tail = token.rsplit(".", 1)[-1]
-        if tail not in tails or ("." not in token and len(token) < 4):
+        if token.rsplit(".", 1)[-1] not in tails or ("." not in token and len(token) < 4):
             return None
         # Dotted literals can also be relative inside a namespace. Any competing
         # visible matches are grounds to omit the edge.
-        options = set()
-        for space in ancestors(cur.ns):
-            options.add(scope(space, token))
-        for opened in cur.opens:
+        if token.startswith("_root_."):
+            options = {token.removeprefix("_root_.")}
+        else:
+            options = set()
             for space in ancestors(cur.ns):
-                options.add(scope(scope(space, opened), token))
+                options.add(scope(space, token))
+                for opened in cur.opens:
+                    options.add(scope(scope(space, opened), token))
         hits = []
         for k in options:
             match = by_name.get(k)

@@ -11,10 +11,19 @@ import networkx as nx
 from common import RESULTS, archive_data, digest, imports, put_json, read_rows
 
 FREEZE = "independent-sha256.json"
+ARTIFACTS = (
+    "REPORT.md", "SPINE.md", "combined-communities.json", "combined-membership.tsv.gz",
+    "communities.json", "directories.tsv.gz", "external.tsv", "family-edges.tsv",
+    "import-map.svg", "imports.json.gz", "inventory.tsv.gz", "longest-paths.json",
+    "metrics.tsv.gz", "provenance.json", "rh-trace.tsv.gz", "spine-witnesses.json.gz",
+    "spine.tsv", "structure.json", "trace-summary.json", "unreachable.tsv.gz",
+)
 
 
 def verify_frozen():
     manifest = json.loads((RESULTS / FREEZE).read_text())
+    if set(manifest) != set(ARTIFACTS):
+        raise ValueError("The independent manifest has missing or extra artifacts")
     for name, expected in manifest.items():
         if digest(RESULTS / name) != expected:
             raise ValueError(f"Independent output changed: {name}")
@@ -113,10 +122,13 @@ def main():
             assert step["name"].split(".")[-1] in lines(step["path"])[step["line"] - 1]
         for a, b in zip(chain, chain[1:]):
             assert b["token_in_caller"] in lines(a["path"])[b["caller_use_line"] - 1]
+    for row in read_rows(RESULTS / "rh-trace.tsv.gz"):
+        token = row["token"]
+        if token.startswith("_root_.") and row["name"] != token.removeprefix("_root_."):
+            raise ValueError(f"Global name {token} resolved to {row['name']}")
     print(f"Verified archive imports ({count:,} occurrences), three path lengths, five cuts, and 200 source trails.")
     if args.freeze:
-        files = sorted(p for p in RESULTS.iterdir() if p.is_file() and p.name != FREEZE and not p.name.startswith("comparison"))
-        put_json(RESULTS / FREEZE, {p.name: digest(p) for p in files})
+        put_json(RESULTS / FREEZE, {name: digest(RESULTS / name) for name in ARTIFACTS})
 
 
 if __name__ == "__main__":

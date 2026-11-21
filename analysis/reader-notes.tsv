@@ -1,5 +1,5 @@
 module	anchor	description
-Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.RowSrc	UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter	Supplies the local–global Galois parameter used by the every-character theorem by applying a theta-lift result.
+Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.RowSrc	UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter	Applies theta lifting to obtain the local–global existence and compatibility theorem for Galois representations used in Dirichlet L-function nonvanishing.
 Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GaloisRepresentationsOfThetaLift	UpperTheory.Gal.Int.galoisRepresentations_of_thetaLift	Derives the local–global Galois parameter from a theta lift and the weight-one geometric realization.
 Formalism.LocalRingCardinality.RhoDetPrimeEqMuTildeMulChiPow	Formalism.BasicNotions.Loc.GoodCoef	Defines the coefficient-field condition that captures roots of unity of order dividing lcm(ℓ,N).
 Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.WeightOneGeometricRealization	UpperTheory.Gal.Int.Geo.geoOne_holds	Turns the weight-one realization into the geometric input consumed by the theta-lift argument.
