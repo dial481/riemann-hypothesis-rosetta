@@ -1,6 +1,5 @@
 """Cluster the entire two-tree source graph and draw its directory-level import map."""
 from collections import Counter
-from pathlib import Path
 
 import matplotlib
 matplotlib.use("Agg")

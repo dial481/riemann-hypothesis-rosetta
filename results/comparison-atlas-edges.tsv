@@ -1,0 +1,114 @@
+from	to	atlas_relation	pr_RH_status
+main-rh	rh-all	calls	direct
+main-zeta	rh-all	calls	outside RH graph
+main-right	all-chi	calls	outside RH graph
+main-strip	claim-all	calls	outside RH graph
+main-prim	crit-all	calls	outside RH graph
+rh-all	rh-every	calls	direct
+rh-all	all-chi	calls	direct
+all-chi	every	calls	direct
+crit-all	vw-crit	calls	outside RH graph
+crit-all	all-chi	calls	outside RH graph
+rh-every	rh-right	calls	direct
+vw-crit	gamma	calls	outside RH graph
+strip	prim-zero	calls	outside RH graph
+strip	prim-reflect	calls	outside RH graph
+prim-zero	factor	calls	outside RH graph
+bundle-zeta	strip	calls	outside RH graph
+every	from-row	calls	direct
+every	row-prod	calls	direct
+from-row	rec	calls	direct
+from-row	lit	calls	direct
+from-row	vwin-row	calls	direct
+row-prod	row-geo	calls	direct
+row-prod	tlift	calls	direct
+row-geo	geo-one	calls	direct
+lit	seven	calls	direct
+lit	theta-match	calls	direct
+lit	covol	calls	direct
+seven	every-green	calls	direct
+seven	definite	calls	direct
+every-green	imprimitive	calls	direct
+every-green	zero-green	calls	direct
+zero-green	zero-top	calls	direct
+zero-green	shape	calls	direct
+zero-green	supply	calls	direct
+shape	family-design	calls	direct
+family-design	divin	calls	direct
+divin	vv-sum	calls	direct
+vwin-row	window-inputs	calls	direct
+window-inputs	depth-window	calls	direct
+depth-window	lit-window	calls	direct
+lit-window	patch-window	calls	direct
+patch-window	four-produce	calls	direct
+four-produce	four-use	calls	direct
+zero-top	tied-cyc	calls	direct
+zero-top	prime-bound	calls	direct
+zero-top	form-b	calls	direct
+tied-cyc	tied	calls	direct
+tied	window-consumer	calls	direct
+prime-bound	artin-window	calls	direct
+artin-window	core-gm	calls	direct
+core-gm	ch-top	calls	direct
+core-gm	ch-core	calls	direct
+form-b	landau	calls	direct
+landau	landau-lemma	calls	direct
+landau-lemma	pole	calls	direct
+landau-lemma	oscillation	calls	direct
+lit	eigen-package	calls	direct
+lit	theta-package	calls	direct
+lit	hodge-package	calls	direct
+lit	local-rec	calls	direct
+local-rec	local-rec-proj	calls	direct
+seven	green	calls	direct
+seven	linked-two-three	calls	direct
+zero-green	goal-shape	calls	direct
+goal-shape	shape-fields	calls	direct
+from-row	open-record	statement	direct
+local-rec-proj	open-record	statement	direct
+tlift	tlift-def	statement	direct
+claim-all	all-chi	bundle-field	outside RH graph
+claim-all	strip	bundle-field	outside RH graph
+claim-all	bundle-zeta	bundle-field	outside RH graph
+main-rh	stmt-zeta	statement	outside RH graph
+main-zeta	stmt-zeta	statement	outside RH graph
+main-right	stmt-right	statement	outside RH graph
+main-strip	stmt-strip	statement	outside RH graph
+main-prim	stmt-prim	statement	outside RH graph
+row-prod	row-def	statement	direct
+core-gm	g-m	statement	direct
+window-consumer	window-def	statement	direct
+seven	vwin-def	statement	no direct edge
+supply	vwin-def	statement	direct
+four-use	vwin-def	statement	no direct edge
+vv-sum	vv	statement	direct
+rh-every	alternate-rh	alternative	outside RH graph
+divin	minor	support	no direct edge
+definite	empty-data	support	no direct edge
+covol	slope	support	no direct edge
+family-design	rank	support	no direct edge
+paper-chain	rank	analogy	concept endpoint
+paper-behrend	behrend	analogy	concept endpoint
+four-produce	tower-fixed-growth	calls	direct
+four-produce	counts-i	calls	direct
+four-produce	counts-ii-iii	calls	direct
+four-produce	counts-v	calls	direct
+four-use	tower-window-from-lemma-k	calls	direct
+four-use	tower-class-rank	calls	direct
+four-use	counts-window	calls	direct
+tower-window-from-lemma-k	tower-bound-from-rank	calls	direct
+tower-window-from-lemma-k	tower-window-constants	calls	direct
+tower-bound-from-rank	tower-operator-bound	calls	direct
+counts-i	counts-common-integer	calls	direct
+counts-window	counts-joint	calls	direct
+counts-joint	counts-height	calls	direct
+counts-height	counts-pointwise	calls	direct
+counts-pointwise	counts-inside	calls	direct
+counts-pointwise	counts-outside	calls	direct
+tower-window-from-lemma-k	tower-class-rank	support	no direct edge
+counts-inside	tower-window-constants	support	no direct edge
+moment-theorem	moment-calculation	calls	direct
+moment-calculation	moment-majorant	calls	direct
+moment-calculation	moment-dominated	calls	direct
+moment-calculation	moment-laurent	calls	direct
+moment-theorem	moment-target	statement	direct

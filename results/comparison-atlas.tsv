@@ -1,0 +1,108 @@
+atlas_id	component	module	declaration	atlas_line	our_trace_line	shore_RH	pr_RH	spine_module
+main-rh	endpoints	Main	riemannHypothesis	4	4	1	1	0
+main-zeta	endpoints	Main	riemannZeta_eq_zero_re	6		0	0	0
+main-right	endpoints	Main	LFunction_ne_zero_of_half_lt_re	8		0	0	0
+main-strip	endpoints	Main	LFunction_eq_zero_re	10		0	0	0
+main-prim	endpoints	Main	LFunction_eq_zero_re_of_isPrimitive	12		0	0	0
+stmt-zeta	endpoints	Statements	RiemannZetaZerosOnLine	3		0	0	0
+stmt-right	endpoints	Statements	DirichletLNonvanishingRightOfHalf	6		0	0	0
+stmt-strip	endpoints	Statements	DirichletLZerosOnLine	10		0	0	0
+stmt-prim	endpoints	Statements	PrimitiveDirichletLZerosOnLine	14		0	0	0
+g-m	statistic	Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.ExplicitFormulaErrorOfHostConditions	Formalism.HC.Level.Gm	38	38	1	1	0
+window-def	statistic	Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.TopWin	Formalism.HC.ChebyshevInequalityAtWindowScale	30	30	1	1	0
+vv	cohomology	Development.AutomorphicArithmetic.CharacterBoxes.ExistsPageN	UpperTheory.Top.VVle	12	12	1	1	0
+vwin-def	cohomology	Development.AutomorphicArithmetic.CharacterBoxes.ExistsPageN	UpperTheory.Top.VWinAt	44	44	1	1	0
+row-def	galois	Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.TypeConditions.WeightsConjBis	UpperTheory.GalStar.Row0b	69	69	1	1	0
+rh-all	endpoints	Supplements.Kernels.MainTheorems	rhOfAll	9	9	1	1	1
+all-chi	endpoints	Supplements.Kernels.MainTheorems	allChi	7	7	1	1	1
+crit-all	endpoints	Supplements.Kernels.MainTheorems	critAll	11		0	0	1
+claim-all	endpoints	Supplements.Kernels.MainTheorems	claimAll	15		0	0	1
+rh-every	reflection	Formalism.GammaFactorNonvanishing.CritLine	Formalism.VW.rh_of_every	29	29	1	1	0
+rh-right	reflection	Formalism.GammaFactorNonvanishing.RhOfRight	Formalism.VW.rh_of_right	5	5	1	1	0
+vw-crit	reflection	Formalism.GammaFactorNonvanishing.CritLine	Formalism.VW.critLine	11		0	0	0
+gamma	reflection	Formalism.GammaFactorNonvanishing.CritLine	Formalism.VW.gammaFactor_ne_zero	6		0	0	0
+strip	reflection	Development.AutomorphicArithmetic.CharacterBoxes.ClaimStrip	Claim.strip	59		0	0	0
+prim-zero	descent	Development.AutomorphicArithmetic.CharacterBoxes.ClaimStrip	Claim.prim_zero	23		0	0	0
+factor	descent	Development.AutomorphicArithmetic.CharacterBoxes.ClaimStrip	Claim.factor_ne_zero	7		0	0	0
+prim-reflect	reflection	Development.AutomorphicArithmetic.CharacterBoxes.ClaimStrip	Claim.prim_reflect	42		0	0	0
+bundle-zeta	reflection	Development.AutomorphicArithmetic.CharacterBoxes.ClaimStrip	Claim.zeta	75		0	0	0
+every	inputs	Development.AutomorphicArithmetic.CharacterBoxes.MainConclusion	UpperTheory.FinalTheorems.everyCharacter	10	10	1	1	1
+from-row	inputs	Development.AutomorphicArithmetic.CharacterBoxes.MainConclusion	UpperTheory.FinalTheorems.everyCharacter_of_row	7	7	1	1	1
+row-prod	galois	Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.RowSrc	UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter	6	6	1	1	1
+row-geo	galois	Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GaloisRepresentationsOfThetaLift	UpperTheory.Gal.Int.galoisRepresentations_of_thetaLift	6	6	1	1	1
+tlift	galois	Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.ThetaKernels.TLiftK	UpperTheory.TP.K.tLiftK	4	4	1	1	1
+geo-one	galois	Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.GeometricFlagBases.WeightOneGeometricRealization	UpperTheory.Gal.Int.Geo.geoOne_holds	11	11	1	1	1
+rec	inputs	Development.AutomorphicArithmetic.Foundations.LocalLanglands.LocalCentralUnits.RecTExists	UpperTheory.Zero.LLC.recTExists	20	20	1	1	0
+lit	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin	UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin	810	810	1	1	1
+open-record	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin	UpperTheory.LiteratureTheorems.OpenLiteratureStatements	215	215	1	1	1
+eigen-package	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin	UpperTheory.LiteratureTheorems.published_results_eigen	666	666	1	1	1
+theta-package	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin	UpperTheory.LiteratureTheorems.published_results_first	727	727	1	1	1
+hodge-package	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin	UpperTheory.LiteratureTheorems.published_results_arithmetic	781	781	1	1	1
+local-rec	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin	UpperTheory.LiteratureTheorems.local_langlands_gl_recT_exists_of_literature	313	313	1	1	1
+local-rec-proj	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin	UpperTheory.LiteratureTheorems.local_langlands_recT_exists_of_literature	283	283	1	1	1
+green	inputs	Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SumRangeEqRoots	GlobalTheory.GreenBridge.green_of_regular	225	225	1	1	0
+linked-two-three	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.At23OfAll	UpperTheory.N.boundAtTwoThree_linked_of_recT	24	24	1	1	0
+goal-shape	family	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ShapeOf	GlobalTheory.Fc.forall_goal_of_shape_of_hyps	31	31	1	1	0
+shape-fields	family	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ShapeOf	GlobalTheory.Fc.goal_of_shape_of_hyps	24	24	1	1	0
+tlift-def	galois	Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.TLiftK	UpperTheory.TP.TLiftK	12	12	1	1	0
+theta-match	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin	UpperTheory.LiteratureTheorems.theta_integrals_agree_and_local_matching_of_literature	565	565	1	1	1
+covol	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TopCovolSlim2Use	SelfIntersectionVolumeEstimates.topCovolSlim2_use_alt_alt	16	16	1	1	0
+seven	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SiegelEisensteinSecondTermHypotheses	UpperTheory.Lit.every_character_of_theta_integrals_local_matching	69	69	1	1	1
+definite	inputs	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SiegelEisensteinSecondTermHypotheses	UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound	44	44	1	1	1
+every-green	descent	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TopPlug	UpperTheory.Top.every_character_of_green_v_win	16	16	1	1	0
+imprimitive	descent	Development.AutomorphicArithmetic.CharacterBoxes.Imprimitive	UpperTheory.Top.imprimitive	5	5	1	1	0
+zero-green	choreography	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TopPlug	UpperTheory.Top.zero_free_all_of_green_v_win	12	12	1	1	0
+shape	family	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TopShape	UpperTheory.Top.shape_closed_link_n_of_green	33	33	1	1	0
+family-design	family	Development.AutomorphicArithmetic.CharacterBoxes.DesWin	UpperTheory.Top.topDesWin	11	11	1	1	0
+divin	family	Development.AutomorphicArithmetic.CharacterBoxes.DivinNOfHypV	UpperTheory.Top.divinN_of_hypV	117	117	1	1	0
+vv-sum	family	Development.AutomorphicArithmetic.CharacterBoxes.DivinNOfHypV	UpperTheory.Top.vvRecord	17	17	1	1	0
+supply	hosts	Development.AutomorphicArithmetic.CharacterBoxes.SupplyChi	UpperTheory.Top.supplyChi	8	8	1	1	0
+vwin-row	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.VwinOfRow	UpperTheory.One.vwin_of_row	4	4	1	1	0
+window-inputs	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TopMainZj	UpperTheory.One.Join.automorphic_window_of_inputs	71	71	1	1	1
+depth-window	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TopMainZj	UpperTheory.One.Join.v_window_of_depth_zero_residual_bc_cm	55	55	1	1	1
+lit-window	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.WindowBoundOfLiteratureLevel	UpperTheory.V.v_window_of_literal_automorphy_n	33	33	1	1	1
+patch-window	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.WindowBoundOfLiteratureLevel	UpperTheory.V.HV.DescentVanishingReductions.v_window_of_automorphy_csd_ss_mono_odd	30	30	1	1	1
+four-produce	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.WindowBoundOfLiteratureLevel	UpperTheory.V.HV.DescentVanishingReductions.vwin_of_hypotheses_H_E_alt	25	25	1	1	1
+four-use	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.HVCore	UpperTheory.V.HV.Core.of_four_alt	18	18	1	1	0
+zero-top	choreography	Development.AutomorphicArithmetic.CharacterBoxes.ZeroFreeAllOfTopG	UpperTheory.Top.zeroFreeAll_of_topG	26	26	1	1	0
+tied-cyc	choreography	Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.TopWin	Formalism.HC.zeroFreeOn_of_tiedWin_cyc	90	90	1	1	0
+tied	choreography	Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.TopWin	Formalism.HC.zeroFreeOn_of_tiedWin	83	83	1	1	0
+window-consumer	choreography	Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.TopWin	Formalism.HC.level_of_tiedWin	68	68	1	1	0
+prime-bound	comparison	Development.AutomorphicArithmetic.PrimitiveCosets.LevelGmLeOnFamilyScales	UpperTheory.Comparison₂.level_gm_le_on_family_scales	28	28	1	1	0
+artin-window	comparison	Development.AutomorphicArithmetic.PrimitiveCosets.WindowInequalityOfArtinInputs	UpperTheory.Comparison₂.windowInequality_of_artinInputs	17	17	1	1	0
+core-gm	comparison	Development.AutomorphicArithmetic.PrimitiveCosets.CoreGm	UpperTheory.Comparison₂.core_gm	12	12	1	1	0
+ch-top	comparison	Development.AutomorphicArithmetic.DedekindLFunctions.LandauTheorems.ChTop	Deduction.ch_top	37	37	1	1	0
+ch-core	comparison	Development.AutomorphicArithmetic.DedekindLFunctions.LandauTheorems.ChCore	Deduction.ch_core	343	343	1	1	0
+form-b	criterion	Development.AutomorphicArithmetic.PrimitiveCosets.Imports	UpperTheory.Comparison₂.formB	8	8	1	1	0
+landau	criterion	Development.AutomorphicArithmetic.DedekindLFunctions.LandauTheorems.ZeroFreeOfRpowWindow	Deduction.zeroFree_of_rpow_window	11	11	1	1	0
+landau-lemma	criterion	Development.AutomorphicArithmetic.DedekindLFunctions.LandauTheorems.lemmaL	Deduction.lemmaL	13	13	1	1	0
+pole	residues	Development.AutomorphicArithmetic.DedekindLFunctions.LandauTheorems.poleData	Deduction.poleData	248	248	1	1	0
+oscillation	criterion	Development.AutomorphicArithmetic.DedekindLFunctions.LandauTheorems.landauWindow	Deduction.landau_window	83	83	1	1	0
+alternate-rh	reflection	Development.AutomorphicArithmetic.CharacterBoxes.RiemannHypothesisOfEveryCharacter	UpperTheory.riemannHypothesis_of_everyCharacter	215		0	0	0
+rank	family	Development.AbelianVarietyTheory.Definitions.GlobalTwisting.PairRowIffQdRows	GlobalTheory.EX.RankVal	28	28	1	1	0
+minor	family	Formalism.SharpRestriction.GrowthBounds.CoarseMultiplicity.KeyMinorDvd	Formalism.MainNotions.ColumnSystems.Pf.key_minor_dvd	132	132	1	1	0
+behrend	primes	Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.ThickExists	Formalism.FrobeniusOrbits.ThickExists.noRel_image	85		1	1	0
+empty-data	family	Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.VolLevMulWtMid	GlobalTheory.Fam.volLev_mul_wt_mid_alt	24	24	1	1	0
+slope	family	Formalism.LatticeSlopes.LatticeSlopesProofs.SlopeInequality	Formalism.F.slopeInequality_of	111	111	1	1	0
+tower-window-from-lemma-k	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.LayeredIsomorphisms.ThmBabOfLemmaK	UpperTheory.V.Win.thmBab_of_lemmaK	9	9	1	1	0
+tower-window-constants	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.LayeredIsomorphisms.ThmBabOf	UpperTheory.V.Win.thmBab_of	11	11	1	1	0
+tower-bound-from-rank	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.ABoundOfIsTower	UpperTheory.V.PropA.aBound_of_isTower	7	7	1	1	0
+tower-operator-bound	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.AdditiveValuationNorms.ABoundOfDescends	UpperTheory.V.PropA.aBound_of_descends	36	36	1	1	0
+tower-class-rank	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.FerreroWashingtonIndex.FerreroWashington	UpperTheory.V.FW.ferreroWashington	104	104	1	1	0
+tower-fixed-growth	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.KFinal	UpperTheory.V.ZK.lemmaK_litN_alt	11	11	1	1	0
+counts-i	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.LinkedUnlE	UpperTheory.V.Z.J.count_i_of_printed_bound_k_kato_automorphy	49	49	1	1	0
+counts-ii-iii	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.AdjointLiftingOfCohomology	UpperTheory.V.HV.DescentVanishingReductions.countII_and_countIII_of_printsH_of_sp4In	33	33	1	1	0
+counts-v	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.LinkedUnlE	UpperTheory.V.Z.J.count_v_of_printed_bound_k_reduced_unitary_lift	55	55	1	1	0
+counts-common-integer	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.FPropGKU	UpperTheory.V.Z.J.propGK_of_numberU3U_of_oneCharU	110	110	1	1	0
+counts-window	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.JointWinOfCounts	UpperTheory.V.HV.vwin_of_counts	30	30	1	1	0
+counts-joint	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.JointWinOfCounts	UpperTheory.V.HV.jointWin_of_counts	25	25	1	1	0
+counts-height	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.JointWinOfCounts	UpperTheory.V.HV.thmHV_of_counts	20	20	1	1	0
+counts-pointwise	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.JointWinOfCounts	UpperTheory.V.HV.pointHV_of_counts	16	16	1	1	0
+counts-inside	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.FinalLe	UpperTheory.V.HV.sumIn	86	86	1	1	0
+counts-outside	cohomology	Development.AutomorphicArithmetic.AutomorphicVarieties.HeightAndVanishing.SumOut	UpperTheory.V.HV.sumOut	50	50	1	1	0
+moment-target	statistic	Formalism.GL3MeanSquares.PrimeCountAsymptoticInProgressions	Formalism.HermitianLattices.GL2a2.PsiZeroConst	18	18	1	1	0
+moment-theorem	statistic	Formalism.GL3MeanSquares.HookFormulaTorsion.PsiZeroIntegral	Formalism.HermitianLattices.GL2a2.psi_zero_integral_constant	530	530	1	1	0
+moment-calculation	statistic	Formalism.GL3MeanSquares.HookFormulaTorsion.PsiZeroIntegral	Formalism.HermitianLattices.P.PsiZeroIntegral.psiZeroConst_main	423	423	1	1	0
+moment-majorant	statistic	Formalism.GL3MeanSquares.HookFormulaTorsion.PsiZeroIntegral	Formalism.HermitianLattices.P.PsiZeroIntegral.sw_bound	279	279	1	1	0
+moment-dominated	statistic	Formalism.GL3MeanSquares.HookFormulaTorsion.PsiZeroIntegral	Formalism.HermitianLattices.P.PsiZeroIntegral.core_tendsto	157	157	1	1	0
+moment-laurent	statistic	Formalism.GL3MeanSquares.HookFormulaTorsion.PsiZeroIntegral	Formalism.HermitianLattices.P.PsiZeroIntegral.zeta_logderiv_limit	216		1	1	0

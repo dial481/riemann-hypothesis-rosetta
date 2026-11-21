@@ -1,0 +1,102 @@
+{
+  "input_sha256": {
+    "shore/constants.csv.gz": "2964f5236046325ac7884906cb9517b0aa582330dd48a07eef291cb579444820",
+    "shore/per-theorem.tsv": "dc74e65916b6b945be788657001859eb7f1666c863e10d92c5c8ef0be1651606",
+    "pr-graph.json.gz": "82c88d25d909a1399c754b87ce298e1939ab0908aeb4766fdac8a57387c71dc5",
+    "atlas/data/model.json": "8c85bd83b65afa31e330392acd81124397815d6d072a51dca19633936c4af544"
+  },
+  "own_source_sites": 641100,
+  "shore_sites": {
+    "ours": 641100,
+    "theirs": 804891,
+    "shared": 638751,
+    "ours_only": 2349,
+    "theirs_only": 166140
+  },
+  "pr_sites": {
+    "ours": 641100,
+    "theirs": 806982,
+    "shared": 638818,
+    "ours_only": 2282,
+    "theirs_only": 168164
+  },
+  "shore_vs_pr_sites": {
+    "ours": 804891,
+    "theirs": 806982,
+    "shared": 804802,
+    "ours_only": 89,
+    "theirs_only": 2180
+  },
+  "shore_modules": {
+    "ours": 134176,
+    "theirs": 146284,
+    "shared": 134043,
+    "ours_only": 133,
+    "theirs_only": 12241
+  },
+  "pr_modules": {
+    "ours": 134176,
+    "theirs": 146352,
+    "shared": 134047,
+    "ours_only": 129,
+    "theirs_only": 12305
+  },
+  "shore_modules_outside_imports": [],
+  "pr_modules_outside_imports": [],
+  "shore_mathlib_modules": 5081,
+  "reachable_mathlib_modules": 8312,
+  "shore_mathlib_outside_imports": [],
+  "shore_per_theorem": [
+    {
+      "theorem": "riemannHypothesis",
+      "published": 804891,
+      "from_mask": 804891,
+      "overlap_with_our_RH": 638751
+    },
+    {
+      "theorem": "riemannZeta_eq_zero_re",
+      "published": 804892,
+      "from_mask": 804892,
+      "overlap_with_our_RH": 638750
+    },
+    {
+      "theorem": "LFunction_ne_zero_of_half_lt_re",
+      "published": 804889,
+      "from_mask": 804889,
+      "overlap_with_our_RH": 638747
+    },
+    {
+      "theorem": "LFunction_eq_zero_re",
+      "published": 804899,
+      "from_mask": 804899,
+      "overlap_with_our_RH": 638747
+    },
+    {
+      "theorem": "LFunction_eq_zero_re_of_isPrimitive",
+      "published": 804892,
+      "from_mask": 804892,
+      "overlap_with_our_RH": 638747
+    }
+  ],
+  "pr_reported_nodes": 806982,
+  "pr_reported_edges": 8197610,
+  "spine_shore_anchors": 200,
+  "spine_pr_anchors": 200,
+  "both_spine_anchors": 200,
+  "pr_complete_chains": 198,
+  "pr_unique_edges": [
+    462,
+    460,
+    2,
+    0
+  ],
+  "atlas_pins": 107,
+  "atlas_modules": 64,
+  "atlas_modules_inside_imports": 64,
+  "atlas_spine_modules": 10,
+  "atlas_named_matches": 87,
+  "atlas_exact_lines": 87,
+  "atlas_components_with_trace": 13,
+  "atlas_components_with_spine": 4,
+  "atlas_component_count": 14
+}

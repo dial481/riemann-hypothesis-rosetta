@@ -5,7 +5,7 @@ This deliberately incomplete name resolver reads the original source only.
 import argparse
 import re
 import sys
-from collections import Counter, deque, namedtuple
+from collections import deque, namedtuple
 from functools import lru_cache
 from pathlib import Path
 

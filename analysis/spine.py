@@ -1,10 +1,9 @@
 """Fuse hub and cut rankings, then attach source witnesses and reader notes."""
 import argparse
-import csv
 from collections import Counter
 from pathlib import Path
 
-from common import PROJECT, RESULTS, put_json, read_rows, table
+from common import PROJECT, RESULTS, read_rows, table
 
 SOURCE = f"https://github.com/leanprover-community/riemann-hypothesis/blob/{PROJECT}/"
 

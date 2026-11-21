@@ -3,7 +3,6 @@ import argparse
 import gzip
 import json
 import re
-from collections import Counter
 from functools import lru_cache
 from pathlib import Path
 
@@ -22,9 +21,41 @@ def verify_frozen():
     return manifest
 
 
+def line_header(source):
+    """Independent line-oriented check of the headers in pinned Mathlib."""
+    depth = 0
+    names = []
+    for line in source.splitlines():
+        pos, visible = 0, []
+        for marker in re.finditer(r"/-|-/|--", line):
+            if not depth:
+                visible.append(line[pos:marker.start()])
+                if marker[0] == "--":
+                    pos = len(line)
+                    break
+            if marker[0] == "/-":
+                depth += 1
+            elif marker[0] == "-/" and depth:
+                depth -= 1
+            pos = marker.end()
+        if not depth:
+            visible.append(line[pos:])
+        words = " ".join(visible).split()
+        if not words or words in (["module"], ["prelude"]):
+            continue
+        if "import" not in words:
+            break
+        i = words.index("import")
+        if set(words[:i]) - {"private", "public", "meta"}:
+            break
+        names.extend(w for w in words[i+1:] if w != "all")
+    return names
+
+
 def main():
     cli = argparse.ArgumentParser()
     cli.add_argument("proof", type=Path)
+    cli.add_argument("--mathlib", type=Path)
     cli.add_argument("--freeze", action="store_true")
     args = cli.parse_args()
     adj, inv = archive_data()
@@ -60,6 +91,9 @@ def main():
             names = [s.decode() for s in re.findall(rb"^import ([^\s]+)[ \t]*$", data, flags=re.M)]
             assert len(names) == int(r["import_commands"]) and sorted(set(names)) == adj[m], m
             count += len(names)
+        elif args.mathlib:
+            names = line_header((args.mathlib / r["path"]).read_text())
+            assert len(names) == int(r["import_commands"]) and sorted(set(names)) == adj[m], m
     assert imports("/- /- import False -/ -/\nmodule\npublic meta import all Mathlib.X\n"
                    "-- import Nope\nimport «A».B\n#check \"import Ghost\"") == ["Mathlib.X", "A.B"]
     spine = list(read_rows(RESULTS / "spine.tsv"))
@@ -81,9 +115,7 @@ def main():
             assert b["token_in_caller"] in lines(a["path"])[b["caller_use_line"] - 1]
     print(f"Verified archive imports ({count:,} occurrences), three path lengths, five cuts, and 200 source trails.")
     if args.freeze:
-        files = sorted(p for p in RESULTS.iterdir() if p.is_file() and p.name != FREEZE)
-        if any(p.name.startswith("comparison") for p in files):
-            raise ValueError("Freeze the independent run in a clean results directory")
+        files = sorted(p for p in RESULTS.iterdir() if p.is_file() and p.name != FREEZE and not p.name.startswith("comparison"))
         put_json(RESULTS / FREEZE, {p.name: digest(p) for p in files})
 
 

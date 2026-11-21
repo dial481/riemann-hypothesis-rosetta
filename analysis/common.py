@@ -5,13 +5,14 @@ import gzip
 import hashlib
 import io
 import json
+import os
 import re
 from contextlib import contextmanager
 from pathlib import Path
 
 PROJECT = "40e56bab026552e089d7afcfeff08d2defb9c005"
 MATHLIB = "0df444a360eaa60ab8c11dca51a86af692955474"
-RESULTS = Path("results")
+RESULTS = Path(os.environ.get("ROSETTA_RESULTS", "results"))
 SEG = r"(?:«[^»\n]+»|[^\W\d][\w'₀-₉]*)"
 NAME = rf"{SEG}(?:\.{SEG})*"
 NAME_RE = re.compile(NAME)

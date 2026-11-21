@@ -1,0 +1,144 @@
+{
+  "Formalism.SatakeDualWeyl.Statement": [
+    {
+      "id": 773206,
+      "name": "riemannHypothesis",
+      "file": "Main.lean",
+      "line": 4
+    },
+    {
+      "id": 806981,
+      "name": "rhOfAll",
+      "file": "Supplements/Kernels/MainTheorems.lean",
+      "line": 9
+    },
+    {
+      "id": 806980,
+      "name": "allChi",
+      "file": "Supplements/Kernels/MainTheorems.lean",
+      "line": 7
+    },
+    {
+      "id": 389043,
+      "name": "UpperTheory.FinalTheorems.everyCharacter",
+      "file": "Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean",
+      "line": 10
+    },
+    {
+      "id": 389042,
+      "name": "UpperTheory.FinalTheorems.everyCharacter_of_row",
+      "file": "Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean",
+      "line": 7
+    },
+    {
+      "id": 425028,
+      "name": "UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin",
+      "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean",
+      "line": 810
+    },
+    {
+      "id": 427563,
+      "name": "UpperTheory.Lit.every_character_of_theta_integrals_local_matching",
+      "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean",
+      "line": 69
+    },
+    {
+      "id": 427562,
+      "name": "UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound",
+      "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean",
+      "line": 44
+    },
+    {
+      "id": 426691,
+      "name": "GlobalTheory.Glob.open_and_linked_of_stronger_extension_alt",
+      "file": "Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/OpenAndLinkedOfStrongerExtension.lean",
+      "line": 28
+    },
+    {
+      "id": 685368,
+      "name": "Formalism.MainNotions.S.AutInst",
+      "file": "Formalism/SharpRestriction/CuspSpanNormBounds/GlobAut.lean",
+      "line": 32
+    },
+    {
+      "id": 682460,
+      "name": "Formalism.UG.hform",
+      "file": "Formalism/SatakeDualWeyl/Statement.lean",
+      "line": 17
+    }
+  ],
+  "Formalism.GradedWeylDivisibility.FinalD": [
+    {
+      "id": 773206,
+      "name": "riemannHypothesis",
+      "file": "Main.lean",
+      "line": 4
+    },
+    {
+      "id": 806981,
+      "name": "rhOfAll",
+      "file": "Supplements/Kernels/MainTheorems.lean",
+      "line": 9
+    },
+    {
+      "id": 806980,
+      "name": "allChi",
+      "file": "Supplements/Kernels/MainTheorems.lean",
+      "line": 7
+    },
+    {
+      "id": 389043,
+      "name": "UpperTheory.FinalTheorems.everyCharacter",
+      "file": "Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean",
+      "line": 10
+    },
+    {
+      "id": 389042,
+      "name": "UpperTheory.FinalTheorems.everyCharacter_of_row",
+      "file": "Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean",
+      "line": 7
+    },
+    {
+      "id": 377416,
+      "name": "UpperTheory.One.vwin_of_row",
+      "file": "Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/VwinOfRow.lean",
+      "line": 4
+    },
+    {
+      "id": 393656,
+      "name": "UpperTheory.BaseChangeIdentities.baseChangeN",
+      "file": "Development/AutomorphicArithmetic/Foundations/BaseChangeIdentities/DefiniteNHolds.lean",
+      "line": 5
+    },
+    {
+      "id": 393657,
+      "name": "UpperTheory.BaseChangeIdentities.baseChangeN_of",
+      "file": "Development/AutomorphicArithmetic/Foundations/BaseChangeIdentities/FillPre.lean",
+      "line": 7
+    },
+    {
+      "id": 394202,
+      "name": "UpperTheory.BaseChangeIdentities.uSide",
+      "file": "Development/AutomorphicArithmetic/Foundations/BaseChangeIdentities/USideFree.lean",
+      "line": 10
+    },
+    {
+      "id": 129007,
+      "name": "GlobalTheory.BCT.dimW_ne_zero",
+      "file": "Development/AbelianVarietyTheory/Proofs/DivisorProofs/HasLevelOfFixed.lean",
+      "line": 56
+    },
+    {
+      "id": 347481,
+      "name": "GlobalTheory.Branching.finite_nablaSq",
+      "file": "Development/AbelianVarietyTheory/PublishedTheorems/PublishedFoundations/FiniteIntertwining.lean",
+      "line": 42
+    },
+    {
+      "id": 564805,
+      "name": "Formalism.GradedWeylDivisibility.sSIdxFinite",
+      "file": "Formalism/GradedWeylDivisibility/FinalD.lean",
+      "line": 17
+    }
+  ]
+}
