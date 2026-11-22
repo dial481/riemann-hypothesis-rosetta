@@ -8,9 +8,10 @@ from pathlib import Path
 
 import networkx as nx
 
-from common import RESULTS, archive_data, digest, imports, put_json, read_rows
+from common import RESULTS, archive_data, content_digest, digest, imports, put_json, read_rows
 
 FREEZE = "independent-sha256.json"
+CONTENT_FREEZE = "independent-content-sha256.json"
 ARTIFACTS = (
     "REPORT.md", "SPINE.md", "combined-communities.json", "combined-membership.tsv.gz",
     "communities.json", "directories.tsv.gz", "external.tsv", "family-edges.tsv",
@@ -21,11 +22,13 @@ ARTIFACTS = (
 
 
 def verify_frozen(directory=RESULTS):
-    manifest = json.loads((directory / FREEZE).read_text())
+    portable = (directory / CONTENT_FREEZE).exists()
+    checksum = content_digest if portable else digest
+    manifest = json.loads((directory / (CONTENT_FREEZE if portable else FREEZE)).read_text())
     if set(manifest) != set(ARTIFACTS):
         raise ValueError("The independent manifest has missing or extra artifacts")
     for name, expected in manifest.items():
-        if digest(directory / name) != expected:
+        if checksum(directory / name) != expected:
             raise ValueError(f"Independent output changed: {name}")
     return manifest
 
@@ -128,6 +131,7 @@ def main():
             raise ValueError(f"Global name {token} resolved to {row['name']}")
     print(f"Verified archive imports ({count:,} occurrences), three path lengths, five cuts, and 200 source trails.")
     if args.freeze:
+        put_json(RESULTS / CONTENT_FREEZE, {name: content_digest(RESULTS / name) for name in ARTIFACTS})
         put_json(RESULTS / FREEZE, {name: digest(RESULTS / name) for name in ARTIFACTS})
 
 

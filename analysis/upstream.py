@@ -12,9 +12,10 @@ import numpy as np
 from scipy.optimize import linear_sum_assignment
 
 from check import line_header, verify_frozen
-from common import digest, put_json, read_rows, table
+from common import content_digest, put_json, read_rows, table
 from inventory import ORIGINAL_PINS, UPSTREAM_PINS
 import upstream_kernel as kernel
+from upstream_lines import line_changes
 
 FROZEN = Path("results")
 PIN, LIB = (p[0] for p in UPSTREAM_PINS)
@@ -24,7 +25,7 @@ OUTPUTS = (
     "community-overlap.tsv", "directories.tsv.gz", "external.tsv", "family-edges.tsv",
     "import-map.svg", "imports.json.gz", "inventory.tsv.gz", "longest-paths.json",
     "metrics.tsv.gz", "path-status.tsv.gz", "provenance.json", "spine-survival.tsv",
-    "structure.json", "unreachable.tsv.gz",
+    "structure.json", "unreachable.tsv.gz", "line-changes-by-directory.tsv",
 ) + kernel.OUTPUTS
 
 
@@ -92,7 +93,7 @@ def verify_cuts(directory, metric, names):
             assert len(lost) == int(metric[m]["disconnected_novel"]), m
 
 
-def render(dest, out, old_paths, new_paths, reached, kernel_result):
+def render(dest, out, old_paths, new_paths, reached, kernel_result, line_stats):
     old, new = metrics(FROZEN), metrics(out)
     sp = list(read_rows(FROZEN / "spine.tsv"))
     assert len(sp) == len({s["path"] for s in sp}) == 200
@@ -122,22 +123,36 @@ def render(dest, out, old_paths, new_paths, reached, kernel_result):
     prefix = f"upstream/{SHORT}/"
     report = [
         "# Upstream module comparison", "",
-        f"Of {len(removed):,} original proof files removed upstream as unused, the frozen RH trace reached "
+        f"Upstream removed {len(removed):,} original proof files. Of those, {kernel_result['counts']['used_removed']} contained a declaration used by the original kernel targets. The frozen RH trace reached "
         f"{len(removed & reached):,} and missed {len(removed - reached):,} ({len(removed - reached)/len(removed):.1%}). "
         f"Upstream retained {len(retained - reached):,} other files the trace missed. Trace absence alone does not establish mathematical irrelevance.", "",
         f"The baseline is [the original proof](https://github.com/leanprover-community/riemann-hypothesis/tree/{ORIGINAL_PINS[0][0]}) "
         f"and the comparison uses [one upstream commit](https://github.com/leanprover-community/riemann-hypothesis/tree/{PIN}). "
         f"Each graph uses the Mathlib revision in its own dependency manifest, `{ORIGINAL_PINS[1][0]}` and `{LIB}` respectively. "
         "The project-file boundary is `src/**/*.lean`, including files directly under `src/`. "
-        "A path is trace-reached when at least one frozen trace site belongs to it. All upstream measurements use module imports.", "",
+        "A path is trace-reached when at least one frozen trace site belongs to it. The upstream graph uses explicit module imports. Kernel-use flags refer to the original proof.", "",
         "| Original paths | Trace reached | Trace unreached | Total |", "|---|---:|---:|---:|",
     ]
-    for label, paths in [("Removed upstream as unused", removed), ("Retained upstream", retained), ("All original paths", old_paths)]:
+    for label, paths in [("Removed upstream", removed), ("Retained upstream", retained), ("All original paths", old_paths)]:
         report.append(f"| {label} | {len(paths & reached):,} | {len(paths - reached):,} | {len(paths):,} |")
     added = sorted(new_paths - old_paths)
     k = kernel_result["counts"]
     labels = kernel_result["source_classification"]
     states = kernel_result["removed_status"]
+    families, total = line_stats
+    report += ["", "## Source lines removed", "",
+               f"The {len(removed):,} deleted files contained **{total['lines_in_removed_files']:,} original lines**. "
+               f"Across all project paths, the diff deleted {total['deleted_lines']:,} lines and added {total['added_lines']:,}. "
+               f"The net reduction was {total['net_lines_removed']:,} lines, from {total['original_lines']:,} to {total['upstream_lines']:,}.", "",
+               "| Source directory | Deleted files | Lines in deleted files | All lines deleted | Lines added | Net reduction |",
+               "|---|---:|---:|---:|---:|---:|"]
+    for directory, row in [*sorted(families.items()), ("Total", total)]:
+        label = "Directly under src/" if directory == "src" else directory
+        report.append(f"| {label} | {row['removed_files']:,} | {row['lines_in_removed_files']:,} | "
+                      f"{row['deleted_lines']:,} | {row['added_lines']:,} | {row['net_lines_removed']:,} |")
+    report += ["", "Each file contributes to one directory. Git counts changed lines as a deletion plus an addition. "
+               "A negative net reduction is a gain. The detailed table groups files by their immediate parent. "
+               f"[All directories]({prefix}line-changes-by-directory.tsv)"]
     report += ["", "## Kernel cross-check on the original files", "",
                f"Of {k['unused']:,} files with no owned declaration in the union of the five kernel target cones, "
                f"{k['unused_removed']:,} were removed upstream as unused and {k['unused_retained']:,} were retained. "
@@ -152,13 +167,12 @@ def render(dest, out, old_paths, new_paths, reached, kernel_result):
                "[v0.2.1 schema](https://github.com/james-shore/rh-proof-dependencies/blob/v0.2.1/docs/dataset.md)", "",
                f"**Unverified at the upstream pin. No Lean build was run.** For all {k['unused_retained']:,} retained kernel-unused files, "
                "we enumerated their direct upstream importers and joined each importer and target to the original whole-environment compiled "
-               "declaration edges (type or value). On these retained import pairs, "
-               f"{labels['referenced by an unused declaration']:,} targets are labelled **referenced by an unused declaration** "
-               f"and {labels['conduit only']:,} **conduit only**. The latter means no original compiled declaration edge was found from these importers. "
-               "Neither label establishes what upstream's kernel would use. The importer table also identifies former direct imports.", "",
-               f"The upstream source check found corroborating command or token evidence from an originally unused caller for "
-               f"{labels['referenced_with_upstream_unused_caller_evidence']:,} targets with a compiled reference. "
-               f"For {labels['conduits_with_upstream_source_candidate']} provisionally labelled conduits it found a candidate upstream source reference. "
+               "declaration edges (type or value). The three evidence groups are mutually exclusive.", "",
+               "| Evidence for the retained file | Files |", "|---|---:|",
+               f"| Referenced by an originally unused declaration, with corroborating upstream source evidence | {labels['referenced_with_upstream_unused_caller_evidence']:,} |",
+               f"| Referenced by an originally unused declaration, without corroborating upstream source evidence | {labels['referenced by an unused declaration'] - labels['referenced_with_upstream_unused_caller_evidence']:,} |",
+               f"| Provisional conduit: no original compiled declaration edge from these importers | {labels['conduit only']:,} |", "",
+               f"The source scan found a candidate reference in an upstream importer for {labels['conduits_with_upstream_source_candidate']} provisional conduits. "
                "Those disagreements are retained for review. The evidence table separates byte-identical caller commands, scoped identifier mentions, "
                "and historical edges whose upstream use remains unconfirmed. Identifier mentions can occur in tactic alternatives. "
                "Implicit arguments and elaborator-generated references can lack a literal token. "
@@ -185,7 +199,7 @@ def render(dest, out, old_paths, new_paths, reached, kernel_result):
     report += [f"| Other project modules disconnected by removing RowSrc | {old_cut:,} | {new_cut:,} |", "",
                f"{len(sp)-len(absent)} of the {len(sp)} frozen spine paths survive. "
                f"{sum(s['module'] in new for s in sp)} remain reachable by imports from Main. "
-               + " ".join(f'Original rank {s["rank"]}, {link(s["module"], ORIGINAL_PINS[0][0])}, was removed upstream as unused.' for s in absent)
+               + " ".join(f'Original rank {s["rank"]}, {link(s["module"], ORIGINAL_PINS[0][0])}, was removed upstream. Its original file contained a kernel-used declaration.' for s in absent)
                + f" [All spine paths, ranks and cuts]({prefix}spine-survival.tsv) · [Longest paths]({prefix}longest-paths.json)", "",
                "## Five largest project cuts", "",
                "Removing a module disconnects the other project modules whose every import path from Main passes through it. "
@@ -208,8 +222,8 @@ def render(dest, out, old_paths, new_paths, reached, kernel_result):
                f"[Upstream per-module memberships and cuts]({prefix}metrics.tsv.gz)", "", "## Reproduce", "",
                "Run from the repository root with the README environment, original source inputs and byte-reproduced baseline in place. "
                "The runner checks both Git trees, performs the removal gate, repeats the module inventory, graph and community stages, "
-               "then verifies the headers, distances, ranks and cuts. The SHA-256 manifest covers the module outputs, comparison tables and this report.", "",
-               "```bash", "set -eu", "export LC_ALL=C", "cmp results/independent-sha256.json inputs/reproduced/independent-sha256.json",
+               "then verifies the headers, distances, ranks and cuts. The SHA-256 manifest covers the module outputs, comparison tables and this report. Gzip artifacts are hashed after decompression.", "",
+               "```bash", "set -eu", "export LC_ALL=C", "cmp results/independent-content-sha256.json inputs/reproduced/independent-content-sha256.json",
                "mkdir -p inputs/upstream inputs/upstream-mathlib",
                f"curl -fsSL --retry 3 https://codeload.github.com/leanprover-community/riemann-hypothesis/tar.gz/{PIN} -o inputs/upstream-proof.tgz",
                "tar xzf inputs/upstream-proof.tgz --strip-components=1 -C inputs/upstream",
@@ -221,7 +235,7 @@ def render(dest, out, old_paths, new_paths, reached, kernel_result):
                "done",
                ".venv/bin/python analysis/upstream.py inputs/upstream inputs/upstream-mathlib --original-proof inputs/lean --kernel inputs/kernel --dest inputs/replayed",
                f"cmp results/{prefix}sha256.json inputs/replayed/{prefix}sha256.json",
-               "cmp results/independent-sha256.json inputs/reproduced/independent-sha256.json", "```", ""]
+               "cmp results/independent-content-sha256.json inputs/reproduced/independent-content-sha256.json", "```", ""]
     (dest / "upstream-comparison.md").write_text("\n".join(report))
 
 
@@ -246,12 +260,13 @@ def main():
         subprocess.run([sys.executable, f"analysis/{stage}.py", *params], env=env, check=True)
     verify_imports(out, args.proof, args.mathlib)
     kernel_result = kernel.analyze(args.proof, args.original_proof, args.kernel, out, paths, gated)
-    render(args.dest, out, *paths, kernel_result)
+    line_stats = line_changes(args.original_proof, args.proof, FROZEN, out)
+    render(args.dest, out, *paths, kernel_result, line_stats)
     verify_frozen(FROZEN)
     if {p.name for p in out.iterdir()} - {"sha256.json"} != set(OUTPUTS):
         raise ValueError("Unexpected files in the upstream output directory")
     artifacts = [args.dest / "upstream-comparison.md", *(out / name for name in OUTPUTS)]
-    put_json(out / "sha256.json", {p.relative_to(args.dest).as_posix(): digest(p) for p in sorted(artifacts)})
+    put_json(out / "sha256.json", {p.relative_to(args.dest).as_posix(): content_digest(p) for p in sorted(artifacts)})
 
 
 if __name__ == "__main__":

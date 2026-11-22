@@ -67,7 +67,7 @@ These labels come from the frozen import communities and their dominant source f
 From this repository root, use Python 3.14, Git, curl and tar. The analysis reads source as data. Raw archives, the Python environment and third-party comparison downloads can live outside the repository.
 
 ```bash
-python3 -m venv .venv
+python3.14 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 mkdir -p inputs/parts inputs/mathlib
 for n in $(seq -w 1 14); do
@@ -79,12 +79,12 @@ tar -xzf inputs/lean.tar.gz -C inputs
 curl --fail --location --retry 3 https://codeload.github.com/leanprover-community/mathlib4/tar.gz/0df444a360eaa60ab8c11dca51a86af692955474 -o inputs/mathlib.tar.gz
 tar -xzf inputs/mathlib.tar.gz --strip-components=1 -C inputs/mathlib
 .venv/bin/python analysis/run.py inputs/lean inputs/mathlib --out inputs/reproduced
-cmp results/independent-sha256.json inputs/reproduced/independent-sha256.json
+cmp results/independent-content-sha256.json inputs/reproduced/independent-content-sha256.json
 ```
 
 If the split archive is unavailable, unpack the [exact mirror snapshot](https://codeload.github.com/leanprover-community/riemann-hypothesis/tar.gz/40e56bab026552e089d7afcfeff08d2defb9c005) into `inputs/lean` with `--strip-components=1`. Both routes pass through the same Git-tree check. The preservation repository also contains every original source file byte for byte, plus the separate comparator file `src/Challenge.lean`. [Preservation snapshot inspected](https://github.com/homeowmorphism/riemann-hypothesis-original/tree/ab2bdc545873e6e70326c1d97b9a794c038edf81) The default output directory is `results/`. The example uses a separate directory to compare with the committed files.
 
-The independent run finishes by verifying the 200 citation chains and recording SHA-256 for its 20 artifacts. The following optional command verifies that manifest, downloads only digest-pinned comparison inputs, joins the datasets and checks the independent manifest again. It writes separate `comparison*` outputs. Commit `aca7e18` preserves the original independent run made before the first comparison. A later source audit corrected explicit global-name resolution. Commit `05f7faa` freezes that correction. The current manifest includes the subsequent rounding change for portable ranks. [First independent freeze](https://github.com/dial481/riemann-hypothesis-rosetta/commit/aca7e1830b22c913bd9658c3f38e82128539beea) · [Corrected trace freeze](https://github.com/dial481/riemann-hypothesis-rosetta/commit/05f7faa030529eccafb8e48ef826960462606422) · [Current manifest](results/independent-sha256.json)
+The independent run verifies the 200 citation chains. Its content manifest hashes decompressed bytes for gzip artifacts, so different gzip encoders can reproduce the same results. The historical byte manifest also records the exact files originally distributed. The following optional command verifies that manifest, downloads only digest-pinned comparison inputs, joins the datasets and checks the independent manifest again. It writes separate `comparison*` outputs. Commit `aca7e18` preserves the original independent run made before the first comparison. A later source audit corrected explicit global-name resolution. Commit `05f7faa` freezes that correction. The current manifest includes the subsequent rounding change for portable ranks. [First independent freeze](https://github.com/dial481/riemann-hypothesis-rosetta/commit/aca7e1830b22c913bd9658c3f38e82128539beea) · [Corrected trace freeze](https://github.com/dial481/riemann-hypothesis-rosetta/commit/05f7faa030529eccafb8e48ef826960462606422) · [Current manifest](results/independent-sha256.json)
 
 ```bash
 ROSETTA_RESULTS=inputs/reproduced .venv/bin/python analysis/compare.py inputs/comparisons --fetch
