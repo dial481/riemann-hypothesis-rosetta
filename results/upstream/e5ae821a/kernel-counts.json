@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "unused": 28900,
+    "unused_removed": 25756,
+    "unused_retained": 3144,
+    "used_removed": 36,
+    "used_removed_traced": 30,
+    "retained_miss_rh": 12235,
+    "retained_miss_other": 3,
+    "retained_miss_unused": 3011,
+    "rh_files": 146284,
+    "trace_files": 134176,
+    "shared": 134043
+  },
+  "source_classification": {
+    "referenced by an unused declaration": 2354,
+    "conduits_with_upstream_source_candidate": 39,
+    "referenced_with_upstream_unused_caller_evidence": 1982,
+    "conduit only": 790
+  },
+  "removed_status": {
+    "gone under original names": 27,
+    "elsewhere": 7,
+    "mixed": 2
+  },
+  "removed_declarations": 109,
+  "removed_declarations_elsewhere": 14,
+  "input_sha256": {
+    "constants.csv.gz": "2964f5236046325ac7884906cb9517b0aa582330dd48a07eef291cb579444820",
+    "decls.csv.gz": "bdfeae289f2db8b279816439049f26ba69ec993af2bab3b30d53340fe02493b9",
+    "decl_edges.csv.gz": "0e450a0120add04c917c574150a2898db6c07c87e1da9623d2eafe506ddc2025"
+  }
+}

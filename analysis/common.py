@@ -94,3 +94,11 @@ def digest(path):
     with open(path, "rb") as src:
         return hashlib.file_digest(src, "sha256").hexdigest()
 
+
+
+def content_digest(path):
+    """Hash a generated artifact's payload independently of its gzip encoding."""
+    if Path(path).suffix != ".gz":
+        return digest(path)
+    with gzip.open(path, "rb") as stream:
+        return hashlib.file_digest(stream, "sha256").hexdigest()

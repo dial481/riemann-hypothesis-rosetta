@@ -1,0 +1,10 @@
+{
+  "Novel": {
+    "commit": "e5ae821a00834f8043e987947f8151cc769bafe2",
+    "git_tree": "1dd06ddc08ddd73fb341142dc0b0c68ee1f6fad5"
+  },
+  "Mathlib": {
+    "commit": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+    "git_tree": "501eafb7ebff36206265263f5ef70166d6d7f9c7"
+  }
+}

@@ -45,6 +45,10 @@ def main():
 
     cats = ["Main", "Statements", "Supplements", "Development", "Formalism", "GroundTheory",
             "ReciprocityTheory", "CompanionTheory", "PositivityTheory", "Lemmata", "BuildAid", "Mathlib", "External"]
+    project_families = {family(m) for m in meta if meta[m]["category"] == "Novel"}
+    extra = sorted(project_families - set(cats))
+    if extra:
+        cats = [c for c in cats[:-2] if c in project_families] + extra + cats[-2:]
     ix = {k: i for i, k in enumerate(cats)}
     grid = np.zeros((len(ix), len(ix)), dtype=int)
     for m, deps in adj.items():
@@ -61,7 +65,8 @@ def main():
         ax.text(j, i, label, ha="center", va="center", color="white" if v >= 2500 else "#16263b", fontsize=8)
     ax.set_xticks(range(len(cats)), cats, rotation=48, ha="right")
     ax.set_yticks(range(len(cats)), cats)
-    ax.set(xlabel="Imported family", ylabel="Importing family", title="Where the original source trees import their dependencies")
+    title = "Where the pinned source trees import their dependencies" if extra else "Where the original source trees import their dependencies"
+    ax.set(xlabel="Imported family", ylabel="Importing family", title=title)
     fig.colorbar(pic, ax=ax, shrink=.72, label="Distinct module-to-module edges (log scale)")
     fig.savefig(RESULTS / "import-map.svg", metadata={"Date": None})
     plt.close(fig)
