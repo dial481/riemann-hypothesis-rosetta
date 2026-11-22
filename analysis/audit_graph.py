@@ -4,7 +4,7 @@ import math
 from collections import Counter, defaultdict
 from graphlib import TopologicalSorter
 
-from common import RESULTS, archive_data, read_rows
+from common import PAGERANK_PLACES, RESULTS, SCORE_PLACES, archive_data, read_rows
 
 
 def main():
@@ -49,7 +49,7 @@ def main():
             lost_project[idom[m]] += (m in project) + lost_project[m]
 
     project_degree = {m: sum(d in project for d in adjacency[m]) for m in project}
-    pagerank, ranks, communities = {}, {}, Counter()
+    pagerank, scores, ranks, communities = {}, {}, {}, Counter()
     seen = set()
     for row in read_rows(RESULTS / "metrics.tsv.gz"):
         m = row["module"]
@@ -69,6 +69,8 @@ def main():
         if m in project:
             assert int(row["novel_dependents"]) == sum(p in project for p in predecessors[m]), m
             pagerank[m] = float(row["novel_pagerank"])
+            assert round(pagerank[m], PAGERANK_PLACES) == pagerank[m], m
+            scores[m] = float(row["score"])
             ranks[m] = int(row["import_rank"])
             communities[int(row["community"])] += 1
     assert seen == adjacency.keys()
@@ -77,9 +79,10 @@ def main():
                math.log1p(lost_project[m] if m != root else 0)) for m in project}
     maxima = tuple(map(max, zip(*raw.values())))
     def score(m):
-        return sum(w * v / mx for w, v, mx in zip((0.40, 0.25, 0.35), raw[m], maxima))
+        return round(sum(w * v / mx for w, v, mx in zip((0.40, 0.25, 0.35), raw[m], maxima)), SCORE_PLACES)
     for i, m in enumerate(sorted(project, key=lambda m: (-score(m), m)), start=1):
         assert ranks[m] == i, m
+        assert scores[m] == score(m), m
     assert communities == {g["id"]: g["novel_modules"] for g in json.loads((RESULTS / "communities.json").read_text())}
 
     n = len(project)

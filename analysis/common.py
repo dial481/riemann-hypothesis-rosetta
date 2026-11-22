@@ -12,6 +12,8 @@ from pathlib import Path
 
 PROJECT = "40e56bab026552e089d7afcfeff08d2defb9c005"
 MATHLIB = "0df444a360eaa60ab8c11dca51a86af692955474"
+PAGERANK_PLACES = 14
+SCORE_PLACES = 12
 RESULTS = Path(os.environ.get("ROSETTA_RESULTS", "results"))
 SEG = r"(?:«[^»\n]+»|[^\W\d][\w'₀-₉]*)"
 NAME = rf"{SEG}(?:\.{SEG})*"

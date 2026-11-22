@@ -4,7 +4,7 @@ from collections import Counter, defaultdict
 
 import networkx as nx
 
-from common import RESULTS, archive_data, put_json, table
+from common import PAGERANK_PLACES, RESULTS, SCORE_PLACES, archive_data, put_json, table
 
 
 def cuts(graph, root, novel):
@@ -48,12 +48,13 @@ def main():
         for d in adj[m]:
             longest_from_root[d] = max(longest_from_root.get(d, 0), longest_from_root[m] + 1)
     parent, dominated, dom_novel = cuts(cone, root, novel)
-    pr = nx.pagerank(proof, alpha=0.85, tol=1e-12, max_iter=500)
+    pr = {m: round(value, PAGERANK_PLACES) for m, value in
+          nx.pagerank(proof, alpha=0.85, tol=1e-12, max_iter=500).items()}
     # Only project-to-project dependents enter the reading-priority score.
     metrics = {m: (math.log1p(len(proof) * pr[m]), math.log1p(proof.in_degree(m)),
                    math.log1p(dom_novel[m] if m != root else 0)) for m in proof}
     maxima = [max(x[i] for x in metrics.values()) for i in range(3)]
-    scores = {m: sum(w * v / largest for w, v, largest in zip((.40, .25, .35), vs, maxima))
+    scores = {m: round(sum(w * v / largest for w, v, largest in zip((.40, .25, .35), vs, maxima)), SCORE_PLACES)
               for m, vs in metrics.items()}
     order = sorted(scores, key=lambda m: (-scores[m], m))
     rank = {m: i for i, m in enumerate(order, 1)}
