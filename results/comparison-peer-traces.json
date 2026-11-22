@@ -1,0 +1,66 @@
+{
+  "identity": "source-level declaration name without module, normalized for private prefixes in compiled data",
+  "cadamcat_commit": "b3e1e2df268c5d81a54594ef405dd4f7d51ce917",
+  "jae_63_commit": "0434143d80c94d491e2228e234507d38dfcb57d7",
+  "sorted_names_sha256": {
+    "cadamcat": "bf45feed1cc5233258730e9efc34dfa31dfa3942f63e100d1b61d0c0ff25da81",
+    "jae_63": "12eabfaab0def3d36d27a222e727bf64995bf55e011100215ea1892869d8607a"
+  },
+  "whole_RH": {
+    "rosetta": {
+      "shore_RH": {
+        "predicted": 639030,
+        "reference": 801182,
+        "matched": 636761,
+        "precision": 0.996449305979375,
+        "recall": 0.7947769670312114
+      },
+      "proofs_and_reasons_RH": {
+        "predicted": 639030,
+        "reference": 803273,
+        "matched": 636824,
+        "precision": 0.9965478929001769,
+        "recall": 0.7927865121820352
+      }
+    },
+    "cadamcat": {
+      "shore_RH": {
+        "predicted": 697937,
+        "reference": 801182,
+        "matched": 683234,
+        "precision": 0.9789336286799525,
+        "recall": 0.8527825138358076
+      },
+      "proofs_and_reasons_RH": {
+        "predicted": 697937,
+        "reference": 803273,
+        "matched": 683593,
+        "precision": 0.9794480017537399,
+        "recall": 0.8510095571493129
+      }
+    },
+    "jae_63": {
+      "shore_RH": {
+        "predicted": 157117,
+        "reference": 801182,
+        "matched": 155488,
+        "precision": 0.9896319303449022,
+        "recall": 0.19407325676313247
+      },
+      "proofs_and_reasons_RH": {
+        "predicted": 157117,
+        "reference": 803273,
+        "matched": 155598,
+        "precision": 0.9903320455456761,
+        "recall": 0.19370500440074545
+      }
+    }
+  },
+  "jae_63_depth12_from_everyCharacter": {
+    "predicted": 157117,
+    "reference": 185223,
+    "matched": 153634,
+    "precision": 0.9778318068700396,
+    "recall": 0.8294542254471637
+  }
+}
