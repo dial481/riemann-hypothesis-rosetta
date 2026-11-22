@@ -1,0 +1,201 @@
+rank	kind	anchor	original_path	original_line	name_entry_urls	file_entry_urls
+1	theorem	UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/RowSrc.lean	6	https://andrewodesky.com/rh/s/galois-representations.html	https://andrewodesky.com/rh/s/galois-representations.html
+2	theorem	UpperTheory.Gal.Int.galoisRepresentations_of_thetaLift	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GaloisRepresentationsOfThetaLift.lean	6		
+3	def	Formalism.BasicNotions.Loc.GoodCoef	src/Formalism/LocalRingCardinality/RhoDetPrimeEqMuTildeMulChiPow.lean	28		https://andrewodesky.com/rh/s/family-member-identifications.html
+4	theorem	UpperTheory.Gal.Int.Geo.geoOne_holds	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GeometricFlagBases/WeightOneGeometricRealization.lean	11	https://andrewodesky.com/rh/s/q2-spherical-attachment.html	
+5	structure	ReciprocityTheory.ChartRestriction.G.Geo.Tor.PELUnif	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/UniformisationConclusion.lean	83		
+6	theorem	UpperTheory.Gal.Int.Geo.geometric_realization_of_weight_one	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/GeometricFlagBases/GeometricRealizationOfWeightOne.lean	25		
+7	def	GlobalTheory.ThK.latHat	src/Development/AbelianVarietyTheory/Definitions/Divisors/CTSmallCone.lean	62		
+8	theorem	UpperTheory.One.Join.automorphic_window_of_inputs	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/TopMainZj.lean	71	https://andrewodesky.com/rh/s/z5-automorphic-localization-inputs.html	https://andrewodesky.com/rh/s/z5-automorphic-localization-inputs.html
+9	def	GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.HasExp	src/Development/AbelianVarietyTheory/BlockTheory/DivisorBase/WeilTensorModels.lean	114		
+10	theorem	UpperTheory.V.v_window_of_literal_automorphy_n	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/WindowBoundOfLiteratureLevel.lean	33		
+11	def	ReciprocityTheory.ChartRestriction.G.Out.SecBaseChangeAnySt	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/SecBaseChangeAnySt.lean	16		
+12	def	ReciprocityTheory.ChartRestriction.G.Out.GlobalSectionsRankAlgClosed	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/GlobalSectionsRankAlgClosed.lean	19		
+13	structure	ReciprocityTheory.ChartRestriction.G.Out.Laws6	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/UnifUniqSt.lean	60		
+14	def	Formalism.UG.hform	src/Formalism/SatakeDualWeyl/Statement.lean	17		
+15	def	ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsHolTo	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/IsHolPeriods.lean	22		
+16	theorem	rhOfAll	src/Supplements/Kernels/MainTheorems.lean	9		
+17	theorem	UpperTheory.FinalTheorems.everyCharacter	src/Development/AutomorphicArithmetic/CharacterBoxes/MainConclusion.lean	10	https://andrewodesky.com/rh/s/every-character.html	https://andrewodesky.com/rh/s/every-character.html
+18	def	GlobalTheory.EtC.C2	src/Development/AbelianVarietyTheory/Definitions/Divisors/DivisorSupportCondition.lean	105		
+19	theorem	UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean	810		https://andrewodesky.com/rh/s/w2-cuspidal-sobolev-decay.html|https://andrewodesky.com/rh/s/w3-principalization-boundary.html|https://andrewodesky.com/rh/s/w3-unitary-siegel-sets.html
+20	def	Formalism.MainNotions.SchurIrreducible.wittIdx	src/Formalism/SharpRestriction/Divisibility/SchurIrreducible.lean	375		
+21	theorem	UpperTheory.Lit.every_character_of_theta_integrals_local_matching	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/SiegelEisensteinSecondTermHypotheses.lean	69		
+22	structure	Formalism.BasicNotions.LocTied	src/Formalism/LocalRingCardinality/AdicCompletionLocal/LocTied.lean	11	https://andrewodesky.com/rh/s/family-member-local-period-data.html	
+23	def	GlobalTheory.Published.CuspRapidDecay	src/Development/AbelianVarietyTheory/PublishedTheorems/AutomorphicForms₂/ExistsNormLeHeightPow.lean	28		
+24	theorem	GlobalTheory.T.final_theorem_of_inputs_right	src/Development/AutomorphicSpectrum/Proofs/GeometryProofs/FinalTheoremOfInputsRightStatement.lean	19		
+25	structure	ReciprocityTheory.ChartRestriction.G.Geo.Tor.Moduli	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/PushInvertible.lean	29	https://andrewodesky.com/rh/s/family-moduli-polarized.html	
+26	theorem	GlobalTheory.CompanionTheory.Ar.Top.goodTower_volume_of_reduced	src/Development/AutomorphicSpectrum/Proofs/GeometryProofs/FinalTheoremOfInputsRight.lean	28		
+27	def	ReciprocityTheory.ChartRestriction.G.Out.RelAmple	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/NonzeroLocus.lean	33		
+28	theorem	GlobalTheory.T.good_tower_volume_theorem	src/Development/AutomorphicSpectrum/Proofs/DivisibilityProofs/GoodTowerVolumeTheoremStatement.lean	26		
+29	abbrev	ReciprocityTheory.ChartRestriction.G.Geo.Tor.lbPow	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/ThetaUnifAV.lean	10		
+30	theorem	GlobalTheory.CompanionTheory.Ar.Top.goodTower_and_volume	src/Development/AutomorphicSpectrum/Proofs/DivisibilityProofs/GoodTowerVolumeTheorem.lean	36		
+31	def	ReciprocityTheory.ChartRestriction.G.Geo.Tor.abLocus	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/IsGrpPullback.lean	14		
+32	theorem	UpperTheory.V.Z.Kato.Final.zetaUr	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/KatoQuadraticCharacters/UnramifiedZeta/ZetaUr.lean	9		
+33	theorem	GlobalTheory.TorKSField.toroidalForFanKS	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ToroidalCompactificationFanLogKodairaSpencerIso.lean	8		
+34	class	ReciprocityTheory.ChartRestriction.G.Semi.IsAbelianScheme	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/SemiabelianSchemes/AbelianSchemeQuotients/IsAbelianScheme.lean	13		
+35	theorem	GlobalTheory.Fc.S0.StageU.hypotheses_nonempty_of_unramified_exponents_alt	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/HypothesesNonemptyOfUnramifiedExponents.lean	41		
+36	def	ReciprocityTheory.ChartRestriction.G.Geo.Tor.N1ab	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/HeckeKer.lean	10		
+37	def	GlobalTheory.SplitWeil.KOne	src/Development/AbelianVarietyTheory/Definitions/Foundations/MatrixMeasurableSpace.lean	27		
+38	theorem	Formalism.UG.Final.DwActMul	src/Formalism/SatakeDualWeyl/KpqSubgroupCompact.lean	517		https://andrewodesky.com/rh/s/r1-definite-unitary-lattice-classes.html|https://andrewodesky.com/rh/s/r10-definite-adelic-stabilizers.html|https://andrewodesky.com/rh/s/r10-inert-spherical-hecke-eigenvalue.html|https://andrewodesky.com/rh/s/s8-spherical-hecke-eigenvalue.html|https://andrewodesky.com/rh/s/u2-spherical-hecke-commutativity.html
+39	structure	ReciprocityTheory.ChartRestriction.G.Geo.Tor.SiegPre	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/Clauses.lean	16		
+40	theorem	ReciprocityTheory.ChartRestriction.G.Geo.Tor.gs_unit	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/ValCalc.lean	23		
+41	structure	Formalism.BasicNotions.LocPrime	src/Formalism/SharpRestriction/LevelLetterCocycles/DataNLoc.lean	527	https://andrewodesky.com/rh/s/family-member-local-period-data.html	https://andrewodesky.com/rh/s/family-member-local-period-data.html
+42	structure	ReciprocityTheory.ChartRestriction.G.Geo.Tor.Host	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/TwoWeightEqOneAddRoot.lean	14	https://andrewodesky.com/rh/s/family-moduli-polarized.html	https://andrewodesky.com/rh/s/family-moduli-polarized.html
+43	abbrev	Formalism.MainNotions.S.umat	src/Formalism/SharpRestriction/CuspSpanNormBounds/RelevantZeroGramTerms.lean	16		
+44	def	ReciprocityTheory.ChartRestriction.G.Geo.Tor.valAt'	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/IsLieBasis.lean	67		
+45	theorem	GlobalTheory.T.volume_theorem_of_inputs	src/Development/AutomorphicSpectrum/Proofs/DivisibilityProofs/VolumeTheoremOfInputsStatement.lean	23		
+46	def	Formalism.L2.Theta.HasParam	src/Formalism/LocalToGlobal/BesselHermitianTheta/DefsReal.lean	64		
+47	theorem	GlobalTheory.CompanionTheory.Ar.Cusp.volumeTheoremX_of_inputs	src/Development/AutomorphicSpectrum/Proofs/DivisibilityProofs/VolumeTheoremOfInputs.lean	72		
+48	def	UpperTheory.Gal.Int.recT	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/IntegralStructures/Development.lean	18		https://andrewodesky.com/rh/s/q2-spherical-attachment.html
+49	structure	Formalism.BasicNotions.Ties	src/Formalism/LocalRingCardinality/DataTies.lean	38	https://andrewodesky.com/rh/s/family-parameter-ties.html	https://andrewodesky.com/rh/s/family-parameter-ties.html
+50	theorem	GlobalTheory.SmGL.isCuspidal_detRep_one	src/Development/AbelianVarietyTheory/Definitions/TwistedInnerProducts/IsSubquotientDetRepParInd.lean	640		
+51	theorem	GlobalTheory.T.bundle_bothParts_of_standardKernel_of_globalArtinReciprocity	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/BundleBothPartsOfStandardKernelOfGlobalArtinReciStatement.lean	7		
+52	def	ReciprocityTheory.ChartRestriction.G.Out.QkToAkU	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/QkToAkU.lean	16		
+53	theorem	GlobalTheory.Svd.servH_row_of_artin	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/BundleBothPartsOfStandardKernelOfGlobalArtinReci.lean	15		
+54	structure	Formalism.MainNotions.S.Loc.Model	src/Formalism/SharpRestriction/CuspSpanNormBounds/FractionFieldToGenericStalkAlgebraMapEq.lean	42		
+55	theorem	ReciprocityTheory.ChartRestriction.G.Geo.Tor.LBIso.chartPull	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/SabPull.lean	31		
+56	def	Formalism.IndefR.Datum.IsIdemSum	src/Formalism/LocalToGlobal/IndefiniteReal/DatumVec.lean	78		
+57	theorem	GlobalTheory.T.rigidBoundaryChartsForFan_unitaryDatum	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/RigidBoundaryChartsForFanUnitaryDatumStatement.lean	16		
+58	structure	ReciprocityTheory.ChartRestriction.G.Semi.LB.IsLB	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/SemiabelianSchemes/CubicalStructures/CubeSymmetricSwapFirst.lean	22		
+59	theorem	GlobalTheory.RigChart.rigidForFan_holds	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/RigidBoundaryChartsForFanUnitaryDatum.lean	19	https://andrewodesky.com/rh/s/k1-unitary-rigid-boundary.html	https://andrewodesky.com/rh/s/k1-unitary-rigid-boundary.html
+60	def	GlobalTheory.ThK.KDecay	src/Development/AbelianVarietyTheory/Definitions/Divisors/MatchingOfParts.lean	8		
+61	theorem	GlobalTheory.T.bundle_bothParts_of_standardKernel_and_six_hypotheses	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/BundleBothPartsOfStandardKernelAndSixHypothesesStatement.lean	11		
+62	structure	ReciprocityTheory.ChartRestriction.G.Out.PsiOn	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/IsNsmul.lean	85		
+63	theorem	GlobalTheory.Svd.servH_row	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/BundleBothPartsOfStandardKernelAndSixHypotheses.lean	15		
+64	def	ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsProjOver	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/IsCompletedStrictHens.lean	22		
+65	def	Formalism.BasicNotions.Ranks.r	src/Formalism/LocalRingCardinality/Params.lean	32		https://andrewodesky.com/rh/s/family-weight-arrays.html
+66	theorem	GlobalTheory.AbLaw.isLB_pw	src/Development/AbelianVarietyTheory/Definitions/AbelianSchemeLaws/FirstCohomologyVanishesSpecOfIsLocalRing.lean	100		
+67	theorem	GlobalTheory.siegelToroidalIntegral_holds	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/SiegelToroidalIntegralHolds.lean	14		
+68	def	ReciprocityTheory.ChartRestriction.G.Out.WeilIs	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/ConstGen.lean	52		
+69	theorem	GlobalTheory.T.siegelToroidalCompactification_polarisedCharts	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/SiegelToroidalCompactificationPolarisedChartsStatement.lean	11		
+70	def	Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.IsCMExt	src/Formalism/SharpRestriction/GlobalSchurBounds/GeneralLinearActions/GenusMassVolumes.lean	13		
+71	theorem	GlobalTheory.UPel.HT.model_nonempty	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/HarrisTaylorIntegralModelNonempty.lean	11		
+72	theorem	GlobalTheory.SiegJoin.siegelToroidalPolCharts	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/SiegelToroidalCompactificationPolarisedCharts.lean	17	https://andrewodesky.com/rh/s/k1-siegel-polarized-compactification.html	https://andrewodesky.com/rh/s/k1-siegel-polarized-compactification.html
+73	def	GlobalTheory.Published.DualAbelianScheme	src/Development/AbelianVarietyTheory/PublishedTheorems/Divisors₂/ExistsCrystalPairing.lean	25		
+74	structure	Formalism.BasicNotions.TH.GrpData	src/Formalism/LocalRingCardinality/DataTheta.lean	93	https://andrewodesky.com/rh/s/family-point-archimedean-oscillator.html	https://andrewodesky.com/rh/s/family-integral-theta-spaces.html|https://andrewodesky.com/rh/s/family-point-archimedean-oscillator.html
+75	theorem	UpperTheory.V.HV.DescentVanishingReductions.published_hypotheses_from_patching_alt	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/PublishedHypothesesFromPatching.lean	98		
+76	theorem	GlobalTheory.AdelicUnitaryTop.properSpace_adicCompletion	src/Development/AbelianVarietyTheory/Proofs/UnitaryExistence/LcscAdelicUnitaryGroup.lean	40		
+77	theorem	GlobalTheory.T.toroidalFanKodairaSpencer_of_rigidBoundaryCharts	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ToroidalFanKodairaSpencerOfRigidBoundaryChartsStatement.lean	16		
+78	def	ReciprocityTheory.AnForm.R.FinalTheorems.EffCartier	src/ReciprocityTheory/AnalyticForms/RegularLocalRings/FinalTheorems.lean	6		
+79	theorem	GlobalTheory.RigChart.toroidalForFanKS_of_rigidForFan	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ToroidalFanKodairaSpencerOfRigidBoundaryCharts.lean	16		
+80	def	GlobalTheory.Published.HarishChandraModules	src/Development/AbelianVarietyTheory/PublishedTheorems/TwistedTraceFormula/HarishChandraModulesOn.lean	43		
+81	theorem	GlobalTheory.T.logKodairaSpencer_iso_smooth_snc_toroidalModel	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/LogKodairaSpencerIsoSmoothSncToroidalModelStatement.lean	16		
+82	theorem	ReciprocityTheory.ChartRestriction.G.Geo.Tor.val_cub	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/CubeVal.lean	121		
+83	theorem	GlobalTheory.LogKSAssembly.hasLogKS	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/LogKodairaSpencerIsoSmoothSncToroidalModel.lean	57		
+84	def	ReciprocityTheory.ChartRestriction.G.Out.AdmBase	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/ThickTransComp.lean	20		
+85	theorem	GlobalTheory.T.tuplesHaveLocalModels_at_constructedPoint_over_trueColumns	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/TuplesHaveLocalModelsAtConstructedPointOverTrueCStatement.lean	7		
+86	structure	Formalism.MainNotions.FamP	src/Formalism/SharpRestriction/ParConsts.lean	31	https://andrewodesky.com/rh/s/family-arithmetic-data.html|https://andrewodesky.com/rh/s/family-fixed-constants.html|https://andrewodesky.com/rh/s/family-shared-data.html	https://andrewodesky.com/rh/s/family-arithmetic-data.html|https://andrewodesky.com/rh/s/family-fixed-constants.html|https://andrewodesky.com/rh/s/family-integral-adjusted-sources.html
+87	theorem	GlobalTheory.Svd.modelsAt_bpt	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/TuplesHaveLocalModelsAtConstructedPointOverTrueC.lean	10		
+88	def	ReciprocityTheory.ChartRestriction.G.Geo.Tor.valR	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/HasArcDataIff.lean	53		
+89	theorem	UpperTheory.TP.K.tLiftK	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ThetaParseval/ThetaKernels/TLiftK.lean	4	https://andrewodesky.com/rh/s/q2-spherical-attachment.html	
+90	theorem	UpperTheory.TP.tLift_holds_k	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ThetaParseval/ThetaKernels/TPGHolds.lean	58		
+91	def	GlobalTheory.CompanionTheory.SW.IsLocR	src/CompanionTheory/SpectralGeometry/CountingDefinitions/AdelicEulerProducts/IsEulerProd.lean	16		
+92	theorem	GlobalTheory.Ex.spMap_comp'	src/Development/AbelianVarietyTheory/Definitions/Degenerations/AdmissibleBaseOfCompleteDvr.lean	231		
+93	theorem	GlobalTheory.T.tuplesHaveLocalModels_of_standardColumnObjects	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/TuplesHaveLocalModelsOfStandardColumnObjectsStatement.lean	7		
+94	structure	Formalism.IndefR.Links.IsItW	src/Formalism/LocalToGlobal/IndefiniteReal/LinksChar.lean	58	https://andrewodesky.com/rh/s/family-point-analytic-theta.html	
+95	theorem	GlobalTheory.Svd.modelsAt_of_part	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/TuplesHaveLocalModelsOfStandardColumnObjects.lean	11		
+96	theorem	GlobalTheory.T.liftInj_and_nonVan_typeNZ_of_given	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/LocalTypeDictionary/LiftInjNonVanTypeNZOfPrints.lean	51		
+97	def	Formalism.REAL.qdet	src/Formalism/RealPlaceAnalysis/StatementE.lean	17		
+98	theorem	GlobalTheory.T.downNe_of_eulerRight_doubling	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/LocalTypeDictionary/EulerFactorFromDoubling.lean	17		
+99	theorem	GlobalTheory.Doubling.t2Space_adeleRing'	src/Development/AbelianVarietyTheory/Definitions/Foundations/T2SpaceAdeleRing.lean	227		
+100	theorem	GlobalTheory.Core.Rk.Exh.Top.downNe_k_of_hypotheses'	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/LocalTypeDictionary/KplugFill.lean	18		
+101	abbrev	Formalism.MainNotions.LocalSituation.zlMod	src/Formalism/SharpRestriction/LevelLetterCocycles/LocalSituation.lean	529		
+102	theorem	GlobalTheory.T.exists_quasiProjective_harrisTaylor_family	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsQuasiProjectiveHarrisTaylorFamilyStatement.lean	7		
+103	theorem	Formalism.BasicNotions.factNatW	src/Formalism/LocalRingCardinality/RankBoundMonotoneInDimension.lean	361		
+104	theorem	PositivityTheory.Rg.Rsw.resCore	src/Development/WeilBound/RepresentationTheoryGL/RegularisedSiegelWeil/ThetaIdempotents/ThetaCoefficients/ResCore.lean	44	https://andrewodesky.com/rh/s/s2-regularized-residue-annihilation.html	https://andrewodesky.com/rh/s/s2-regularized-residue-annihilation.html
+105	abbrev	GlobalTheory.EtC.cpush	src/Development/AbelianVarietyTheory/Definitions/Divisors/SecClass.lean	24		
+106	theorem	GlobalTheory.UPel.HT.exists_repFam_qproj	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsQuasiProjectiveHarrisTaylorFamily.lean	13		
+107	theorem	ReciprocityTheory.ChartRestriction.G.Geo.Tor.pull_isLB	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/BCTools.lean	102		
+108	theorem	GlobalTheory.arithHilbertSamuel_of_principalisation	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ArithHilbertSamuelOfPrincipalisation.lean	11	https://andrewodesky.com/rh/s/arithmetic-hilbert-samuel.html	https://andrewodesky.com/rh/s/arithmetic-hilbert-samuel.html
+109	structure	Formalism.IndefR.Links.RealDat	src/Formalism/LocalToGlobal/IndefiniteReal/LinksDefs.lean	516	https://andrewodesky.com/rh/s/family-point-realization-data.html	https://andrewodesky.com/rh/s/family-point-analytic-levels.html|https://andrewodesky.com/rh/s/family-point-realization-data.html
+110	theorem	GlobalTheory.T.thetaLocalModels_of_splitUnramified_joints	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/ThetaLocalModelsOfSplitUnramifiedJointsStatement.lean	8		
+111	abbrev	Formalism.IndefR.Datum.InfFam	src/Formalism/LocalToGlobal/IndefiniteReal/LocalNewformFunction.lean	19		
+112	theorem	GlobalTheory.TwV.modelsOK_of_joints	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/ThetaLocalModelsOfSplitUnramifiedJoints.lean	11		
+113	def	GlobalTheory.Published.ArCalc	src/Development/AbelianVarietyTheory/PublishedTheorems/Divisors₂/EqOfIsometricTrivShift.lean	161		
+114	theorem	GlobalTheory.T.jointSite_chain_compared_carries_admittedSystem	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/JointSiteChainComparedCarriesAdmittedSystemStatement.lean	8		
+115	def	ReciprocityTheory.ChartRestriction.G.Geo.IsSectionOn	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/InterSt.lean	13		
+116	theorem	GlobalTheory.TwV.site_cmpLite_siteAdm	src/Development/AbelianVarietyTheory/Proofs/SatakeParameters/JointSiteChainComparedCarriesAdmittedSystem.lean	77		
+117	structure	UpperTheory.TP.W.GoodK	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/ThetaParseval/HalfIndexLattices/SplitStab.lean	18		
+118	def	Formalism.MainNotions.N.IsDR	src/Formalism/SharpRestriction/LevelLetterCocycles/LocCoh.lean	21		
+119	theorem	GlobalTheory.T.crystallinePeriodBound_all_constant_ge_forty	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/CrystallinePeriodBoundAllConstantGeFortyStatement.lean	11		
+120	abbrev	GlobalTheory.HeckeGal.Gab	src/Development/AbelianVarietyTheory/PublishedTheorems/AutomorphicForms₂/ExistsUniqueHcharOfFiniteOrder.lean	15		https://andrewodesky.com/rh/s/u3-finite-order-hecke-character.html
+121	theorem	GlobalTheory.InertiaEigenvalues.theoremT_all_records	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/CrystallinePeriodBoundAllConstantGeForty.lean	13		
+122	def	GlobalTheory.Published.AbelianDeRham	src/Development/AbelianVarietyTheory/PublishedTheorems/Divisors₂/CrysToDRBijective.lean	65		
+123	theorem	GlobalTheory.T.liftingStep_theoremT_of_bhattScholze_fontaine	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/LiftingStepTheoremTOfBhattScholzeFontaineStatement.lean	11		
+124	def	Formalism.MainNotions.N.IsSSRep	src/Formalism/SharpRestriction/LevelLetterCocycles/DataN.lean	1186		https://andrewodesky.com/rh/s/family-member-finite-types.html|https://andrewodesky.com/rh/s/family-member-galois-twists.html|https://andrewodesky.com/rh/s/family-member-local-parameters.html|https://andrewodesky.com/rh/s/family-member-theta-expansions.html
+125	theorem	GlobalTheory.RunDepth.leafDepth_all_run	src/Development/AbelianVarietyTheory/Proofs/JetHarmonics/LeafDepthAllRun.lean	13		
+126	theorem	GlobalTheory.TheoremTClosing.main	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/LiftingStepTheoremTOfBhattScholzeFontaine.lean	37		
+127	structure	Formalism.L2.Theta.RealTied	src/Formalism/LocalToGlobal/BesselHermitianTheta/MinfDensity.lean	82	https://andrewodesky.com/rh/s/family-point-theta-functions.html	https://andrewodesky.com/rh/s/family-point-theta-functions.html
+128	theorem	Formalism.GradedWeylDivisibility.sSIdxFinite	src/Formalism/GradedWeylDivisibility/FinalD.lean	17		
+129	def	Formalism.HermitianLatticesTheory.dual	src/Formalism/HermitianLattices/StatementLat.lean	31		
+130	theorem	GlobalTheory.T.unitaryToroidalSeparation_of_base	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/UnitaryToroidalSeparationOfBaseStatement.lean	6		
+131	theorem	GlobalTheory.UPoincTop.uStB	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/UnitaryToroidalSeparationOfBase.lean	90		
+132	def	GlobalTheory.WeilM.ResEtaPow	src/Development/AbelianVarietyTheory/Definitions/Divisors/HilbertNinetyQuotientHomEqIff.lean	396		
+133	def	GlobalTheory.Published.Principalisation	src/Development/AbelianVarietyTheory/PublishedTheorems/Divisors₂/GeometricallyConnectedOfIsIsoRestrict.lean	118	https://andrewodesky.com/rh/s/principalization.html	
+134	theorem	GlobalTheory.T.hasSemiAbelianUniformisation_complete_normal_base	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/HasSemiAbelianUniformisationCompleteNormalBaseStatement.lean	13		
+135	theorem	UpperTheory.V.Z.Kato.Joint.kato_global_unit_law_of_smoothed_classes	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/KatoQuadraticCharacters/FrobeniusHodgeTateLaws/KatoGlobalUnitLawOfSmoothedClasses.lean	8		
+136	structure	GlobalTheory.NormSum.Pair	src/Development/AbelianVarietyTheory/Definitions/Foundations/NormSumPairRankZeroOfCurveCoordNorm.lean	121		
+137	structure	GlobalTheory.CuspRep.CuspSub	src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/ExpoConjOfIsCsd.lean	209		
+138	theorem	UpperTheory.V.Z.Kato.Joint.kato_global_admissibility_of_admissible	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/KatoQuadraticCharacters/FrobeniusHodgeTateLaws/KatoGlobalAdmissibilityOfAdmissible.lean	35		
+139	structure	GlobalTheory.SmGL.Segment	src/Development/AbelianVarietyTheory/PublishedTheorems/TwistedTraceFormula/ExistsCellOfIsSubquotient.lean	110		
+140	theorem	GlobalTheory.Mum.has_of_base	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/HasSemiAbelianUniformisationCompleteNormalBase.lean	32		
+141	abbrev	Formalism.FrobeniusOrbits.HGrp	src/Formalism/FrobeniusOrbits/Statement.lean	24		
+142	def	GlobalTheory.CechDR.Sec.res	src/Development/AbelianVarietyTheory/Definitions/Divisors/ComparisonMemCechHodgeFiltration.lean	179		
+143	theorem	GlobalTheory.T.minimalBlowup_smooth_with_semiAbelianCharts	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/MinimalBlowupSmoothWithSemiAbelianChartsStatement.lean	6		
+144	theorem	GlobalTheory.SiegJoin.chartSt5_holds	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/MinimalBlowupSmoothWithSemiAbelianCharts.lean	9		
+145	def	GlobalTheory.BCT.trOn	src/Development/AbelianVarietyTheory/Definitions/Divisors/IsUnifAt.lean	19		
+146	def	GroundTheory.Heights₂.Heights.HilbertSamuel.genDeg	src/GroundTheory/HeightsAndTheta/Heights/HilbertSamuel/StatementsArith.lean	33		
+147	structure	GlobalTheory.Mum.Factor	src/Development/AbelianVarietyTheory/Definitions/Divisors/TateProductRigidificationTrivial.lean	21		
+148	theorem	Formalism.GradedWeylDivisibility.standardMonomialSpanDomain	src/Formalism/GradedWeylDivisibility/FinalC.lean	37	https://andrewodesky.com/rh/s/u5-minor-product-spanning.html	https://andrewodesky.com/rh/s/u5-minor-product-spanning.html
+149	theorem	GlobalTheory.T.lift_surjection_good_crystalline_lattices	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/LiftSurjectionGoodCrystallineLatticesStatement.lean	10		
+150	structure	GlobalTheory.Hk3.LocPair	src/Development/AbelianVarietyTheory/Definitions/GaloisGeometry/NormalFam.lean	166		
+151	theorem	GlobalTheory.TheoremT.liftF_of_isGood	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/LiftSurjectionGoodCrystallineLattices.lean	27		
+152	def	GlobalTheory.SplitFlip.omA	src/Development/AbelianVarietyTheory/Definitions/Divisors/RankEqCardIffExistsFrameMatrixFirstColumnBlock.lean	193		
+153	theorem	GlobalTheory.T.depthTable_goodPrimes_of_chartForm	src/Development/AbelianVarietyTheory/Proofs/JetHarmonics/DepthTableGoodPrimesOfChartFormStatement.lean	9		
+154	theorem	ReciprocityTheory.ChartRestriction.G.Geo.Tor.sabComp	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/BirationalGeometry/ToroidalCompactification/SabComp.lean	93		
+155	theorem	GlobalTheory.leafDepthGood_of_chartForm	src/Development/AbelianVarietyTheory/Proofs/JetHarmonics/DepthTableGoodPrimesOfChartForm.lean	12		
+156	theorem	UpperTheory.GalN.V.Win.N.countK_alt	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/FrobeniusTraceCountBoundOfCmEigensystemCount.lean	63		https://andrewodesky.com/rh/s/u2-finite-frobenius-trace-data.html
+157	theorem	GlobalTheory.T.open0_of_unitary_group_hypotheses	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/OpenOrbitOfUnramifiedExponents.lean	75		
+158	def	Formalism.MainNotions.StandardLattice.ClassNumberFormula₂	src/Formalism/SharpRestriction/GlobalSchurBounds/StandardLattice.lean	453		
+159	def	GlobalTheory.Published.JacquetShalika	src/Development/AbelianVarietyTheory/PublishedTheorems/GaloisCohomology₂/StrongMultiplicityOne.lean	202		
+160	def	Formalism.REAL.Jm	src/Formalism/RealPlaceAnalysis/Complexify.lean	9		
+161	theorem	UpperTheory.V.Z.Int.intK_of_prints	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/ThresholdArguments/DenseThresholdCases/IntFinal.lean	11		
+162	theorem	UpperTheory.V.Z.Int.intK_holds	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/IntegralDeterminants/IntPHolds.lean	9		
+163	structure	Formalism.WeaklyAdmissibleFiltrations.PeriodData	src/Formalism/WeaklyAdmissibleFiltrations/Statement.lean	75	https://andrewodesky.com/rh/s/family-member-local-period-data.html	
+164	theorem	UpperTheory.V.Z.Int.intK_of_desc	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/IntegralDeterminants/IntPOfDesc.lean	8		
+165	abbrev	Formalism.PairingDivisionLocalBalance.Pl	src/Formalism/PairingDivisors/StatementH.lean	11		
+166	theorem	UpperTheory.V.Z.Int.intK	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/IntegralDeterminants/SlopeAll.lean	16		
+167	theorem	GlobalTheory.deRham_potentiallySemistable	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/DeRhamPotentiallySemistable.lean	11		
+168	def	Formalism.REAL.Amat	src/Formalism/RealPlaceAnalysis/StatementB.lean	22		
+169	theorem	UpperTheory.V.Z.Int.slopeAllOf	src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/IntegralDeterminants/SlopeAllOf.lean	152		
+170	def	GlobalTheory.Published.DiscreteSeriesCover	src/Development/AbelianVarietyTheory/PublishedTheorems/TwistedTraceFormula/AdmissibleDiscreteSeriesOfHasParam.lean	35		
+171	theorem	GlobalTheory.JSW.jacquetShalikaRigidity_holds	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/JacquetShalikaRigidityHolds.lean	250		
+172	def	Formalism.CoboundaryTransfers.RatSurj	src/Formalism/CoboundaryTransfers/Statement.lean	161		
+173	def	ReciprocityTheory.ChartRestriction.G.Semi.LB.genPull	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/SemiabelianSchemes/Biextensions/GenericFiberCubeInclusion.lean	14		
+174	def	Formalism.REAL.rhoC	src/Formalism/RealPlaceAnalysis/StatementA.lean	34		
+175	theorem	GlobalTheory.CarrierGap.offDiag	src/Development/AbelianVarietyTheory/Proofs/FlagMeasures/OffK0Closed.lean	673		
+176	structure	Formalism.BasicNotions.SizeData₂	src/Formalism/LocalRingCardinality/DataParams₂.lean	76	https://andrewodesky.com/rh/s/family-parameter-local-size.html	https://andrewodesky.com/rh/s/family-parameter-local-size.html
+177	theorem	GlobalTheory.T.pAdicMonodromyTheorem_matrixForm	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/PAdicMonodromyTheoremMatrixFormStatement.lean	7		
+178	structure	ReciprocityTheory.ChartRestriction.G.Out.UnifPre	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/DegUnif.lean	105		
+179	theorem	GlobalTheory.PMon.matThm_holds	src/Development/AbelianVarietyTheory/Proofs/InertiaEigenvalues/PAdicMonodromyTheoremMatrixForm.lean	14		
+180	structure	Formalism.L2.Theta.AllTied	src/Formalism/LocalToGlobal/BesselHermitianTheta/AllTied.lean	20	https://andrewodesky.com/rh/s/family-point-abstract-theta.html	https://andrewodesky.com/rh/s/family-point-abstract-theta.html
+181	theorem	GlobalTheory.PDiv.SemiBialgHom.map_mulBy	src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/CobOneEqZeroOfConnecting.lean	25		
+182	theorem	UpperTheory.Lit.farguesExact	src/Development/AutomorphicArithmetic/ThetaCorrespondence/PrismaticDieudonne/PrismaticDieudonneHodge.lean	27		
+183	def	ReciprocityTheory.ChartRestriction.G.Semi.extend_existsSt	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/SemiabelianSchemes/Biextensions/CubicalExtendsSt.lean	28		
+184	theorem	GlobalTheory.T.main_theorem_published_inputs_third_alt_alt	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/MainTheoremPublishedInputsThird.lean	34		
+185	theorem	GlobalTheory.SplitFlip.isOpen_KO	src/Development/AbelianVarietyTheory/Definitions/Divisors/T2SpaceGeneralLinearGroup.lean	67		
+186	theorem	GlobalTheory.T.main_theorem_published_inputs_variant_alt_alt	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/MainTheoremPublishedInputsVariant.lean	31		
+187	theorem	GlobalTheory.T.bessel_period_nonvanishing_ascent_of_depth_data	src/Development/AbelianVarietyTheory/Proofs/TwistedOperators/BesselPeriodNonvanishingAscentOfDepthDataStatement.lean	11		
+188	def	ReciprocityTheory.ChartRestriction.G.FD.cc	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/FundamentalDomains/Signature.lean	12		https://andrewodesky.com/rh/s/family-moduli-complex.html
+189	def	GlobalTheory.Published.ToroidalForFanKS	src/Development/AbelianVarietyTheory/PublishedTheorems/Divisors₂/ToroidalCompactificationBis.lean	45		
+190	theorem	GlobalTheory.Asc.ascent_of_depFixed	src/Development/AbelianVarietyTheory/Proofs/TwistedOperators/BesselPeriodNonvanishingAscentOfDepthData.lean	21		
+191	theorem	Formalism.L2.SG.TheoremSConclusion.theoremS_of_conj	src/Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/TheoremSConclusion.lean	68		
+192	theorem	GlobalTheory.LocGL.IrrGL.isCusp_of	src/Development/AbelianVarietyTheory/Definitions/NonGaloisDescent/NonemptyEquivMultiProdOne.lean	297		
+193	def	ReciprocityTheory.ChartRestriction.G.Semi.charUnit	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/SemiabelianSchemes/AbelianSchemeQuotients/QSurjective.lean	31		
+194	theorem	UpperTheory.Gal.KunnethLefschetz.Top.etSide_sm_holds	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/KunnethLefschetz/EtSideGoodHolds.lean	8		
+195	def	UpperTheory.Zero.LLC.IsRecT	src/Development/AutomorphicArithmetic/Foundations/LocalLanglands/IsRecTOfIsRec.lean	76		
+196	def	Formalism.L2.Theta.mt	src/Formalism/LocalToGlobal/BesselHermitianTheta/TiedWeil.lean	22		https://andrewodesky.com/rh/s/family-point-abstract-weil.html
+197	structure	ReciprocityTheory.ChartRestriction.G.Out.Unif	src/ReciprocityTheory/ReductiveGroups/ArithmeticGeometry/ExtensionDescent/DegExp.lean	140		
+198	theorem	GlobalTheory.T.main_theorem_published_results_final_alt_alt	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/MainTheoremPublishedResultsFinal.lean	43		
+199	theorem	UpperTheory.Gal.KunnethLefschetz.core_holds	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/KunnethLefschetz/CoreHolds.lean	5		
+200	structure	UpperTheory.Gal.KunnethLefschetz.Core	src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/KunnethLefschetz/EtSideGood.lean	7		
