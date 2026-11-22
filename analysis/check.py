@@ -20,12 +20,12 @@ ARTIFACTS = (
 )
 
 
-def verify_frozen():
-    manifest = json.loads((RESULTS / FREEZE).read_text())
+def verify_frozen(directory=RESULTS):
+    manifest = json.loads((directory / FREEZE).read_text())
     if set(manifest) != set(ARTIFACTS):
         raise ValueError("The independent manifest has missing or extra artifacts")
     for name, expected in manifest.items():
-        if digest(RESULTS / name) != expected:
+        if digest(directory / name) != expected:
             raise ValueError(f"Independent output changed: {name}")
     return manifest
 

@@ -24,6 +24,8 @@ def main():
                 distance[d] = distance[m] + 1
                 queue.append(d)
 
+    # The project ranking and its induced degrees cover Main's import closure.
+    project.intersection_update(distance)
     parents = {m: [p for p in predecessors[m] if p in distance] for m in queue}
     order = list(TopologicalSorter(parents).static_order())
     position = {m: i for i, m in enumerate(order)}

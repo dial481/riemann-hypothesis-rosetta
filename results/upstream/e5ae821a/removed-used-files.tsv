@@ -1,0 +1,37 @@
+original_path	trace_reached	declarations	kernel_used_declarations	found_elsewhere	kernel_used_found_elsewhere	status
+src/CompanionTheory/HarishChandraModules/LowKTypeMultiplicity/EigenspaceCyclicDensity/TopUniq.lean	1	1	1	0	0	gone under original names
+src/CompanionTheory/HarishChandraModules/LowKTypeMultiplicity/EigenspaceCyclicDensity/UniqHpkOf.lean	1	1	1	0	0	gone under original names
+src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/InverseGramEigenvaluesSumHs.lean	0	1	1	1	1	elsewhere
+src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/LineFormulaOfFubiniAndParabolicStatement.lean	1	1	1	0	0	gone under original names
+src/CompanionTheory/SpectralGeometry/LocalGlobalProofs/StableLattices/UnitaryMaximalCompactIsCompact.lean	1	3	3	0	0	gone under original names
+src/Development/AbelianVarietyTheory/Proofs/DecoratedLatticeProofs/GluedPlaceDoubleStepVanishTargetCoreLattice.lean	1	1	1	0	0	gone under original names
+src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/CrystallineCocycleOnTrivialThickeningsAdditiveLi.lean	1	1	1	1	1	elsewhere
+src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsAbelianSchemeBaseChangeSpecAlgebraProdStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsCoboundaryOfMemHodgeFiltrationStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsContinuousPeriodBasisAlongArc.lean	1	1	1	0	0	gone under original names
+src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsPointwiseCochainCoboundaryEqChernCocycleAlStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsPrimitiveWithCotangentOfDualHeightOneStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/ExistsUniquePushoutTorsorSectionDifferenceStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/PowCharEqZeroOfKillsVerschiebungStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AbelianVarietyTheory/Proofs/FlagMeasures/LineLatticeClassMeanTraceFormDualLatticeStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AutomorphicArithmetic/AutomorphicVarieties/AutomorphicForms/L2Cusps/LiftCmp.lean	0	1	1	0	0	gone under original names
+src/Development/AutomorphicArithmetic/AutomorphicVarieties/ModularityArgument/TraceFormula/GL4HoweTheory/HoweEx0.lean	0	1	1	1	1	elsewhere
+src/Development/AutomorphicArithmetic/Foundations/Convolution/RealGroupAnalysis/CuspRegions/ExCusp.lean	1	1	1	0	0	gone under original names
+src/Development/AutomorphicArithmetic/Foundations/Convolution/TwistedLocalOrbits/HoweEx.lean	0	1	1	1	1	elsewhere
+src/Development/AutomorphicArithmetic/Foundations/Convolution/TwistedLocalOrbits/HoweInj.lean	0	5	5	5	5	elsewhere
+src/Development/AutomorphicArithmetic/IntegralCasts/CapelliIdentities/CapelliComplements/FirstLemmaA.lean	1	1	1	0	0	gone under original names
+src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EigAt.lean	1	2	2	2	2	elsewhere
+src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/GrpTieOfLC.lean	1	1	1	1	1	elsewhere
+src/Development/AutomorphicSpectrum/Definitions/JetCones/KTypePosCone.lean	1	40	1	0	0	gone under original names
+src/Development/AutomorphicSpectrum/Proofs/BlockDecomposition/BlockCentralElementCommutesLevi.lean	1	2	2	0	0	gone under original names
+src/Development/AutomorphicSpectrum/Proofs/BlockDecomposition/HighestTermLemmaRealStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AutomorphicSpectrum/Proofs/BlockDecomposition/N2TopRealStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AutomorphicSpectrum/Proofs/DivisibilityProofs/VolumeTheoremOfInputsStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AutomorphicSpectrum/Proofs/GeometryProofs/ExistsGoodRootTowerStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AutomorphicSpectrum/Proofs/GeometryProofs/FullIntersectionGoodLevelStatement.lean	1	1	1	0	0	gone under original names
+src/Development/AutomorphicSpectrum/Proofs/JetProofs/ExistsDiagonalCongrOfSimilitudeDistinctEigenvalu.lean	1	1	1	0	0	gone under original names
+src/Formalism/GammaFactorNonvanishing/CritLine.lean	1	3	3	0	0	gone under original names
+src/Formalism/GammaFactorNonvanishing/RhOfRight.lean	1	1	1	0	0	gone under original names
+src/Formalism/LocalToGlobal/IndefiniteReal/RankZerothComponentEq.lean	1	20	1	1	0	mixed
+src/Formalism/LocalToGlobal/ProjectiveLattices/FrameExBor.lean	0	5	1	1	1	mixed
+src/Formalism/LocalToGlobal/SiegelLatticeTheory/FlagStabilizerTensors/RootLatticeThresholds/EvalTOntoPhi.lean	1	2	2	0	0	gone under original names

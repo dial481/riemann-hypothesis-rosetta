@@ -7,6 +7,15 @@ from pathlib import Path
 
 from common import MATHLIB, PROJECT, RESULTS, gzout, imports, json, put_json, table
 
+ORIGINAL_PINS = (
+    (PROJECT, "e517b335d21898fd2506ad538a1e1775c0aaa4e4"),
+    (MATHLIB, "f18edc0401eb2459e5241329743eb8626fdff148"),
+)
+UPSTREAM_PINS = (
+    ("e5ae821a00834f8043e987947f8151cc769bafe2", "1dd06ddc08ddd73fb341142dc0b0c68ee1f6fad5"),
+    ("fc4f59e577feb1a4956671bc04ac18aaaf8cd842", "501eafb7ebff36206265263f5ef70166d6d7f9c7"),
+)
+
 
 def git_tree(root):
     # Private index captures the actual files on disk, even for a dirty checkout.
@@ -22,13 +31,12 @@ def main():
     cli = argparse.ArgumentParser()
     cli.add_argument("proof", type=Path)
     cli.add_argument("mathlib", type=Path)
+    cli.add_argument("--upstream", action="store_true", help="Use the pinned upstream comparison trees")
     args = cli.parse_args()
     RESULTS.mkdir(exist_ok=True)
     adj, inventory, provenance = {}, [], {}
-    for category, base, commit, tree in [
-        ("Novel", args.proof, PROJECT, "e517b335d21898fd2506ad538a1e1775c0aaa4e4"),
-        ("Mathlib", args.mathlib, MATHLIB, "f18edc0401eb2459e5241329743eb8626fdff148")
-    ]:
+    pins = UPSTREAM_PINS if args.upstream else ORIGINAL_PINS
+    for (category, base), (commit, tree) in zip([("Novel", args.proof), ("Mathlib", args.mathlib)], pins):
         base = base.resolve()
         actual = git_tree(base)
         if actual != tree:
