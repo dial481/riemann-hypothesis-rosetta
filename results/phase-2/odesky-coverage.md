@@ -2,7 +2,7 @@
 
 **34 of 200 spine anchors** have a catalogue match by name or cited file. In the reverse direction, **50 of 1,886 catalogue entries (2.7%)** cite a spine file or name a declaration owned by one.
 
-Snapshot of 1,886 distinct catalogue entries retrieved **2026-11-22T17:15:18Z**. HTML SHA-256: `2c57f0ee0c8d291a1595ab46e1a6a4c732c10b14ca15b46cd4f0431b20e8879e`. [Catalogue index](https://andrewodesky.com/rh/index.html) · [Frozen identifier index](odesky-index.tsv.gz)
+Snapshot of Andrew O’Desky’s catalogue of 1,886 entries retrieved **2026-11-22T17:15:18Z**. HTML SHA-256: `2c57f0ee0c8d291a1595ab46e1a6a4c732c10b14ca15b46cd4f0431b20e8879e`. [Catalogue index](https://andrewodesky.com/rh/index.html) · [Frozen identifier index](odesky-index.tsv.gz)
 
 ## Coverage of the 200 spine anchors
 
@@ -21,6 +21,18 @@ Spine rank measures the role of a file in the import graph. A catalogue entry de
 Joining the full 175,187-file inventory places **1,881 of 1,886 entries** in **1,851 distinct project modules**. The remaining 5 entries cite Mathlib. Their rows carry empty project metrics. Each entry–file row identifies its catalogue section and whether the file was cited, owns an exactly named declaration, or both. Multi-file entries keep every match and its own metrics. Of 2,294 distinct listed identifiers, 2,215 have an exact original project owner. The entry table records the remaining names, including library names and unqualified spellings.
 
 Import rank is the original structural ranking (1 is highest). The cut counts other project files that lose every import path from Main when the module is removed, excluding the module itself. Kernel use is measured on the original proof: RH, another target, or unused by all five. The five-target mask is preserved. The two declaration-name columns separately identify which exactly matched declarations occur in any of the five kernel cones. File-level use alone cannot establish use of a named declaration. [Every entry and its module metrics](odesky-entry-modules.tsv.gz) · [All original modules, including zero matches](odesky-module-metrics.tsv.gz)
+
+Of 2,215 exactly owned Lean names, 2,206 occur in at least one of the five original kernel cones. The remaining 9 names occur in 7 entries and lie outside all five. [James Shore’s v0.2.1 declaration table](https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/decls.csv.gz)
+
+| Catalogue entry | Exactly owned names outside all five cones |
+|---|---|
+| [divisibility](https://andrewodesky.com/rh/s/divisibility.html) | `Formalism.InvariantFactorPaths.G7.FrameJetExcessBound` |
+| [f6-off-level-period-valuation](https://andrewodesky.com/rh/s/f6-off-level-period-valuation.html) | `Formalism.MainNotions.WeilJacquetShalikaLaw.off_level_bound` |
+| [interlacing-cancellation](https://andrewodesky.com/rh/s/interlacing-cancellation.html) | `Formalism.LatticeIndexTer.Interlace`, `Formalism.LatticeIndexTer.sumInterlacedBound` |
+| [q9-terminal-period-height](https://andrewodesky.com/rh/s/q9-terminal-period-height.html) | `Formalism.BranchingDeterminantCap.stepDiiiRecord`, `Formalism.BranchingDeterminantCap.third_descent_inequality` |
+| [s10-finite-field-gauss-operators](https://andrewodesky.com/rh/s/s10-finite-field-gauss-operators.html) | `Formalism.ThetaLiftIndependence.final_gaussOp` |
+| [u3-csd-local-global-compatibility](https://andrewodesky.com/rh/s/u3-csd-local-global-compatibility.html) | `UpperTheory.V.Af.compatCsd` |
+| [u4-frobenius-determines-semisimple](https://andrewodesky.com/rh/s/u4-frobenius-determines-semisimple.html) | `UpperTheory.V.Af.isoOfFrob` |
 
 ## Reverse coverage of the catalogue
 
@@ -44,6 +56,8 @@ Of 1,886 entries, **40** cite a spine file in their File field. Looking up the l
 | [Geometric estimate](https://andrewodesky.com/rh/index.html#g-geometry) | 519 | 11 | 519 |
 | [Cohomological input](https://andrewodesky.com/rh/index.html#g-cohomology) | 231 | 3 | 231 |
 | [Automorphic and Galois input](https://andrewodesky.com/rh/index.html#g-automorphic) | 456 | 11 | 456 |
+
+**0 of 49 entries in [Slope inequality](https://andrewodesky.com/rh/index.html#g-slope) touch a spine file**, either by a file citation or by a named declaration’s original owner.
 
 ## Spine entries for review
 

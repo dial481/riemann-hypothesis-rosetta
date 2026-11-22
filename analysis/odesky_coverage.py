@@ -204,7 +204,12 @@ def section_label(url):
     return SECTIONS[url.rsplit("#",1)[1]]
 
 
-def report(spine, entries, names, files, reverse, sections, entry_counts, module_count, owner_count):
+def report(spine, entries, names, files, reverse, sections, entry_counts, module_count, owners, used_names):
+    outside = owners.keys() - used_names
+    outside_entries = [(url, sorted(outside.intersection(ns))) for url,(ns,_) in sorted(entries.items())
+                       if outside.intersection(ns)]
+    if (len(owners), len(used_names), len(outside), len(outside_entries)) != (2215, 2206, 9, 7):
+        raise ValueError("Unexpected five-target coverage of exactly owned catalogue names")
     kinds = Counter(s["kind"] for s in spine)
     groups = {"Theorems": {int(s["rank"]) for s in spine if s["kind"]=="theorem"},
               "Definitions and structures": {int(s["rank"]) for s in spine if s["kind"]!="theorem"}}
@@ -217,7 +222,7 @@ def report(spine, entries, names, files, reverse, sections, entry_counts, module
     lines = ["# Statement catalogue coverage of the original proof", "",
              f"**{matched_anchors} of {len(spine)} spine anchors** have a catalogue match by name or cited file. In the reverse direction, "
              f"**{touched} of {len(entries):,} catalogue entries ({touched/len(entries):.1%})** cite a spine file or name a declaration owned by one.", "",
-             f"Snapshot of {len(entries):,} distinct catalogue entries retrieved **{UTC}**. "
+             f"Snapshot of Andrew O’Desky’s catalogue of {len(entries):,} entries retrieved **{UTC}**. "
              f"HTML SHA-256: `{HTML_SHA}`. [Catalogue index]({URL}) · [Frozen identifier index]({INDEX})", "",
              "## Coverage of the 200 spine anchors", "",
              "| Anchor kind | Anchors | Name cited | File cited | Name and file in one entry | File without name | Name without file | Neither |",
@@ -240,14 +245,21 @@ def report(spine, entries, names, files, reverse, sections, entry_counts, module
               f"The remaining {len(external)} entries cite Mathlib. Their rows carry empty project metrics. "
               "Each entry–file row identifies its catalogue section and whether the file was cited, owns an exactly named declaration, or both. "
               "Multi-file entries keep every match and its own metrics. "
-              f"Of {len({n for ns,_ in entries.values() for n in ns}):,} distinct listed identifiers, {owner_count:,} have an exact original project owner. "
+              f"Of {len({n for ns,_ in entries.values() for n in ns}):,} distinct listed identifiers, {len(owners):,} have an exact original project owner. "
               "The entry table records the remaining names, including library names and unqualified spellings.", "",
               "Import rank is the original structural ranking (1 is highest). The cut counts other project files that lose every import path from Main "
               "when the module is removed, excluding the module itself. Kernel use is measured on the original proof: RH, another target, or unused "
               "by all five. The five-target mask is preserved. The two declaration-name columns separately identify which exactly matched declarations "
               "occur in any of the five kernel cones. File-level use alone cannot establish use of a named declaration. "
               f"[Every entry and its module metrics]({LINK_TABLE}) · [All original modules, including zero matches]({MODULE_TABLE})", "",
-              "## Reverse coverage of the catalogue", "",
+              f"Of {len(owners):,} exactly owned Lean names, {len(used_names):,} occur in at least one of the five original kernel cones. "
+              f"The remaining {len(outside)} names occur in {len(outside_entries)} entries and lie outside all five. "
+              "[James Shore’s v0.2.1 declaration table](https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/decls.csv.gz)", "",
+              "| Catalogue entry | Exactly owned names outside all five cones |", "|---|---|"]
+    for url, missing in outside_entries:
+        slug = url.rsplit("/",1)[1].removesuffix(".html")
+        lines.append(f"| [{slug}]({url}) | " + ", ".join(f"`{n}`" for n in missing) + " |")
+    lines += ["", "## Reverse coverage of the catalogue", "",
               "| Spine group | Entries naming an anchor | Entries citing a spine file | Entries naming any declaration owned by a spine file | Either file or owner |",
               "|---|---:|---:|---:|---:|"]
     for group, ranks in groups.items():
@@ -268,7 +280,14 @@ def report(spine, entries, names, files, reverse, sections, entry_counts, module
         urls = {url for url,sec in sections.items() if sec == section}
         lines.append(f"| [{section_label(section)}]({section}) | {len(urls)} | "
                      f"{sum(bool(reverse[u][1] or reverse[u][2]) for u in urls)} | {sum(bool(entry_counts[u]) for u in urls)} |")
-    lines += ["", "## Spine entries for review", "",
+    slope = URL + "#g-slope"
+    slope_urls = [u for u,sec in sections.items() if sec == slope]
+    slope_hits = sum(bool(reverse[u][1] or reverse[u][2]) for u in slope_urls)
+    if (slope_hits, len(slope_urls)) != (0, 49):
+        raise ValueError("Unexpected slope section overlap")
+    lines += ["", f"**{slope_hits} of {len(slope_urls)} entries in [Slope inequality]({slope}) touch a spine file**, "
+              "either by a file citation or by a named declaration’s original owner.",
+              "", "## Spine entries for review", "",
               "Each citation link identifies the entry's section. The match table also includes entries naming a different declaration in a spine module. "
               f"A dash means the corresponding lookup found no entry. [All matches with sections]({MATCH_TABLE}) · "
               f"[All anchors, including unmatched entries]({ANCHOR_TABLE})", "",
@@ -331,7 +350,7 @@ def main():
            for url,(a,f,o) in sorted(reverse.items())))
     table(dest/ANCHOR_TABLE, ["rank","kind","anchor","original_path","original_line","name_entry_urls","file_entry_urls"],
           ((s["rank"],s["kind"],s["anchor"],s["path"],s["line"],packed(name_hits[int(s["rank"])]),packed(file_hits[int(s["rank"])])) for s in spine))
-    (dest/REPORT).write_text(report(spine, entries, name_hits, file_hits, reverse, sections, entry_counts, module_count, len(owners)), encoding="utf-8")
+    (dest/REPORT).write_text(report(spine, entries, name_hits, file_hits, reverse, sections, entry_counts, module_count, owners, used_names), encoding="utf-8")
     put_json(dest/MANIFEST,{name:content_digest(dest/name) for name in sorted((INDEX,OWNER_TABLE,ENTRY_TABLE,ANCHOR_TABLE,REPORT,MODULE_TABLE,LINK_TABLE,MATCH_TABLE))})
 
 

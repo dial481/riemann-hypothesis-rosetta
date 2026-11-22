@@ -1,0 +1,46 @@
+{
+  "edges_bytes": 399119904,
+  "edges_sha256": "423a8dfe2150b5a5937679a5822f1477b7d10f241702afc6abd254813203aaae",
+  "constants_sha256": "2964f5236046325ac7884906cb9517b0aa582330dd48a07eef291cb579444820",
+  "witnesses": [
+    {
+      "rank": 14,
+      "caller": "PositivityTheory.ThKEst.siegelAll_of",
+      "target": "Formalism.UG.hform",
+      "caller_family": [
+        "PositivityTheory.ThKEst.siegelAll_of"
+      ],
+      "target_family": [
+        "Formalism.UG.hform",
+        "Formalism.UG.hform.eq_1"
+      ],
+      "caller_outgoing_edge_rows": 327,
+      "caller_distinct_targets": 325,
+      "target_incoming_edge_rows": 2463,
+      "target_distinct_callers": 1630,
+      "target_family_incoming_edge_rows": 2478,
+      "target_family_distinct_callers": 1631,
+      "exact_edge_rows": 0,
+      "family_edge_rows": 0
+    },
+    {
+      "rank": 128,
+      "caller": "GlobalTheory.FunObj.exists_coords",
+      "target": "Formalism.GradedWeylDivisibility.sSIdxFinite",
+      "caller_family": [
+        "GlobalTheory.FunObj.exists_coords"
+      ],
+      "target_family": [
+        "Formalism.GradedWeylDivisibility.sSIdxFinite"
+      ],
+      "caller_outgoing_edge_rows": 97,
+      "caller_distinct_targets": 53,
+      "target_incoming_edge_rows": 51,
+      "target_distinct_callers": 50,
+      "target_family_incoming_edge_rows": 51,
+      "target_family_distinct_callers": 50,
+      "exact_edge_rows": 0,
+      "family_edge_rows": 0
+    }
+  ]
+}

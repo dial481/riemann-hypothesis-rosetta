@@ -1,6 +1,6 @@
 # Cross-validation of the original-source map
 
-**Both compiled RH datasets contain all 200 independently chosen starting declarations, at their cited source locations.** The Proofs & Reasons graph also contains every direct step in **198 of the 200** source trails. In the two exceptions the starting declaration is used by RH, and the particular route from our source scan includes one direct edge absent from that graph. [Per-entry results](comparison-spine.tsv) · [Direct-edge checks](comparison-witness-edges.tsv) · [Alternative compiled trails](comparison-alternative-paths.json)
+**The compiled RH declaration graph confirms 460 of 462 distinct direct witness edges. The remaining two are false positives of the text trace.** Neither source mention is a direct kernel dependency in either compiled dataset. Both datasets contain all 200 frozen spine anchors, and the declaration graph confirms every edge in 198 of the 200 reading trails. [Per-entry results](comparison-spine.tsv) · [Direct-edge checks](comparison-witness-edges.tsv) · [Alternative compiled trails](comparison-alternative-paths.json)
 
 The original independent results were committed before the comparison inputs were downloaded. A subsequent audit of explicitly global names in our own trace identified three misresolved references. The corrected source-only outputs were frozen in `05f7faa` and then compared afresh with the same four digest-pinned inputs. The subsequent portable ranking freeze changed the module metrics file. The 200 witness chains and the reference inputs match the preceding freeze. [Rounded ranking freeze](https://github.com/dial481/riemann-hypothesis-rosetta/commit/3e5c5447e8ac9d62b8fc2d65e863857b5c2f0b15). [Original independent snapshot](https://github.com/dial481/riemann-hypothesis-rosetta/tree/aca7e1830b22c913bd9658c3f38e82128539beea/results) · [Corrected independent snapshot](https://github.com/dial481/riemann-hypothesis-rosetta/tree/05f7faa030529eccafb8e48ef826960462606422/results) · [Audit and change in membership](review/2026-11-21.md) · [Comparison data and input hashes](comparison.json)
 
@@ -83,18 +83,32 @@ cmp results/comparison-peer-traces.json inputs/reproduced/comparison-peer-traces
 
 </details>
 
-## The two disputed spine edges
+## Two source mentions excluded by both compiled graphs
 
-| Reading priority | Source mention | Result of checking the compiled graph |
-|---:|---|---|
-| 14 · Formalism.SatakeDualWeyl.Statement | `siegelAll_of` lists `Formalism.UG.hform` in a `simp only` call at line 238. | Both declarations are present. The compiled graph has no direct edge between them. An alternative shortest RH trail has 10 edges and reaches `hform` through `Formalism.MainNotions.S.AutInst`. |
-| 128 · Formalism.GradedWeylDivisibility.FinalD | `exists_coords` invokes `sSIdxFinite` to construct a local finiteness instance at line 78. | Both endpoints are present. The compiled graph has no direct edge between them. An alternative shortest RH trail has 11 edges and reaches `sSIdxFinite` through `GlobalTheory.Branching.finite_nablaSq`. |
+| Spine rank | Caller → target | Outgoing edge rows from caller | Distinct constants referencing target | Direct edges, exact / including auxiliaries |
+|---:|---|---:|---:|---:|
+| 14 | `PositivityTheory.ThKEst.siegelAll_of` → `Formalism.UG.hform` | 327 | 1,630 | 0 / 0 |
+| 128 | `GlobalTheory.FunObj.exists_coords` → `Formalism.GradedWeylDivisibility.sSIdxFinite` | 97 | 50 | 0 / 0 |
 
-These are literal references in the submitted source. Simplification or local-instance elaboration can represent the resulting term differently. The exact reason for each missing direct edge requires inspection of the elaborated term. The external trails are stored separately from our independent witnesses. [Rank 14 source mention](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/WeilBound/ThetaLifts/FrameEstimates/SiegelAll.lean#L238) · [Rank 128 source mention](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/FiniteClPlusAndExistsCoords.lean#L78)
+James Shore’s v0.2.1 kernel edge table contains 2,463 incoming edge rows for `hform` and 51 for `sSIdxFinite`. A caller may occur in both a type edge and a value edge. The distinct-caller column counts each constant once. The family check includes constants assigned to either declaration in the release, including shared auxiliaries, and dotted descendants of either endpoint. This includes `Formalism.UG.hform.eq_1`. No caller-family constant refers directly to a target-family constant in either case. [Kernel edges, v0.2.1](https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/edges.parquet) · [Ownership and edge schema](https://github.com/james-shore/rh-proof-dependencies/blob/v0.2.1/docs/dataset.md) · [Counts, endpoint families and SHA-256](comparison-kernel-edges.json)
 
-## Naskręcki’s atlas
+At rank 14, line 238 lists `hform` in a simplifier argument. At rank 128, line 78 mentions `sSIdxFinite` when constructing a local instance. Proofs & Reasons also has no direct edge for these pairs. Its compiled RH trails reach the target declarations through `Formalism.MainNotions.S.AutInst` and `GlobalTheory.Branching.finite_nablaSq`, respectively. The frozen spine and its source witnesses retain the original evidence. [Rank 14 source mention](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/WeilBound/ThetaLifts/FrameEstimates/SiegelAll.lean#L238) · [Rank 128 source mention](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AbelianVarietyTheory/Proofs/DivisorProofs/FiniteClPlusAndExistsCoords.lean#L78)
 
-The atlas identifies 107 Lean declaration pins across 64 files, plus two conceptual nodes, in 14 mathematical components. Its model records the same archive hash, original mirror commit and Mathlib pin. We matched its abbreviated local names by exact module and line plus a unique qualified-name suffix. All **64** files are in Main’s closure. **87 of 107** declaration pins match our RH trace at the exact source line, spanning **13 of 14** components. Of the remaining 20, **18** also fall outside both compiled RH selections. The atlas covers five exports, so a separate endpoint such as `critAll` has a place in that map. [Frozen atlas model](https://github.com/nasqret/riemann-rev/blob/d53b3804bd013df4cf9af3b4087728148c90c9bd/data/model.json) · [Pin-by-pin comparison](comparison-atlas.tsv)
+## Bartosz Naskręcki’s atlas
+
+The atlas identifies 107 Lean declaration pins across 64 files, plus two conceptual nodes, in 14 mathematical components. Its model records the same archive hash, original mirror commit and Mathlib pin. We resolved all 107 pins against the original compiled declaration owners by file, source span and exact name or unambiguous qualified-name suffix. All 64 files are in Main’s import closure. The source trace matches 87 pins at the exact line, across 13 of 14 components.
+
+**89 pins are in the kernel closure of `riemannHypothesis`, 17 are in one or more of the four other targets but outside RH, and 1 is outside all five.** That pin is `alternate-rh`, the declaration `UpperTheory.riemannHypothesis_of_everyCharacter`. It has a verified owner and mask zero. For each pin, `shore_five_theorem_mask` is the bitwise union of the theorem masks of its owned, nonshared project constants. A pin may contribute to multiple rows below.
+
+| Mask bit | Kernel target | Pins |
+|---:|---|---:|
+| 1 | `riemannHypothesis` | 89 |
+| 2 | `riemannZeta_eq_zero_re` | 90 |
+| 4 | `LFunction_ne_zero_of_half_lt_re` | 87 |
+| 8 | `LFunction_eq_zero_re` | 93 |
+| 16 | `LFunction_eq_zero_re_of_isPrimitive` | 90 |
+
+On 22 November 2026, the runtime check resolved atlas HEAD to `e9bdf8f4177403b66426f84b0ccbac15a4ad152a`. Its `data/model.json` was byte-identical to the analysis pin `d53b3804`. Both have SHA-256 `8c85bd83b65afa31e330392acd81124397815d6d072a51dca19633936c4af544`. [Model at the observed HEAD](https://github.com/nasqret/riemann-rev/blob/e9bdf8f4177403b66426f84b0ccbac15a4ad152a/data/model.json) · [Frozen atlas model](https://github.com/nasqret/riemann-rev/blob/d53b3804bd013df4cf9af3b4087728148c90c9bd/data/model.json) · [Pin-by-pin comparison](comparison-atlas.tsv)
 
 Two atlas declarations are present in **both** compiled RH sets and absent from our trace. Both have concrete explanations to test in a future resolver:
 
@@ -107,7 +121,21 @@ The atlas labels 85 edges as calls. For **74**, both endpoints are in the Proofs
 
 ## Investigation list
 
-1. Inspect term-level ownership of the two disputed direct edges above. Both target anchors already have independently published compiled RH paths.
-2. Trace the source-only 2,233 sites and the 166,098 missed by the lexical resolver but reported by both compiled sources. The two atlas cases give reproducible fixtures for improving the next independent parser version.
-3. Audit the **2,269** names on which the two compiled datasets differ before using either as a complete ground truth. The membership flags preserve both accounts.
-4. Review mathematical-area labels for communities dominated by umbrella imports. A centrality rank and a one-line source note are entry points for a mathematician’s review. [Independent community profiles](communities.json)
+1. Trace the source-only 2,233 sites and the 166,098 missed by the lexical resolver but reported by both compiled sources. The two atlas cases give reproducible fixtures for improving the next independent parser version.
+2. Audit the **2,269** names on which the two compiled datasets differ before using either as a complete ground truth. The membership flags preserve both accounts.
+3. Review mathematical-area labels for communities dominated by umbrella imports. A centrality rank and a one-line source note are entry points for a mathematician’s review. [Independent community profiles](communities.json)
+
+## Reproduce the edge and atlas checks
+
+Use the repository environment and the README reproduction of the frozen outputs. The comparison runner verifies the release digests, including the 399,119,904-byte edge table (SHA-256 `423a8dfe2150b5a5937679a5822f1477b7d10f241702afc6abd254813203aaae`). The manifest covers the eight generated comparison outputs and hashes gzip payloads after decompression. The live atlas check runs separately so later HEAD changes remain distinguishable from the pinned comparison.
+
+```bash
+set -eu
+export LC_ALL=C
+.venv/bin/python -m pip install -r requirements.txt
+ROSETTA_RESULTS=inputs/reproduced .venv/bin/python analysis/compare.py inputs/comparisons --fetch
+cmp results/comparison-content-sha256.json inputs/reproduced/comparison-content-sha256.json
+.venv/bin/python analysis/check_witness_edges.py inputs/comparisons/shore
+.venv/bin/python analysis/check_atlas_head.py --commit e9bdf8f4177403b66426f84b0ccbac15a4ad152a
+.venv/bin/python analysis/check_atlas_head.py
+```

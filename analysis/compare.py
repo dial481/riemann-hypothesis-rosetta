@@ -10,20 +10,38 @@ from collections import defaultdict
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from urllib.request import urlretrieve
+from typing import NamedTuple
 
 from check import verify_frozen
-from common import PROJECT, RESULTS, digest, put_json, read_rows, table
+import check_witness_edges as kernel_edges
+import check_atlas_head as atlas_model
+from common import PROJECT, RESULTS, content_digest, digest, put_json, read_rows, table
 
 URLS = {
-    "shore/constants.csv.gz": ("2964f5236046325ac7884906cb9517b0aa582330dd48a07eef291cb579444820",
+    "shore/edges.parquet": (kernel_edges.EDGES_SHA256, "https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/edges.parquet"),
+    "shore/decls.csv.gz": ("bdfeae289f2db8b279816439049f26ba69ec993af2bab3b30d53340fe02493b9",
+                           "https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/decls.csv.gz"),
+    "shore/constants.csv.gz": (kernel_edges.CONSTANTS_SHA256,
                                "https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/constants.csv.gz"),
     "shore/per-theorem.tsv": ("dc74e65916b6b945be788657001859eb7f1666c863e10d92c5c8ef0be1651606",
                               "https://raw.githubusercontent.com/james-shore/rh-proof-dependencies/70fbb2fc21fed8de3c02d9f6df0b6067bf22e879/data/per-theorem.tsv"),
     "pr-graph.json.gz": ("82c88d25d909a1399c754b87ce298e1939ab0908aeb4766fdac8a57387c71dc5",
                          "https://photos.proofsandreasons.io/alp-graph/rh/alp-declaration-graph-used-by-rh.json.gz"),
-    "atlas/data/model.json": ("8c85bd83b65afa31e330392acd81124397815d6d072a51dca19633936c4af544",
-                              "https://raw.githubusercontent.com/nasqret/riemann-rev/d53b3804bd013df4cf9af3b4087728148c90c9bd/data/model.json")
+    "atlas/data/model.json": (atlas_model.MODEL_SHA256, atlas_model.model_url(atlas_model.PIN))
 }
+
+
+class AtlasPin(NamedTuple):
+    atlas_id: str
+    component: str
+    module: str
+    declaration: str
+    atlas_line: int
+    our_trace_line: int | str
+    shore_RH: int
+    pr_RH: int
+    spine_module: int
+    shore_five_theorem_mask: int
 
 
 def site(module, name):
@@ -60,6 +78,8 @@ def main():
     verify_frozen()
     for name, (sha, url) in URLS.items():
         check_input(a.evidence_dir / name, sha, url, a.fetch)
+    checked_edges = kernel_edges.audit(a.evidence_dir / "shore")
+    kernel_edges.check_expected(checked_edges)
     ours = {site(r["module"], r["name"]): int(r["line"]) for r in read_rows(RESULTS / "rh-trace.tsv.gz")}
     ours_set = set(ours)
     spine = list(read_rows(RESULTS / "spine.tsv"))
@@ -69,10 +89,14 @@ def main():
     atlas = json.loads((a.evidence_dir / "atlas/data/model.json").read_text())
     assert atlas["pins"]["mirror_commit"] == PROJECT
     atlas_modules = {r["module"] for r in atlas["nodes"] if r.get("module")}
-    atlas_positions = defaultdict(set)
-    for key, number in ours.items():
-        if key[0] in atlas_modules:
-            atlas_positions[key[0], number].add(key)
+    # Resolve abbreviated atlas spellings against all original declaration owners,
+    # including declarations outside every theorem cone.
+    atlas_owners = defaultdict(list)
+    with gzip.open(a.evidence_dir / "shore/decls.csv.gz", "rt") as stream:
+        for r in csv.DictReader(stream):
+            if r["origin"] == "project" and r["module"] in atlas_modules:
+                key = site(r["module"], r["decl"])
+                atlas_owners[key[0]].append((key, int(r["start_line"]), int(r["end_line"]), r["in_cone"] == "true"))
     masks, shore_lines = {}, {}
     shore_mathlib = set()
     with gzip.open(a.evidence_dir / "shore/constants.csv.gz", "rt") as stream:
@@ -108,8 +132,6 @@ def main():
             pr.add(k)
             node_count += 1
             depths[r["id"]] = r["steps_below_riemannHypothesis"]
-            if k[0] in atlas_modules:
-                atlas_positions[k[0], r["line"]].add(k)
             if k in chain_sites or k[0] in atlas_modules:
                 ids[k] = r["id"]
                 pr_lines[k] = r["line"]
@@ -139,8 +161,14 @@ def main():
                                  int(sl[0] <= int(r["line"]) <= sl[1]), pr_lines.get(k, ""), matched, absent, missing))
     table(RESULTS / "comparison-spine.tsv", ["rank","module","anchor","line","shore_RH_site","pr_RH_site",
           "in_shore_source_range","pr_line","pr_chain_edges_confirmed","pr_chain_edges_absent","pr_chain_edges_unmatched_endpoint"],spine_comparison)
-    table(RESULTS / "comparison-witness-edges.tsv", ["caller_module","caller","dependency_module","dependency","pr_status"],
-          ((*x,*y, "confirmed" if (x,y) in matched_edges else "unmatched endpoint" if (x,y) in missing_sites else "edge absent")
+    audited = {(r["caller"], r["target"]) for r in checked_edges["witnesses"]}
+    assert audited == {(x[1], y[1]) for x, y in absent_edges}
+    assert (len(all_edges), len(matched_edges), len(absent_edges), len(missing_sites)) == (462, 460, 2, 0)
+    put_json(RESULTS / "comparison-kernel-edges.json", checked_edges)
+    table(RESULTS / "comparison-witness-edges.tsv",
+          ["caller_module","caller","dependency_module","dependency","pr_status","kernel_edge_audit"],
+          ((*x,*y, "confirmed" if (x,y) in matched_edges else "unmatched endpoint" if (x,y) in missing_sites else "edge absent",
+            "absent including auxiliaries" if (x[1], y[1]) in audited else "not audited")
            for x,y in sorted(all_edges)))
     table(RESULTS / "comparison-disagreements.tsv.gz", ["module","name","source_trace","shore_RH","pr_RH"],
           ((*k, int(k in ours), int(k in shore), int(k in pr)) for k in sorted((ours_set | shore | pr) - (ours_set & shore & pr))))
@@ -181,15 +209,27 @@ def main():
     for r in atlas["nodes"]:
         if not r.get("module") or not r.get("declaration"):
             continue
-        k = site(r["module"], r["declaration"])
-        qualified = {x for x in atlas_positions[k[0],r["lines"][0]] if x[1].endswith("." + k[1])}
-        if len(qualified) == 1 and k not in ours and k not in pr and k not in shore:
-            k = qualified.pop()
+        module, name = site(r["module"], r["declaration"])
+        line = r["lines"][0]
+        candidates = [(key, used) for key, lo, hi, used in atlas_owners[module]
+                      if lo <= line <= hi and (key[1] == name or key[1].endswith("." + name))]
+        if len(candidates) != 1:
+            raise ValueError(f"Ambiguous or missing owner for atlas pin {r['id']}")
+        k, compiled_used = candidates[0]
+        mask = masks.get(k, 0)
+        assert bool(mask) == compiled_used, k
         atlas_keys[r["id"]] = k
-        atlas_rows.append((r["id"],r["component"],*k,r["lines"][0],ours.get(k,""),int(k in shore),int(k in pr),
-                           int(k[0] in spine_modules)))
-    table(RESULTS / "comparison-atlas.tsv", ["atlas_id","component","module","declaration","atlas_line","our_trace_line",
-          "shore_RH","pr_RH","spine_module"], atlas_rows)
+        atlas_rows.append(AtlasPin(r["id"], r["component"], *k, line, ours.get(k,""), int(k in shore), int(k in pr),
+                           int(k[0] in spine_modules), mask))
+    distribution = {
+        "rh": sum(bool(row.shore_five_theorem_mask & 1) for row in atlas_rows),
+        "other_targets_outside_rh": sum(row.shore_five_theorem_mask != 0 and not row.shore_RH for row in atlas_rows),
+        "outside_all": [row.atlas_id for row in atlas_rows if not row.shore_five_theorem_mask],
+    }
+    if distribution != {"rh": 89, "other_targets_outside_rh": 17, "outside_all": ["alternate-rh"]}:
+        raise ValueError(f"Unexpected atlas mask breakdown: {distribution}")
+    assert atlas_keys["alternate-rh"][1] == "UpperTheory.riemannHypothesis_of_everyCharacter"
+    table(RESULTS / "comparison-atlas.tsv", AtlasPin._fields, atlas_rows)
     edge_rows = []
     for edge in atlas["edges"]:
         x, y = (atlas_keys.get(edge[n]) for n in ("from", "to"))
@@ -217,15 +257,22 @@ def main():
                "both_spine_anchors":sum(x[4]*x[5] for x in spine_comparison),
                "pr_complete_chains":sum(not(x[-1] or x[-2]) for x in spine_comparison),
                "pr_unique_edges":[len(all_edges),len(matched_edges),len(absent_edges),len(missing_sites)],
-               "atlas_pins":len(atlas_rows), "atlas_modules":len({x[2] for x in atlas_rows}),
-               "atlas_modules_inside_imports":sum(m in archive_modules for m in {x[2] for x in atlas_rows}),
-               "atlas_spine_modules":len({x[2] for x in atlas_rows if x[-1]}),
-               "atlas_named_matches":sum(x[5]!="" for x in atlas_rows),
-               "atlas_exact_lines":sum(x[4]==x[5] for x in atlas_rows),
-               "atlas_components_with_trace":len({x[1] for x in atlas_rows if x[5]!=""}),
-               "atlas_components_with_spine":len({x[1] for x in atlas_rows if x[-1]}),
+               "atlas_pins":len(atlas_rows), "atlas_modules":len({x.module for x in atlas_rows}),
+               "atlas_modules_inside_imports":sum(m in archive_modules for m in {x.module for x in atlas_rows}),
+               "atlas_spine_modules":len({x.module for x in atlas_rows if x.spine_module}),
+               "atlas_five_theorem_mask_breakdown":distribution,
+               "atlas_pins_by_target":{r["theorem"]: sum(bool(row.shore_five_theorem_mask & (1 << i)) for row in atlas_rows)
+                                       for i,r in enumerate(roots)},
+               "atlas_named_matches":sum(x.our_trace_line!="" for x in atlas_rows),
+               "atlas_exact_lines":sum(x.atlas_line==x.our_trace_line for x in atlas_rows),
+               "atlas_components_with_trace":len({x.component for x in atlas_rows if x.our_trace_line!=""}),
+               "atlas_components_with_spine":len({x.component for x in atlas_rows if x.spine_module}),
                "atlas_component_count":len(atlas["components"])}
     put_json(RESULTS / "comparison.json", summary)
+    outputs = ("comparison.json", "comparison-alternative-paths.json", "comparison-atlas-edges.tsv",
+               "comparison-atlas.tsv", "comparison-disagreements.tsv.gz", "comparison-kernel-edges.json",
+               "comparison-spine.tsv", "comparison-witness-edges.tsv")
+    put_json(RESULTS / "comparison-content-sha256.json", {name: content_digest(RESULTS / name) for name in outputs})
     verify_frozen()
 
 

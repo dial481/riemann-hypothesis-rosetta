@@ -1,5 +1,7 @@
 {
   "input_sha256": {
+    "shore/edges.parquet": "423a8dfe2150b5a5937679a5822f1477b7d10f241702afc6abd254813203aaae",
+    "shore/decls.csv.gz": "bdfeae289f2db8b279816439049f26ba69ec993af2bab3b30d53340fe02493b9",
     "shore/constants.csv.gz": "2964f5236046325ac7884906cb9517b0aa582330dd48a07eef291cb579444820",
     "shore/per-theorem.tsv": "dc74e65916b6b945be788657001859eb7f1666c863e10d92c5c8ef0be1651606",
     "pr-graph.json.gz": "82c88d25d909a1399c754b87ce298e1939ab0908aeb4766fdac8a57387c71dc5",
@@ -94,6 +96,20 @@
   "atlas_modules": 64,
   "atlas_modules_inside_imports": 64,
   "atlas_spine_modules": 10,
+  "atlas_five_theorem_mask_breakdown": {
+    "rh": 89,
+    "other_targets_outside_rh": 17,
+    "outside_all": [
+      "alternate-rh"
+    ]
+  },
+  "atlas_pins_by_target": {
+    "riemannHypothesis": 89,
+    "riemannZeta_eq_zero_re": 90,
+    "LFunction_ne_zero_of_half_lt_re": 87,
+    "LFunction_eq_zero_re": 93,
+    "LFunction_eq_zero_re_of_isPrimitive": 90
+  },
   "atlas_named_matches": 87,
   "atlas_exact_lines": 87,
   "atlas_components_with_trace": 13,

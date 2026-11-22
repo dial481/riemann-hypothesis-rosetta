@@ -1,0 +1,10 @@
+{
+  "comparison.json": "4ee6ef81e8745775fbf01ece91fabf7e1fc607f0d364094baa3384fae9fd3c98",
+  "comparison-alternative-paths.json": "9a04b39b37fe961d1471c86734991eddcdbfb96d00e8f295e963c867b01f0fca",
+  "comparison-atlas-edges.tsv": "173c8ae356dc77e779295d7f32fe6085d70d54e45dd700cec8706c77c9bbec60",
+  "comparison-atlas.tsv": "dd031c2ee713987d4bdc6d1640c3601c2f981fb3412f91d5747669630816cf40",
+  "comparison-disagreements.tsv.gz": "5a477a3a700c09c9d59670e9ab3dd6a39d30bd19f8519a1b33478f624b98ee91",
+  "comparison-kernel-edges.json": "9d41dc2d1ca032d8b530ced8f310cd0754a45f5d2598ad6439d97032dc8f3232",
+  "comparison-spine.tsv": "5923c6939dfdd6a3d09fe0ff532a4cbccc278b21fc4674bad45ef8539e364f2f",
+  "comparison-witness-edges.tsv": "8a2420a5631adf5d31809bb2067d53ced45ffd3c9f23844d8513d5083c28e834"
+}
