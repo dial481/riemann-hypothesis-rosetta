@@ -6,6 +6,8 @@
 
 AI drafted this reading note from the original source. It is open for mathematical review. [Reader notice](../NOTICE.md)
 
+Descriptions here follow declaration and file names, which are not evidence of mathematical content. [Kernel check of `anyGeometry`](../anygeometry.md)
+
 ## What the theorem promises
 
 Fix a CM number field $E$, an algebraic closure $Ω$, a prime $ℓ$, an identification $ι$ of the algebraic closure of the $ℓ$-adic field with $ℂ$, and an integer rank $a≥1$. Let $π$ be regular algebraic and cuspidal and let $χ$ be a character of the maximal real subfield such that $(π,χ)$ is a polarized pair. The conclusion `Row0b recT` gives **one continuous semisimple, rank-$a$, $ℓ$-adic representation of the absolute Galois group of $E$**, an integer `wt`, and a multiset `HT τ` of integer weights for each embedding $τ$. The witnesses may depend on the global input. They are fixed before the place varies. [Row0b and its quantifiers](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/TypeConditions/WeightsConjBis.lean#L54-L73)
