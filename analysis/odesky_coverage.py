@@ -255,7 +255,7 @@ def report(spine, entries, names, files, reverse, sections, entry_counts, module
               f"[Every entry and its module metrics]({LINK_TABLE}) · [All original modules, including zero matches]({MODULE_TABLE})", "",
               f"Of {len(owners):,} exactly owned Lean names, {len(used_names):,} occur in at least one of the five original kernel cones. "
               f"The remaining {len(outside)} names occur in {len(outside_entries)} entries and lie outside all five. "
-              "[James Shore’s v0.2.1 declaration table](https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/decls.csv.gz)", "",
+              "The list of used declarations comes from [Andrew Sutherland’s kernel export](https://math.mit.edu/~drew/grh/). [James Shore’s v0.2.1 declaration table](https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/decls.csv.gz)", "",
               "| Statement entry | Exactly owned names outside all five cones |", "|---|---|"]
     for url, missing in outside_entries:
         slug = url.rsplit("/",1)[1].removesuffix(".html")
