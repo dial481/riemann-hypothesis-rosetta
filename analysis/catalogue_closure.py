@@ -66,7 +66,7 @@ def reachable_targets(graph, target_ids):
     return component, sizes, masks, bits
 
 
-def check_links(edges_path, entries, links, endpoints):
+def check_links(edges_path, entries, links, endpoints, cited_identities):
     owners = {n for mapping in endpoints.values() for n in mapping.values()}
     graph, ids = project_graph(edges_path, owners)
     targets = set(ids.values())  # Either endpoint can be the target in the direction check.
@@ -94,6 +94,7 @@ def check_links(edges_path, entries, links, endpoints):
         source, target = entries[a][0], entries[b][0]
         src_owned = sorted(set(endpoints[a].values()))
         dst_owned = sorted(set(endpoints[b].values()))
+        shared = sorted(cited_identities[a] & cited_identities[b])
         hits = witnesses(src_owned, dst_owned)
         if hits:
             distance, caller, callee = min(hits)
@@ -101,11 +102,11 @@ def check_links(edges_path, entries, links, endpoints):
         else:
             caller = callee = ""
             complete = len(endpoints[a]) == len(source) and len(endpoints[b]) == len(target)
-            result = "no path" if complete else "incomplete endpoint coverage"
+            result = "common declaration" if shared else "no path" if complete else "incomplete endpoint coverage"
         opposite = witnesses(dst_owned, src_owned) if explicit and result == "no path" else []
         exact_reverse = any(rev_src in target and rev_dst in source for _, rev_src, rev_dst in opposite)
         reverse_result = ("direct" if opposite[0][0] == 0 else "transitive") if opposite else ""
         reverse_caller, reverse_callee = opposite[0][1:] if opposite else ("", "")
         rows.append((a, b, explicit, svg_pair, len(source), len(endpoints[a]), len(target), len(endpoints[b]),
-                     int(bool(set(src_owned) & set(dst_owned))), result, caller, callee, reverse_result, reverse_caller, reverse_callee, int(exact_reverse) if opposite else ""))
+                     int(bool(set(src_owned) & set(dst_owned))), result, caller, callee, reverse_result, reverse_caller, reverse_callee, int(exact_reverse) if opposite else "", "|".join(shared)))
     return rows
