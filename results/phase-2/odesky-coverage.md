@@ -1,8 +1,8 @@
-# Statement catalogue coverage of the original proof
+# Coverage of *Statements of the Lean RH project* in the original proof
 
-**34 of 200 spine anchors** have a catalogue match by name or cited file. In the reverse direction, **50 of 1,886 catalogue entries (2.7%)** cite a spine file or name a declaration owned by one.
+**34 of 200 spine anchors** have a statement match by name or cited file. In the reverse direction, **50 of 1,886 statement entries (2.7%)** cite a spine file or name a declaration owned by one.
 
-Snapshot of Andrew O’Desky’s catalogue of 1,886 entries retrieved **2026-11-22T17:15:18Z**. HTML SHA-256: `2c57f0ee0c8d291a1595ab46e1a6a4c732c10b14ca15b46cd4f0431b20e8879e`. [Catalogue index](https://andrewodesky.com/rh/index.html) · [Frozen identifier index](odesky-index.tsv.gz)
+Snapshot of Andrew O’Desky’s *Statements of the Lean RH project*, with 1,886 entries retrieved **2026-11-22T17:15:18Z**. HTML SHA-256: `2c57f0ee0c8d291a1595ab46e1a6a4c732c10b14ca15b46cd4f0431b20e8879e`. [Statements of the Lean RH project](https://andrewodesky.com/rh/index.html) · [Frozen identifier index](odesky-index.tsv.gz)
 
 ## Coverage of the 200 spine anchors
 
@@ -12,19 +12,19 @@ Snapshot of Andrew O’Desky’s catalogue of 1,886 entries retrieved **2026-11-
 | Definitions and structures | 94 | 14 | 16 | 9 | 7 | 5 | 73 |
 | All anchors | 200 | 24 | 27 | 17 | 10 | 7 | 166 |
 
-The second row comprises 57 definitions, 28 structures, 8 abbreviations and 1 class. A declaration match requires the exact qualified Lean identifier. A file match requires a listed project path equal to the frozen spine path after adding the source root and removing the catalogue's line pointer. An entry can list multiple declarations and multiple paths. We compare those fields independently and make no positional pairing. A line number can change with the source revision. Partial names, prose mentions, and subject resemblance do not establish a match.
+The second row comprises 57 definitions, 28 structures, 8 abbreviations and 1 class. A declaration match requires the exact qualified Lean identifier. A file match requires a listed project path equal to the frozen spine path after adding the source root and removing the entry's line pointer. An entry can list multiple declarations and multiple paths. We compare those fields independently and make no positional pairing. A line number can change with the source revision. Partial names, prose mentions, and subject resemblance do not establish a match.
 
-Spine rank measures the role of a file in the import graph. A catalogue entry describes a mathematical statement. An unmatched anchor can be a definition or a wrapper. An absent citation alone supplies no reading priority.
+Spine rank measures the role of a file in the import graph. A statement entry describes a mathematical statement. An unmatched anchor can be a definition or a wrapper. An absent citation alone supplies no reading priority.
 
 ## Across all original project modules
 
-Joining the full 175,187-file inventory places **1,881 of 1,886 entries** in **1,851 distinct project modules**. The remaining 5 entries cite Mathlib. Their rows carry empty project metrics. Each entry–file row identifies its catalogue section and whether the file was cited, owns an exactly named declaration, or both. Multi-file entries keep every match and its own metrics. Of 2,294 distinct listed identifiers, 2,215 have an exact original project owner. The entry table records the remaining names, including library names and unqualified spellings.
+Joining the full 175,187-file inventory places **1,881 of 1,886 entries** in **1,851 distinct project modules**. The remaining 5 entries cite Mathlib. Their rows carry empty project metrics. Each entry–file row identifies its section and whether the file was cited, owns an exactly named declaration, or both. Multi-file entries keep every match and its own metrics. Of 2,294 distinct listed identifiers, 2,215 have an exact original project owner. The entry table records the remaining names, including library names and unqualified spellings.
 
 Import rank is the original structural ranking (1 is highest). The cut counts other project files that lose every import path from Main when the module is removed, excluding the module itself. Kernel use is measured on the original proof: RH, another target, or unused by all five. The five-target mask is preserved. The two declaration-name columns separately identify which exactly matched declarations occur in any of the five kernel cones. File-level use alone cannot establish use of a named declaration. [Every entry and its module metrics](odesky-entry-modules.tsv.gz) · [All original modules, including zero matches](odesky-module-metrics.tsv.gz)
 
 Of 2,215 exactly owned Lean names, 2,206 occur in at least one of the five original kernel cones. The remaining 9 names occur in 7 entries and lie outside all five. [James Shore’s v0.2.1 declaration table](https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/decls.csv.gz)
 
-| Catalogue entry | Exactly owned names outside all five cones |
+| Statement entry | Exactly owned names outside all five cones |
 |---|---|
 | [divisibility](https://andrewodesky.com/rh/s/divisibility.html) | `Formalism.InvariantFactorPaths.G7.FrameJetExcessBound` |
 | [f6-off-level-period-valuation](https://andrewodesky.com/rh/s/f6-off-level-period-valuation.html) | `Formalism.MainNotions.WeilJacquetShalikaLaw.off_level_bound` |
@@ -34,7 +34,7 @@ Of 2,215 exactly owned Lean names, 2,206 occur in at least one of the five origi
 | [u3-csd-local-global-compatibility](https://andrewodesky.com/rh/s/u3-csd-local-global-compatibility.html) | `UpperTheory.V.Af.compatCsd` |
 | [u4-frobenius-determines-semisimple](https://andrewodesky.com/rh/s/u4-frobenius-determines-semisimple.html) | `UpperTheory.V.Af.isoOfFrob` |
 
-## Reverse coverage of the catalogue
+## Reverse coverage of the statement index
 
 | Spine group | Entries naming an anchor | Entries citing a spine file | Entries naming any declaration owned by a spine file | Either file or owner |
 |---|---:|---:|---:|---:|
@@ -46,7 +46,7 @@ Of 1,886 entries, **40** cite a spine file in their File field. Looking up the l
 
 ## Where the matches occur in the argument
 
-| Catalogue section | All entries | Entries touching a spine file | Entries matched to any project file |
+| Statement section | All entries | Entries touching a spine file | Entries matched to any project file |
 |---|---:|---:|---:|
 | [The result](https://andrewodesky.com/rh/index.html#g-result) | 2 | 1 | 2 |
 | [Analytic reduction](https://andrewodesky.com/rh/index.html#g-analytic) | 170 | 1 | 165 |

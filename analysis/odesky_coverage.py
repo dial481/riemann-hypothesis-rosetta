@@ -219,11 +219,11 @@ def report(spine, entries, names, files, reverse, sections, entry_counts, module
     touched = sum(bool(f or o) for _,f,o in reverse.values())
     matched = sum(bool(n) for n in entry_counts.values())
     external = [u for u,n in entry_counts.items() if not n]
-    lines = ["# Statement catalogue coverage of the original proof", "",
-             f"**{matched_anchors} of {len(spine)} spine anchors** have a catalogue match by name or cited file. In the reverse direction, "
-             f"**{touched} of {len(entries):,} catalogue entries ({touched/len(entries):.1%})** cite a spine file or name a declaration owned by one.", "",
-             f"Snapshot of Andrew O’Desky’s catalogue of {len(entries):,} entries retrieved **{UTC}**. "
-             f"HTML SHA-256: `{HTML_SHA}`. [Catalogue index]({URL}) · [Frozen identifier index]({INDEX})", "",
+    lines = ["# Coverage of *Statements of the Lean RH project* in the original proof", "",
+             f"**{matched_anchors} of {len(spine)} spine anchors** have a statement match by name or cited file. In the reverse direction, "
+             f"**{touched} of {len(entries):,} statement entries ({touched/len(entries):.1%})** cite a spine file or name a declaration owned by one.", "",
+             f"Snapshot of Andrew O’Desky’s *Statements of the Lean RH project*, with {len(entries):,} entries retrieved **{UTC}**. "
+             f"HTML SHA-256: `{HTML_SHA}`. [Statements of the Lean RH project]({URL}) · [Frozen identifier index]({INDEX})", "",
              "## Coverage of the 200 spine anchors", "",
              "| Anchor kind | Anchors | Name cited | File cited | Name and file in one entry | File without name | Name without file | Neither |",
              "|---|---:|---:|---:|---:|---:|---:|---:|"]
@@ -235,15 +235,15 @@ def report(spine, entries, names, files, reverse, sections, entry_counts, module
     lines += ["", f"The second row comprises {kinds['def']} definitions, {kinds['structure']} structures, "
               f"{kinds['abbrev']} abbreviations and {kinds['class']} class. "
               "A declaration match requires the exact qualified Lean identifier. A file match requires a listed project path "
-              "equal to the frozen spine path after adding the source root and removing the catalogue's line pointer. "
+              "equal to the frozen spine path after adding the source root and removing the entry's line pointer. "
               "An entry can list multiple declarations and multiple paths. We compare those fields independently and make no positional pairing. "
               "A line number can change with the source revision. Partial names, prose mentions, and subject resemblance do not establish a match.", "",
-              "Spine rank measures the role of a file in the import graph. A catalogue entry describes a mathematical statement. "
+              "Spine rank measures the role of a file in the import graph. A statement entry describes a mathematical statement. "
               "An unmatched anchor can be a definition or a wrapper. An absent citation alone supplies no reading priority.", "",
               "## Across all original project modules", "",
               f"Joining the full 175,187-file inventory places **{matched:,} of {len(entries):,} entries** in **{module_count:,} distinct project modules**. "
               f"The remaining {len(external)} entries cite Mathlib. Their rows carry empty project metrics. "
-              "Each entry–file row identifies its catalogue section and whether the file was cited, owns an exactly named declaration, or both. "
+              "Each entry–file row identifies its section and whether the file was cited, owns an exactly named declaration, or both. "
               "Multi-file entries keep every match and its own metrics. "
               f"Of {len({n for ns,_ in entries.values() for n in ns}):,} distinct listed identifiers, {len(owners):,} have an exact original project owner. "
               "The entry table records the remaining names, including library names and unqualified spellings.", "",
@@ -255,11 +255,11 @@ def report(spine, entries, names, files, reverse, sections, entry_counts, module
               f"Of {len(owners):,} exactly owned Lean names, {len(used_names):,} occur in at least one of the five original kernel cones. "
               f"The remaining {len(outside)} names occur in {len(outside_entries)} entries and lie outside all five. "
               "[James Shore’s v0.2.1 declaration table](https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/decls.csv.gz)", "",
-              "| Catalogue entry | Exactly owned names outside all five cones |", "|---|---|"]
+              "| Statement entry | Exactly owned names outside all five cones |", "|---|---|"]
     for url, missing in outside_entries:
         slug = url.rsplit("/",1)[1].removesuffix(".html")
         lines.append(f"| [{slug}]({url}) | " + ", ".join(f"`{n}`" for n in missing) + " |")
-    lines += ["", "## Reverse coverage of the catalogue", "",
+    lines += ["", "## Reverse coverage of the statement index", "",
               "| Spine group | Entries naming an anchor | Entries citing a spine file | Entries naming any declaration owned by a spine file | Either file or owner |",
               "|---|---:|---:|---:|---:|"]
     for group, ranks in groups.items():
@@ -273,7 +273,7 @@ def report(spine, entries, names, files, reverse, sections, entry_counts, module
               f"[Entry-by-entry joins]({ENTRY_TABLE}) · [Matched names and owner paths]({OWNER_TABLE}) · "
               "[Pinned owner-table release](https://github.com/james-shore/rh-proof-dependencies/releases/tag/v0.2.1)", "",
               "## Where the matches occur in the argument", "",
-              "| Catalogue section | All entries | Entries touching a spine file | Entries matched to any project file |",
+              "| Statement section | All entries | Entries touching a spine file | Entries matched to any project file |",
               "|---|---:|---:|---:|"]
     for anchor in SECTIONS:
         section = URL + "#" + anchor
