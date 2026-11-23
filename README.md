@@ -86,6 +86,14 @@ tar -xzf inputs/mathlib.tar.gz --strip-components=1 -C inputs/mathlib
 cmp results/independent-content-sha256.json inputs/reproduced/independent-content-sha256.json
 ```
 
+To trace simple command-local namespace opens such as `open ThickExists in` immediately before a theorem, use the opt-in trace:
+
+```bash
+ROSETTA_RESULTS=inputs/reproduced .venv/bin/python analysis/trace.py inputs/lean --command-local-opens
+```
+
+This mode recognizes consecutive standalone `open A B in` prefixes on indexed declarations and writes its two outputs under `inputs/reproduced/command-local-opens/`. The default pipeline reproduces the frozen trace.
+
 If the split archive is unavailable, unpack the [exact mirror snapshot](https://codeload.github.com/leanprover-community/riemann-hypothesis/tar.gz/40e56bab026552e089d7afcfeff08d2defb9c005) into `inputs/lean` with `--strip-components=1`. Both routes pass through the same Git-tree check. The preservation repository also contains every original source file byte for byte, plus the separate comparator file `src/Challenge.lean`. [Preservation snapshot inspected](https://github.com/homeowmorphism/riemann-hypothesis-original/tree/ab2bdc545873e6e70326c1d97b9a794c038edf81) The default output directory is `results/`. The example uses a separate directory to compare with the committed files.
 
 The independent run verifies the 200 citation chains. Its content manifest hashes decompressed bytes for gzip artifacts, so different gzip encoders can reproduce the same results. The historical byte manifest also records the exact files originally distributed. The following optional command verifies that manifest, downloads only digest-pinned comparison inputs, joins the datasets and checks the independent manifest again. A fresh comparison downloads about 541 MB, including 399 MB for the kernel edge table. It writes separate `comparison*` outputs. Commit `aca7e18` preserves the original independent run made before the first comparison. A later source audit corrected explicit global-name resolution. Commit `05f7faa` freezes that correction. The current manifest includes the subsequent rounding change for portable ranks. [First independent freeze](https://github.com/dial481/riemann-hypothesis-rosetta/commit/aca7e1830b22c913bd9658c3f38e82128539beea) · [Corrected trace freeze](https://github.com/dial481/riemann-hypothesis-rosetta/commit/05f7faa030529eccafb8e48ef826960462606422) · [Current manifest](results/independent-sha256.json)
