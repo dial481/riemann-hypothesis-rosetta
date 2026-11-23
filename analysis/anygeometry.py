@@ -41,6 +41,8 @@ ROUTE = [
     BL + "parametersOfDependence",
     ANY,
 ]
+TONG_STEP = "UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound"
+TONG_REPORT = "https://github.com/harrytong/rh-verification/blob/f2f706c1e625702ea2f5f7be09604b264eca305b/RH_critics_dependency_findings.md#exact-witness-paths"
 USED = [
     ANY,
     BL + "GeoCl",
@@ -183,6 +185,14 @@ def analyze(original, upstream, directory, out):
         load_kernel(db, directory)
         distance, path = reverse_paths(db)
         check("shortest path", path, ROUTE)
+        # Tong's route shares the prefix through step six and diverges at step seven.
+        for src, dst in [(path[-3], TONG_STEP), (TONG_STEP, ANY)]:
+            check(f"alternate declaration edge {src} -> {dst}", db.execute(
+                "SELECT count(*) > 0 FROM decl_edges WHERE src_kind='decl' AND src=? AND dst_kind='decl' AND dst=?",
+                [src, dst]).fetchone()[0], True)
+            check(f"alternate kernel edge {src} -> {dst}", db.execute(
+                "SELECT DISTINCT via FROM edges WHERE src=? AND dst=? ORDER BY via", [src, dst]
+            ).fetchall(), [("value",)])
         names = sorted(set(distance) | set(USED + UNUSED + path))
         locations = {
             name: (file, line, n)
@@ -346,6 +356,8 @@ Each row gives the declaration’s starting line. Each arrow to the following ro
     for step, name, file, line, _, _, link in path:
         s += f"| {step} | `{name}` | [{Path(file).name}, line {line}]({link}) |\n"
     s += f"""
+Harry Tong independently found `anyGeometry` in all five compiled dependency closures. His RH witness gives a second shortest path of eight edges. It shares steps 0–6 above, then passes through `{TONG_STEP}` and reaches `{ANY}`. Both alternate edges occur as value references in Shore’s kernel data. [Tong’s compiled dependency audit]({TONG_REPORT})
+
 ## Reach and source occurrences
 
 In the original tree, `geoOf` starts at line 16 and `anyGeometry` at line 19 of `OverIx.lean`. Rosetta’s source trace reaches `anyGeometry` at depth 8. It misses `GlobalTheory.Mem.Top.Bl.geoOf`, `GlobalTheory.ShFam.IsGeoOf` and `GlobalTheory.ShFam.Pad.HasTrueSurf`. Shore records zero owned kernel constants and zero incident constant edges for each of these three declarations. [Trace lookup](anygeometry-trace.tsv) · [Masks and incident edges](anygeometry-masks.tsv)
