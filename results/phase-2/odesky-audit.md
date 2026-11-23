@@ -1,5 +1,7 @@
 # Private audit of Andrew O’Desky’s *Statements of the Lean RH project*
 
+**2026-11-23.** Andrew O’Desky rebuilt the site. The entry links below use the November 22 addresses, and the citation check describes the November 22 pages. [Dependency comparison for the rebuilt site](2026-11-23/dependencies.md)
+
 **1,869 of 1,886 entries cite a line where at least one of their named declarations starts.** Another 14 name a declaration in a cited file without an exact line match. Of these, 13 point to a different line and [one entry](https://andrewodesky.com/rh/s/main.html) supplies file paths without line numbers. The remaining 3 name no declaration we could locate in a cited file. Most off-by-line rows are additional names in the same entry: 135 of 167 accompany a name whose starting line matches. [Citation evidence](odesky-audit-citations.tsv.gz)
 
 Across 1,886 entries, 1,878 of 2,317 entry–name citations land at a declaration’s starting line in a listed file. Of 2,481 explicit entry dependencies, 1,827 have a positive-length path in the original project declaration graph. A path establishes a formal dependency between project declaration owners. The remaining 654 explicit links are unconfirmed. These counts check citations and dependencies, and the informalizations remain open for mathematical review. [Citation evidence](odesky-audit-citations.tsv.gz) · [Dependency evidence](odesky-audit-dependencies.tsv.gz)

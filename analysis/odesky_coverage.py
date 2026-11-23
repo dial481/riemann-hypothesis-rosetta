@@ -220,6 +220,7 @@ def report(spine, entries, names, files, reverse, sections, entry_counts, module
     matched = sum(bool(n) for n in entry_counts.values())
     external = [u for u,n in entry_counts.items() if not n]
     lines = ["# Coverage of *Statements of the Lean RH project* in the original proof", "",
+             "**2026-11-23.** Andrew O’Desky rebuilt the site. The entry links below use the November 22 addresses, and the citation check describes the November 22 pages. [Dependency comparison for the rebuilt site](2026-11-23/dependencies.md)", "",
              f"**{matched_anchors} of {len(spine)} spine anchors** have a statement match by name or cited file. In the reverse direction, "
              f"**{touched} of {len(entries):,} statement entries ({touched/len(entries):.1%})** cite a spine file or name a declaration owned by one.", "",
              f"Snapshot of Andrew O’Desky’s *Statements of the Lean RH project*, with {len(entries):,} entries retrieved **{UTC}**. "

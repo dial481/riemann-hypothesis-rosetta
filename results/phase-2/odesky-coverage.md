@@ -1,5 +1,7 @@
 # Coverage of *Statements of the Lean RH project* in the original proof
 
+**2026-11-23.** Andrew O’Desky rebuilt the site. The entry links below use the November 22 addresses, and the citation check describes the November 22 pages. [Dependency comparison for the rebuilt site](2026-11-23/dependencies.md)
+
 **34 of 200 spine anchors** have a statement match by name or cited file. In the reverse direction, **50 of 1,886 statement entries (2.7%)** cite a spine file or name a declaration owned by one.
 
 Snapshot of Andrew O’Desky’s *Statements of the Lean RH project*, with 1,886 entries retrieved **2026-11-22T17:15:18Z**. HTML SHA-256: `2c57f0ee0c8d291a1595ab46e1a6a4c732c10b14ca15b46cd4f0431b20e8879e`. [Statements of the Lean RH project](https://andrewodesky.com/rh/index.html) · [Frozen identifier index](odesky-index.tsv.gz)

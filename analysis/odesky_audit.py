@@ -60,6 +60,8 @@ def report(cites, links, entries):
     weights = "Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/TypeConditions/WeightsConjBis.lean"
     return f"""# Private audit of Andrew O’Desky’s *Statements of the Lean RH project*
 
+**2026-11-23.** Andrew O’Desky rebuilt the site. The entry links below use the November 22 addresses, and the citation check describes the November 22 pages. [Dependency comparison for the rebuilt site](2026-11-23/dependencies.md)
+
 **{exact_entries:,} of {len(entries):,} entries cite a line where at least one of their named declarations starts.** Another {off_entries + len(no_line)} name a declaration in a cited file without an exact line match. Of these, {off_entries} point to a different line and [one entry]({no_line[0]}) supplies file paths without line numbers. The remaining {absent} name no declaration we could locate in a cited file. Most off-by-line rows are additional names in the same entry: {secondary} of {c['off by line']} accompany a name whose starting line matches. [Citation evidence]({CITATIONS})
 
 Across {len(entries):,} entries, {c['exact line']:,} of {len(cites):,} entry–name citations land at a declaration’s starting line in a listed file. Of {explicit:,} explicit entry dependencies, {confirmed:,} have a positive-length path in the original project declaration graph. A path establishes a formal dependency between project declaration owners. The remaining {explicit-confirmed:,} explicit links are unconfirmed. These counts check citations and dependencies, and the informalizations remain open for mathematical review. [Citation evidence]({CITATIONS}) · [Dependency evidence]({LINKS})
