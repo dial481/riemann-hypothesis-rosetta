@@ -1,12 +1,12 @@
 # Private audit of Andrew O’Desky’s *Statements of the Lean RH project*
 
-**2026-11-23.** Andrew O’Desky rebuilt the site. The entry links below use the November 22 addresses, and the citation check describes the November 22 pages. [Dependency comparison for the rebuilt site](2026-11-23/dependencies.md)
+**2026-11-23.** Andrew O’Desky rebuilt the site. The links below use the November 22 addresses. The citations and historical single-graph figures describe those pages. For links retained on November 23, the owner table reports a missing formal dependency when both compiled graphs agree under exact naming. [Two-source results and original-source checks](2026-11-23/dependencies.md) · [Owner table](2026-11-23/owner-no-path.tsv)
 
 **1,869 of 1,886 entries cite a line where at least one of their named declarations starts.** Another 14 name a declaration in a cited file without an exact line match. Of these, 13 point to a different line and [one entry](https://andrewodesky.com/rh/s/main.html) supplies file paths without line numbers. The remaining 3 name no declaration we could locate in a cited file. Most off-by-line rows are additional names in the same entry: 135 of 167 accompany a name whose starting line matches. [Citation evidence](odesky-audit-citations.tsv.gz)
 
 Across 1,886 entries, 1,878 of 2,317 entry–name citations land at a declaration’s starting line in a listed file. Of 2,481 explicit entry dependencies, 1,827 have a positive-length path in the original project declaration graph. A path establishes a formal dependency between project declaration owners. The remaining 654 explicit links are unconfirmed. These counts check citations and dependencies, and the informalizations remain open for mathematical review. [Citation evidence](odesky-audit-citations.tsv.gz) · [Dependency evidence](odesky-audit-dependencies.tsv.gz)
 
-## Figures shared previously and updated results
+## Historical November 22 comparison with Shore’s graph
 
 | Measure | Previously shared | Updated |
 | --- | ---: | ---: |
@@ -47,7 +47,7 @@ For a printed name absent from the consulted project declarations, source matche
 | Explicit “Depends on” | 628 | 1,199 | 4 | 149 | 501 | 2,481 |
 | Additional reverse “Used by” links | 2 | 820 | 0 | 4 | 12 | 838 |
 
-Of the 149 explicit links with complete endpoints and no forward path or shared graph owner, 17 have a reverse witness with graph endpoint names present as printed on both entries. All resolved graph owners yield 18 reverse paths. The printed-owner count measures literal witness spelling. Exact-name resolution also maps exact structure-field names to their owners. [Exact and unique-suffix counts](2026-11-23/dependencies.md) Each row records its direction and witness. [Directional evidence](odesky-audit-dependencies.tsv.gz)
+Of the 149 explicit links with complete endpoints and no forward path or shared graph owner, 17 have a reverse witness with graph endpoint names present as printed on both entries. All resolved graph owners yield 18 reverse paths. The printed-owner count measures literal witness spelling. Exact-name resolution also maps exact structure-field names to their owners. [Two-source results for retained links](2026-11-23/dependencies.md) Each row records its direction and witness. [Directional evidence](odesky-audit-dependencies.tsv.gz)
 
 | Entry | Listed dependency | Shared graph owner |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ A positive-length path takes precedence. For pairs without a forward path, a sha
 
 The graph includes type and value edges and standalone project auxiliary constants. It excludes external libraries, self-loops, literal edges and block membership. The table prefers a direct witness and retains unresolved endpoints. [James Shore’s v0.2.1 schema](https://github.com/james-shore/rh-proof-dependencies/blob/v0.2.1/docs/dataset.md#decl_edges-the-project-declaration-graph-over-the-whole-environment-20372294-rows)
 
-We read every explicit “Depends on” field from the pinned index and checked the fields on two individual pages. The graph provides both endpoint IDs for 1,199 within-field pairs. They match the within-field “Used by” links exactly. Cross-field paths run through field portals, so we resolved them from the entry lists and checked the graph’s count for every directed pair of fields. 838 reverse links have no corresponding explicit “Depends on” field link. We report their results separately. The November 23 comparison gives both dates under exact and unique-suffix name resolution, and separates links added after the source-name snapshot. [Resolution and retained-link tables](2026-11-23/dependencies.md) [Andrew O’Desky’s graph](https://andrewodesky.com/rh/graph.html) · [Frozen link index](odesky-audit-relations.tsv.gz)
+We read every explicit “Depends on” field from the pinned index and checked the fields on two individual pages. The graph provides both endpoint IDs for 1,199 within-field pairs. They match the within-field “Used by” links exactly. Cross-field paths run through field portals, so we resolved them from the entry lists and checked the graph’s count for every directed pair of fields. 838 reverse links have no corresponding explicit “Depends on” field link. We report their results separately. The November 23 comparison tests retained links against both compiled graphs and the original source imports. Links added after the name snapshot are listed separately. [Retained-link evidence](2026-11-23/dependencies.md) [Andrew O’Desky’s graph](https://andrewodesky.com/rh/graph.html) · [Frozen link index](odesky-audit-relations.tsv.gz)
 
 ## RowSrc and the statement entry · unreviewed
 

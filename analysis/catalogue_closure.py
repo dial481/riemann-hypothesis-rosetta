@@ -66,9 +66,7 @@ def reachable_targets(graph, target_ids):
     return component, sizes, masks, bits
 
 
-def check_links(edges_path, entries, links, endpoints):
-    owners = {n for mapping in endpoints.values() for n in mapping.values()}
-    graph, ids = project_graph(edges_path, owners)
+def path_witnesses(graph, ids):
     targets = set(ids.values())  # Either endpoint can be the target in the direction check.
     component, sizes, masks, bits = reachable_targets(graph, targets)
     direct = {node: set(graph.indices[graph.indptr[node]:graph.indptr[node+1]]) & targets
@@ -89,6 +87,16 @@ def check_links(edges_path, entries, links, endpoints):
                     hits.append((1, caller, callee))
         return sorted(hits)
 
+    return witnesses
+
+
+def check_links(edges_path, entries, links, endpoints):
+    owners = {n for mapping in endpoints.values() for n in mapping.values()}
+    graph, ids = project_graph(edges_path, owners)
+    return classify_links(entries, links, endpoints, path_witnesses(graph, ids))
+
+
+def classify_links(entries, links, endpoints, witnesses):
     rows = []
     for (a,b),(explicit,svg_pair) in sorted(links.items()):
         source, target = entries[a][0], entries[b][0]
