@@ -72,10 +72,10 @@ Across {len(entries):,} entries, {c['exact line']:,} of {len(cites):,} entry–n
 | --- | ---: | ---: |
 | Entries citing a named start line, of {len(entries):,} | 1,869 | {exact_entries:,} |
 | Explicit links with a positive path, of {explicit:,} | 1,802 | {confirmed:,} |
-| Complete endpoints, distinct named declarations, no forward path | 140 | {no_path:,} |
+| Complete endpoints, disjoint graph owners, no forward path | 140 | {no_path:,} |
 | Of the preceding row, reverse path with exact graph endpoint names | 14 | {literal_reverse:,} |
 | Unsettled under the earlier grouping | 539 | {unsettled:,} |
-| ↳ Common declaration and no positive path | 2 | {len(common):,} |
+| ↳ Common graph owner and no positive path | 2 | {len(common):,} |
 | ↳ Incomplete endpoint coverage and no positive path | 537 | {incomplete:,} |
 | Citation misses with no project owner (entry–name rows) | 34 | {unresolved:,} |
 
@@ -107,17 +107,17 @@ For a printed name absent from the consulted project declarations, source matche
 {dependency_line("Explicit “Depends on”",1,counts)}
 {dependency_line("Additional reverse “Used by” links",0,counts)}
 
-Of the {no_path} explicit links with complete endpoints and no forward path or shared named declaration, {literal_reverse} have a reverse witness with graph endpoint names present as printed on both entries. Including namespace resolution and field ownership gives {reversed_paths} reverse paths. Each row records its direction and witness. [Directional evidence]({LINKS})
+Of the {no_path} explicit links with complete endpoints and no forward path or shared graph owner, {literal_reverse} have a reverse witness with graph endpoint names present as printed on both entries. All resolved graph owners yield {reversed_paths} reverse paths. The printed-owner count measures literal witness spelling. Exact-name resolution also maps exact structure-field names to their owners. [Exact and unique-suffix counts](2026-11-23/dependencies.md) Each row records its direction and witness. [Directional evidence]({LINKS})
 
-| Entry | Listed dependency | Shared declaration |
+| Entry | Listed dependency | Shared graph owner |
 | --- | --- | --- |
 {shared_rows}
 
-A positive-length path takes precedence. Without one, a shared named declaration gets a separate class, followed by complete or incomplete endpoint coverage. Distinct fields folded into the same structure can share a graph owner without sharing a named declaration. Both facts have their own columns. A folded-field witness establishes a dependency at the level of the owning declaration. It does not establish a reference to that particular projection.
+A positive-length path takes precedence. For pairs without a forward path, a shared graph owner takes precedence over the opposite-direction test. Two fields of the same structure count as a common declaration. In particular, a reverse path between declarations owned by one page is not evidence that the dependency runs in the opposite direction between the pages. A folded-field witness establishes a dependency at the level of the owning declaration. It does not establish a reference to that particular projection.
 
 The graph includes type and value edges and standalone project auxiliary constants. It excludes external libraries, self-loops, literal edges and block membership. The table prefers a direct witness and retains unresolved endpoints. [James Shore’s v0.2.1 schema](https://github.com/james-shore/rh-proof-dependencies/blob/v0.2.1/docs/dataset.md#decl_edges-the-project-declaration-graph-over-the-whole-environment-20372294-rows)
 
-We read every explicit “Depends on” field from the pinned index and checked the fields on two individual pages. The graph provides both endpoint IDs for {sum(r[3] for r in links):,} within-field pairs. They match the within-field “Used by” links exactly. Cross-field paths run through field portals, so we resolved them from the entry lists and checked the graph’s count for every directed pair of fields. {len(links)-explicit:,} reverse links have no corresponding explicit “Depends on” field link. We report their results separately. [Andrew O’Desky’s graph](https://andrewodesky.com/rh/graph.html) · [Frozen link index]({RELATIONS})
+We read every explicit “Depends on” field from the pinned index and checked the fields on two individual pages. The graph provides both endpoint IDs for {sum(r[3] for r in links):,} within-field pairs. They match the within-field “Used by” links exactly. Cross-field paths run through field portals, so we resolved them from the entry lists and checked the graph’s count for every directed pair of fields. {len(links)-explicit:,} reverse links have no corresponding explicit “Depends on” field link. We report their results separately. The November 23 comparison gives both dates under exact and unique-suffix name resolution, and separates links added after the source-name snapshot. [Resolution and retained-link tables](2026-11-23/dependencies.md) [Andrew O’Desky’s graph](https://andrewodesky.com/rh/graph.html) · [Frozen link index]({RELATIONS})
 
 ## RowSrc and the statement entry · unreviewed
 
@@ -184,15 +184,11 @@ def main():
     if content_digest(dest/RELATIONS) != RELATION_SHA:
         raise ValueError("Re-extracted link index differs from the capture")
     cites, endpoints = locate(entries,a.proof,a.mathlib,a.release/"decls.csv.gz",a.release/"constants.csv.gz")
-    identities = defaultdict(set)
-    for row in cites:
-        if row[10]:
-            identities[row[0]].add(row[6])
-    links = check_links(a.release/"decl_edges.parquet", entries, relations, endpoints, identities)
+    links = check_links(a.release/"decl_edges.parquet", entries, relations, endpoints)
     table(dest/CITATIONS,("entry_url","cited_name","file_citations","result","matching_source_sites",
                           "best_file_citations","qualified_name","spelling","compiled_owner","owner_start_line","graph_owner","owner_kind","same_short_name_at_cited_line"),cites)
     table(dest/LINKS,(*REL_FIELDS,"caller_names","caller_names_resolved","dependency_names","dependency_names_resolved",
-                      "shared_owned_declaration","result","witness_caller","witness_dependency","opposite_path","opposite_witness_caller","opposite_witness_dependency","opposite_with_exact_names","shared_named_declarations"),links)
+                      "shared_owned_declaration","result","witness_caller","witness_dependency","opposite_path","opposite_witness_caller","opposite_witness_dependency","opposite_with_exact_names","shared_graph_owners"),links)
     (dest/REPORT).write_text(report(cites,links,entries))
     put_json(dest/MANIFEST,{f:content_digest(dest/f) for f in sorted([RELATIONS,CITATIONS,LINKS,REPORT])})
 

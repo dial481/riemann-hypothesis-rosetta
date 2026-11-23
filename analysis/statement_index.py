@@ -1,4 +1,5 @@
 """Extract card identifiers, public addresses and explicit dependencies, excluding statement text."""
+
 import argparse
 import csv
 import hashlib
@@ -17,6 +18,7 @@ class Cards(HTMLParser):
         self.cards = {}
         self.edges = set()
         self.card = self.field = self.capture = None
+        self.number_open = False
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -25,13 +27,18 @@ class Cards(HTMLParser):
             if self.card or not re.fullmatch(r"[\w-]+", key) or key in self.cards:
                 raise ValueError(f"Ambiguous card {key}")
             self.card = key
-            self.cards[key] = [kind, None]
+            self.cards[key] = [kind, None, "", ""]
         if self.card:
+            if tag == "span" and "theorem-number" in attrs.get("class", "").split():
+                self.number_open = True
             if tag in ("h3", "dt", "dd"):
                 self.capture = tag
                 if tag == "dt":
                     self.field = ""
-            if tag == "a" and (self.capture == "h3" or (self.capture == "dd" and self.field == "Depends on")):
+            if tag == "a" and (
+                self.capture == "h3"
+                or (self.capture == "dd" and self.field == "Depends on")
+            ):
                 url = urljoin(BASE, attrs["href"])
                 if not url.startswith(BASE + "s/") or urlsplit(url).fragment:
                     raise ValueError(f"Unexpected statement address {url}")
@@ -43,15 +50,27 @@ class Cards(HTMLParser):
                     self.edges.add((self.card, url))
 
     def handle_data(self, text):
+        if self.card and self.number_open:
+            self.cards[self.card][2] += text
+        if self.card and self.capture == "h3":
+            self.cards[self.card][3] += text
         if self.card and self.capture == "dt":
             self.field += text
 
     def handle_endtag(self, tag):
+        if tag == "span":
+            self.number_open = False
         if self.card and tag == self.capture:
             self.capture = None
         if self.card and tag == "article":
             if not self.cards[self.card][1]:
                 raise ValueError(f"Missing address for {self.card}")
+            row = self.cards[self.card]
+            row[2:] = [" ".join(value.split()) for value in row[2:]]
+            if not row[3] or (row[0] == "theorem" and not row[2]):
+                raise ValueError(
+                    f"Missing statement heading or theorem number for {self.card}"
+                )
             self.card = self.field = self.capture = None
 
 
@@ -65,11 +84,11 @@ def extract(directory, metadata):
         if parser.card:
             raise ValueError(f"Unclosed card in {name}")
     parser.close()
-    by_url = {url: key for key, (_, url) in parser.cards.items()}
+    by_url = {url: key for key, (_, url, _, _) in parser.cards.items()}
     if len(by_url) != len(parser.cards):
         raise ValueError("Two cards share an address")
     relations = sorted((src, by_url[url]) for src, url in parser.edges)
-    return sorted((key, *v) for key,v in parser.cards.items()), relations
+    return sorted((key, *v) for key, v in parser.cards.items()), relations
 
 
 def tsv(path, columns, rows):
@@ -87,6 +106,6 @@ if __name__ == "__main__":
     cli.add_argument("--depends", type=Path)
     a = cli.parse_args()
     cards, relations = extract(a.html, json.loads(a.metadata.read_text()))
-    tsv(a.cards, ["card_id", "kind", "url"], cards)
+    tsv(a.cards, ["card_id", "kind", "url", "number", "title"], cards)
     if a.depends:
         tsv(a.depends, ["card_id", "depends_on_card_id"], relations)

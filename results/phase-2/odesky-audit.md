@@ -12,10 +12,10 @@ Across 1,886 entries, 1,878 of 2,317 entry–name citations land at a declaratio
 | --- | ---: | ---: |
 | Entries citing a named start line, of 1,886 | 1,869 | 1,869 |
 | Explicit links with a positive path, of 2,481 | 1,802 | 1,827 |
-| Complete endpoints, distinct named declarations, no forward path | 140 | 151 |
+| Complete endpoints, disjoint graph owners, no forward path | 140 | 149 |
 | Of the preceding row, reverse path with exact graph endpoint names | 14 | 17 |
-| Unsettled under the earlier grouping | 539 | 503 |
-| ↳ Common declaration and no positive path | 2 | 2 |
+| Unsettled under the earlier grouping | 539 | 505 |
+| ↳ Common graph owner and no positive path | 2 | 4 |
 | ↳ Incomplete endpoint coverage and no positive path | 537 | 501 |
 | Citation misses with no project owner (entry–name rows) | 34 | 23 |
 
@@ -44,21 +44,23 @@ For a printed name absent from the consulted project declarations, source matche
 
 | Evidence for A depending on B | Direct | Transitive | Common declaration, no positive path | No path with complete endpoint coverage | Incomplete endpoint coverage, no path confirmed | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| Explicit “Depends on” | 628 | 1,199 | 2 | 151 | 501 | 2,481 |
+| Explicit “Depends on” | 628 | 1,199 | 4 | 149 | 501 | 2,481 |
 | Additional reverse “Used by” links | 2 | 820 | 0 | 4 | 12 | 838 |
 
-Of the 151 explicit links with complete endpoints and no forward path or shared named declaration, 17 have a reverse witness with graph endpoint names present as printed on both entries. Including namespace resolution and field ownership gives 19 reverse paths. Each row records its direction and witness. [Directional evidence](odesky-audit-dependencies.tsv.gz)
+Of the 149 explicit links with complete endpoints and no forward path or shared graph owner, 17 have a reverse witness with graph endpoint names present as printed on both entries. All resolved graph owners yield 18 reverse paths. The printed-owner count measures literal witness spelling. Exact-name resolution also maps exact structure-field names to their owners. [Exact and unique-suffix counts](2026-11-23/dependencies.md) Each row records its direction and witness. [Directional evidence](odesky-audit-dependencies.tsv.gz)
 
-| Entry | Listed dependency | Shared declaration |
+| Entry | Listed dependency | Shared graph owner |
 | --- | --- | --- |
+| [family-arithmetic-data](https://andrewodesky.com/rh/s/family-arithmetic-data.html) | [family-integral-adjusted-sources](https://andrewodesky.com/rh/s/family-integral-adjusted-sources.html) | `Formalism.MainNotions.FamP` |
+| [family-point-moduli-integral-evaluation](https://andrewodesky.com/rh/s/family-point-moduli-integral-evaluation.html) | [family-point-moduli-canonical](https://andrewodesky.com/rh/s/family-point-moduli-canonical.html) | `Formalism.L2.Pj.LawsM` |
 | [q2-prime-norm-galois-patching](https://andrewodesky.com/rh/s/q2-prime-norm-galois-patching.html) | [r1-frobenius-semisimple-isomorphism](https://andrewodesky.com/rh/s/r1-frobenius-semisimple-isomorphism.html) | `UpperTheory.Gal.Int.Core.isoOne_holds` |
 | [slope-inequality](https://andrewodesky.com/rh/s/slope-inequality.html) | [frame-codimension](https://andrewodesky.com/rh/s/frame-codimension.html) | `Formalism.HN.FrameLA1` |
 
-A positive-length path takes precedence. Without one, a shared named declaration gets a separate class, followed by complete or incomplete endpoint coverage. Distinct fields folded into the same structure can share a graph owner without sharing a named declaration. Both facts have their own columns. A folded-field witness establishes a dependency at the level of the owning declaration. It does not establish a reference to that particular projection.
+A positive-length path takes precedence. For pairs without a forward path, a shared graph owner takes precedence over the opposite-direction test. Two fields of the same structure count as a common declaration. In particular, a reverse path between declarations owned by one page is not evidence that the dependency runs in the opposite direction between the pages. A folded-field witness establishes a dependency at the level of the owning declaration. It does not establish a reference to that particular projection.
 
 The graph includes type and value edges and standalone project auxiliary constants. It excludes external libraries, self-loops, literal edges and block membership. The table prefers a direct witness and retains unresolved endpoints. [James Shore’s v0.2.1 schema](https://github.com/james-shore/rh-proof-dependencies/blob/v0.2.1/docs/dataset.md#decl_edges-the-project-declaration-graph-over-the-whole-environment-20372294-rows)
 
-We read every explicit “Depends on” field from the pinned index and checked the fields on two individual pages. The graph provides both endpoint IDs for 1,199 within-field pairs. They match the within-field “Used by” links exactly. Cross-field paths run through field portals, so we resolved them from the entry lists and checked the graph’s count for every directed pair of fields. 838 reverse links have no corresponding explicit “Depends on” field link. We report their results separately. [Andrew O’Desky’s graph](https://andrewodesky.com/rh/graph.html) · [Frozen link index](odesky-audit-relations.tsv.gz)
+We read every explicit “Depends on” field from the pinned index and checked the fields on two individual pages. The graph provides both endpoint IDs for 1,199 within-field pairs. They match the within-field “Used by” links exactly. Cross-field paths run through field portals, so we resolved them from the entry lists and checked the graph’s count for every directed pair of fields. 838 reverse links have no corresponding explicit “Depends on” field link. We report their results separately. The November 23 comparison gives both dates under exact and unique-suffix name resolution, and separates links added after the source-name snapshot. [Resolution and retained-link tables](2026-11-23/dependencies.md) [Andrew O’Desky’s graph](https://andrewodesky.com/rh/graph.html) · [Frozen link index](odesky-audit-relations.tsv.gz)
 
 ## RowSrc and the statement entry · unreviewed
 

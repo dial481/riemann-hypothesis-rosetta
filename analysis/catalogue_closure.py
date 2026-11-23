@@ -66,7 +66,7 @@ def reachable_targets(graph, target_ids):
     return component, sizes, masks, bits
 
 
-def check_links(edges_path, entries, links, endpoints, cited_identities):
+def check_links(edges_path, entries, links, endpoints):
     owners = {n for mapping in endpoints.values() for n in mapping.values()}
     graph, ids = project_graph(edges_path, owners)
     targets = set(ids.values())  # Either endpoint can be the target in the direction check.
@@ -94,7 +94,7 @@ def check_links(edges_path, entries, links, endpoints, cited_identities):
         source, target = entries[a][0], entries[b][0]
         src_owned = sorted(set(endpoints[a].values()))
         dst_owned = sorted(set(endpoints[b].values()))
-        shared = sorted(cited_identities[a] & cited_identities[b])
+        shared = sorted(set(src_owned) & set(dst_owned))
         hits = witnesses(src_owned, dst_owned)
         if hits:
             distance, caller, callee = min(hits)
