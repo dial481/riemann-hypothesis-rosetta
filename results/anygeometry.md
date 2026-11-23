@@ -20,6 +20,8 @@ Each row gives the declaration’s starting line. Each arrow to the following ro
 | 7 | `GlobalTheory.Mem.Top.Bl.parametersOfDependence` | [Prm1.lean, line 20](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/Prm1.lean#L20) |
 | 8 | `GlobalTheory.Mem.Top.Bl.anyGeometry` | [OverIx.lean, line 19](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/OverIx.lean#L19) |
 
+Harry Tong independently found `anyGeometry` in all five compiled dependency closures. His RH witness gives a second shortest path of eight edges. It shares steps 0–6 above, then passes through `UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound` and reaches `GlobalTheory.Mem.Top.Bl.anyGeometry`. Both alternate edges occur as value references in Shore’s kernel data. [Tong’s compiled dependency audit](https://github.com/harrytong/rh-verification/blob/f2f706c1e625702ea2f5f7be09604b264eca305b/RH_critics_dependency_findings.md#exact-witness-paths)
+
 ## Reach and source occurrences
 
 In the original tree, `geoOf` starts at line 16 and `anyGeometry` at line 19 of `OverIx.lean`. Rosetta’s source trace reaches `anyGeometry` at depth 8. It misses `GlobalTheory.Mem.Top.Bl.geoOf`, `GlobalTheory.ShFam.IsGeoOf` and `GlobalTheory.ShFam.Pad.HasTrueSurf`. Shore records zero owned kernel constants and zero incident constant edges for each of these three declarations. [Trace lookup](anygeometry-trace.tsv) · [Masks and incident edges](anygeometry-masks.tsv)
