@@ -129,6 +129,6 @@ The survey covers publications found through **22 November 2026, 15:32 UTC**. Th
 
 For comparison, [Alessandro Masullo’s human-drafted approach](https://math216.wordpress.com/wp-content/uploads/2026/11/the-music-of-the-primes.pdf) (940 pages, [known issues under review](https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/)).
 
-**Parked for a later comparison with human-drafted approaches.** Use the Masullo formalization’s errata to ask whether a reported trace-formula issue has a counterpart in Alpöge’s deformalized spine and, if so, how that step is justified. [Masullo formalization](https://github.com/mccorvie/riemann-masullo) · [ERRATA.md](https://github.com/mccorvie/riemann-masullo/blob/main/ERRATA.md)
+**Parked for a later comparison with human-drafted approaches.** Use the Masullo formalization’s errata to ask whether a reported trace-formula issue has a counterpart in an informalization of Alpöge’s spine and, if so, how that step is justified. [Masullo formalization](https://github.com/mccorvie/riemann-masullo) · [ERRATA.md](https://github.com/mccorvie/riemann-masullo/blob/main/ERRATA.md)
 
 Rosetta’s analysis code and original materials are available under the MIT license. The cited proof, datasets and peer publications carry their respective terms. [License](LICENSE)

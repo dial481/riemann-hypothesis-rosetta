@@ -1,0 +1,14 @@
+{
+  "index.html": {
+    "url": "https://andrewodesky.com/rh/index.html",
+    "utc": "2026-11-23T17:42:43+00:00",
+    "sha256": "b32c19f87f14dfc2595dd1305baabffa4a95256e7119406d341e1246692985c0",
+    "bytes": 1121659
+  },
+  "definitions.html": {
+    "url": "https://andrewodesky.com/rh/definitions.html",
+    "utc": "2026-11-23T17:42:44+00:00",
+    "sha256": "8375b80a12cb5902e2d3b24eba5ef6fa3dcab0fe7c55ce7832762dbe2a214903",
+    "bytes": 837141
+  }
+}
