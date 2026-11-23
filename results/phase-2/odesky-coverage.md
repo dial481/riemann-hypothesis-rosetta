@@ -22,7 +22,7 @@ Joining the full 175,187-file inventory places **1,881 of 1,886 entries** in **1
 
 Import rank is the original structural ranking (1 is highest). The cut counts other project files that lose every import path from Main when the module is removed, excluding the module itself. Kernel use is measured on the original proof: RH, another target, or unused by all five. The five-target mask is preserved. The two declaration-name columns separately identify which exactly matched declarations occur in any of the five kernel cones. File-level use alone cannot establish use of a named declaration. [Every entry and its module metrics](odesky-entry-modules.tsv.gz) · [All original modules, including zero matches](odesky-module-metrics.tsv.gz)
 
-Of 2,215 exactly owned Lean names, 2,206 occur in at least one of the five original kernel cones. The remaining 9 names occur in 7 entries and lie outside all five. [James Shore’s v0.2.1 declaration table](https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/decls.csv.gz)
+Of 2,215 exactly owned Lean names, 2,206 occur in at least one of the five original kernel cones. The remaining 9 names occur in 7 entries and lie outside all five. The list of used declarations comes from [Andrew Sutherland’s kernel export](https://math.mit.edu/~drew/grh/). [James Shore’s v0.2.1 declaration table](https://github.com/james-shore/rh-proof-dependencies/releases/download/v0.2.1/decls.csv.gz)
 
 | Catalogue entry | Exactly owned names outside all five cones |
 |---|---|

@@ -162,7 +162,7 @@ def render(dest, out, old_paths, new_paths, reached, kernel_result, line_stats):
                f"At file level, RH recall is {k['shared']:,}/{k['rh_files']:,} = {k['shared']/k['rh_files']:.1%}. "
                f"Precision is {k['shared']:,}/{k['trace_files']:,} = {k['shared']/k['trace_files']:.2%}. "
                "The join uses each declaration owner's original file. The union from the declaration table agrees with the union of nonshared "
-               "project constants' theorem masks. Bit 1 selects RH. "
+               "project constants' theorem masks. Bit 1 selects RH. James Shore’s list of used declarations comes from [Andrew Sutherland’s kernel export](https://math.mit.edu/~drew/grh/). "
                f"[Per-file masks and trace membership]({prefix}kernel-file-usage.tsv.gz) · "
                "[v0.2.1 schema](https://github.com/james-shore/rh-proof-dependencies/blob/v0.2.1/docs/dataset.md)", "",
                f"**Unverified at the upstream pin. No Lean build was run.** For all {k['unused_retained']:,} retained kernel-unused files, "
