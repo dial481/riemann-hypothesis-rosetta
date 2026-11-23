@@ -1,0 +1,5 @@
+declaration	trace_reached	source_depth	file	line
+GlobalTheory.Mem.Top.Bl.anyGeometry	1	8	src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/OverIx.lean	19
+GlobalTheory.Mem.Top.Bl.geoOf	0		src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/OverIx.lean	16
+GlobalTheory.ShFam.IsGeoOf	0		src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/LargeFor.lean	78
+GlobalTheory.ShFam.Pad.HasTrueSurf	0		src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/SecondChernDegreeVanishesTrueSurfaces.lean	346

@@ -1,0 +1,11 @@
+declaration	file	line	owned_constants	named_constant_mask	declaration_mask	incoming_edge_rows	outgoing_edge_rows
+GlobalTheory.Mem.Top.Bl.anyGeometry	src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/OverIx.lean	19	1	31	31	22	5
+GlobalTheory.Mem.Top.Bl.GeoCl	src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/NotGeoClFalse.lean	21	4	31	31	5	4
+GlobalTheory.Fc.HypsAlt	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/Hyps.lean	20	49	31	31	113	2
+Formalism.L2.Geo.geoDegenerate	src/Formalism/LocalToGlobal/LatticeGeometry/Inhabited.lean	239	7	31	31	39	113
+UpperTheory.Top.TopG	src/Development/AutomorphicArithmetic/CharacterBoxes/ZeroFreeAllOfTopG.lean	12	1	31	31	4	15
+UpperTheory.Top.zeroFreeAll_of_topG	src/Development/AutomorphicArithmetic/CharacterBoxes/ZeroFreeAllOfTopG.lean	26	1	31	31	1	61
+UpperTheory.LiteratureTheorems.every_character_of_literature_of_vWin	src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean	810	1	31	31	1	30
+GlobalTheory.Mem.Top.Bl.geoOf	src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/OverIx.lean	16	0	0	0	0	0
+GlobalTheory.ShFam.IsGeoOf	src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/LargeFor.lean	78	0	0	0	0	0
+GlobalTheory.ShFam.Pad.HasTrueSurf	src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/SecondChernDegreeVanishesTrueSurfaces.lean	346	0	0	0	0	0

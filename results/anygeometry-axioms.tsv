@@ -1,0 +1,4 @@
+constant	kind	origin	five_target_mask
+Classical.choice	axiom	core	31
+Quot.sound	axiom	core	31
+propext	axiom	core	31
