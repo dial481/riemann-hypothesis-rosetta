@@ -33,6 +33,7 @@ def locate(entries, proof, mathlib, decls, constants):
     # separately, for catalogue spellings relative to a namespace.
     tails = {n.rsplit(".",1)[-1] for n in names}
     candidates = defaultdict(lambda: defaultdict(set))
+    source_fields = defaultdict(set)
     field = re.compile(r"^( +)(" + SEG + r")\s*(?::|[(\[{])")
     for path,r in sorted(original.items()):
         file = (proof if r["category"] == "Novel" else mathlib) / path
@@ -53,7 +54,10 @@ def locate(entries, proof, mathlib, decls, constants):
             indent = min((len(m[1]) for _,m in matches), default=0)
             for i,m in matches:
                 if len(m[1]) == indent and m[2] in tails:
-                    candidates[path][decl.name + "." + m[2]].add(decl.line + i + 1)
+                    name = decl.name + "." + m[2]
+                    candidates[path][name].add(decl.line + i + 1)
+                    if r["category"] == "Novel":
+                        source_fields[name].add((decl.name, path, decl.line + 1))
 
     wanted = names | {name for file in candidates.values() for name in file}
     owners = {}
@@ -76,12 +80,24 @@ def locate(entries, proof, mathlib, decls, constants):
             if (r["origin"] == "project" and r["shared_aux"] == "false"
                     and r["aux_rule"] == "nested" and r["decl"] == name.rpartition(".")[0]):
                 fields[name] = (r["decl"], r["file"], int(r["start_line"]))
-    # Verify that the graph endpoint really is a structure/class in this release.
-    parents = {key for key, _, _ in fields.values()}
+    source_only = {}
+    for name, locations in source_fields.items():
+        if name not in known_constants and len(locations) == 1:
+            source_only[name] = next(iter(locations))
+    # Verify the enclosing declaration, source file and start line in the pinned release.
+    parents = {parent for parent, _, _ in (*fields.values(), *source_only.values())}
     with gzip.open(decls, "rt", newline="") as stream:
-        structures = {(r["decl"], r["file"], int(r["start_line"])) for r in csv.DictReader(stream)
-                      if r["decl"] in parents and r["command_kind"] in {"structure", "class"} and r["origin"] == "project"}
-    fields = {name: row for name, row in fields.items() if row in structures}
+        structures = [r for r in csv.DictReader(stream) if r["decl"] in parents
+                      and r["command_kind"] in {"structure", "class"} and r["origin"] == "project"]
+    command_sites = {(r["decl"], r["file"], int(r["start_line"])) for r in structures}
+    fields = {name: row for name, row in fields.items() if row in command_sites}
+    # A preceding 'set_option ... in' belongs to start_line but not to the
+    # structure header. Match the header range, then use the graph's command site.
+    headers = {(r["decl"], r["file"], int(r["range_start_line"])):
+               (r["decl"], r["file"], int(r["start_line"])) for r in structures}
+    for name, site in source_only.items():
+        if site in headers:
+            fields[name] = headers[site]
     rows = []
     endpoints = {}
     for url,(entry_names,refs) in sorted(entries.items()):
@@ -121,6 +137,7 @@ def locate(entries, proof, mathlib, decls, constants):
                          "|".join(sorted({f"{p}:{n}" for _,p,n,_ in matches})),
                          "|".join(sorted({ref for q,_,_,ref in matches if q == status})),
                          identity,spelling,owner,owner_line,graph_name,
-                         "structure field" if identity in fields else "declaration" if owner else "",
+                         ("structure field (pinned source)" if identity in fields and identity in source_only
+                          else "structure field" if identity in fields else "declaration" if owner else ""),
                          "|".join(sorted(alternatives))))
     return rows, endpoints

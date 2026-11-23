@@ -2,6 +2,7 @@
 import gzip
 import hashlib
 import json
+import re
 from array import array
 from graphlib import TopologicalSorter
 
@@ -12,6 +13,7 @@ from scipy.sparse.csgraph import breadth_first_order
 
 from common import RESULTS, content_digest, imports, read_rows
 from compare import URLS, check_input
+from upstream_kernel import mask_noncode
 
 THETA = "Formalism.MainNotions.GL3Theta."
 CUBE = THETA + "cube2"
@@ -47,6 +49,31 @@ def rh_graph(filename, sites):
     return graph, ids
 
 
+def mutual_lines(source):
+    """Identify the lines inside explicit mutual commands in the pinned original."""
+    stack = []
+    inside = set()
+    for n, line in enumerate(mask_noncode(source.splitlines()), 1):
+        command = re.match(r"^\s*(?:(?:public|private|protected|noncomputable|unsafe)\s+)*(mutual|namespace|section|end)\b", line)
+        if command and command[1] == "mutual":
+            stack.append("mutual")
+        elif stack and command and command[1] in ("namespace", "section"):
+            stack.append(command[1])
+        if stack:
+            inside.add(n)
+            if command and command[1] == "end":
+                stack.pop()
+    if stack:
+        raise ValueError("Unterminated mutual block")
+    return inside
+
+
+def same_file_order(caller, dependency, mutual):
+    if caller in mutual or dependency in mutual:
+        return "order inconclusive (mutual block)"
+    return "later in same file" if dependency[1] > caller[1] else "file order permits"
+
+
 def source_paths(proof, sites):
     manifest = json.loads((RESULTS / "independent-content-sha256.json").read_text())
     for filename in ("inventory.tsv.gz", "imports.json.gz"):
@@ -57,11 +84,15 @@ def source_paths(proof, sites):
     files = {r["path"]: r for r in read_rows(RESULTS / "inventory.tsv.gz") if r["category"] == "Novel"}
     if {p.relative_to(proof).as_posix() for p in (proof / "src").rglob("*.lean")} != files.keys():
         raise ValueError("Original Lean file set differs from the pinned inventory")
+    mutual = set()
     for path, row in files.items():
         raw = (proof / path).read_bytes()
         if hashlib.sha256(raw).hexdigest() != row["sha256"]:
             raise ValueError(f"Original source digest mismatch for {path}")
-        deps = sorted(set(imports(raw.decode("utf-8"))))
+        text = raw.decode("utf-8")
+        if "mutual" in text:
+            mutual.update((path, n) for n in mutual_lines(text))
+        deps = sorted(set(imports(text)))
         module = row["module"]
         if deps != adjacency[module]:
             raise ValueError(f"Import header differs for {path}")
@@ -78,7 +109,7 @@ def source_paths(proof, sites):
     def test(caller, dependency):
         a, b = modules[caller], modules[dependency]
         if a == b:
-            return "later in same file" if sites[dependency][1] > sites[caller][1] else "file order permits"
+            return same_file_order(sites[caller], sites[dependency], mutual)
         return "transitive imports permit" if closure[a] & bits[b] else "no transitive import"
 
     return test, len(files)

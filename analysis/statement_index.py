@@ -7,9 +7,26 @@ import json
 import re
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import quote, unquote, urljoin, urlsplit
 
 BASE = "https://andrewodesky.com/rh/"
+
+
+def address_name(url):
+    """Parse a canonical theorem address without altering Lean spelling."""
+    parsed = urlsplit(url)
+    if not url.startswith(BASE) or parsed.fragment or parsed.query:
+        raise ValueError(f"Unexpected statement address {url}")
+    path = url[len(BASE):]
+    if path.startswith("s/") and len(path) > 2:
+        return ""
+    match = re.fullmatch(r"lean/([^/]+)/", path)
+    if not match:
+        raise ValueError(f"Unexpected statement address {url}")
+    name = unquote(match[1], errors="strict")
+    if "/" in name or any(ord(c) < 32 for c in name):
+        raise ValueError(f"Invalid declaration segment in {url}")
+    return name
 
 
 class Cards(HTMLParser):
@@ -40,8 +57,9 @@ class Cards(HTMLParser):
                 or (self.capture == "dd" and self.field == "Depends on")
             ):
                 url = urljoin(BASE, attrs["href"])
-                if not url.startswith(BASE + "s/") or urlsplit(url).fragment:
-                    raise ValueError(f"Unexpected statement address {url}")
+                name = address_name(url)
+                if name:
+                    url = BASE + "lean/" + quote(name, safe="'") + "/"
                 if self.capture == "h3":
                     if self.cards[self.card][1]:
                         raise ValueError(f"Multiple headings for {self.card}")
