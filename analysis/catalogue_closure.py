@@ -69,15 +69,11 @@ def reachable_targets(graph, target_ids):
 def check_links(edges_path, entries, links, endpoints):
     owners = {n for mapping in endpoints.values() for n in mapping.values()}
     graph, ids = project_graph(edges_path, owners)
-    targets = {ids[n] for _,b in links for n in endpoints[b].values() if n in ids}
+    targets = set(ids.values())  # Either endpoint can be the target in the direction check.
     component, sizes, masks, bits = reachable_targets(graph, targets)
     direct = {node: set(graph.indices[graph.indptr[node]:graph.indptr[node+1]]) & targets
               for node in ids.values()}
-    rows = []
-    for (a,b),(explicit,svg_pair) in sorted(links.items()):
-        source, target = entries[a][0], entries[b][0]
-        src_owned = sorted(set(endpoints[a].values()))
-        dst_owned = sorted(set(endpoints[b].values()))
+    def witnesses(src_owned, dst_owned):
         hits = []
         for caller in src_owned:
             if caller not in ids:
@@ -91,6 +87,14 @@ def check_links(edges_path, entries, links, endpoints):
                     hits.append((0, caller, callee))
                 elif masks[component[node]] & bits[dep] and (node != dep or sizes[component[node]] > 1):
                     hits.append((1, caller, callee))
+        return sorted(hits)
+
+    rows = []
+    for (a,b),(explicit,svg_pair) in sorted(links.items()):
+        source, target = entries[a][0], entries[b][0]
+        src_owned = sorted(set(endpoints[a].values()))
+        dst_owned = sorted(set(endpoints[b].values()))
+        hits = witnesses(src_owned, dst_owned)
         if hits:
             distance, caller, callee = min(hits)
             result = "direct" if distance == 0 else "transitive"
@@ -98,6 +102,10 @@ def check_links(edges_path, entries, links, endpoints):
             caller = callee = ""
             complete = len(endpoints[a]) == len(source) and len(endpoints[b]) == len(target)
             result = "no path" if complete else "incomplete endpoint coverage"
+        opposite = witnesses(dst_owned, src_owned) if explicit and result == "no path" else []
+        exact_reverse = any(rev_src in target and rev_dst in source for _, rev_src, rev_dst in opposite)
+        reverse_result = ("direct" if opposite[0][0] == 0 else "transitive") if opposite else ""
+        reverse_caller, reverse_callee = opposite[0][1:] if opposite else ("", "")
         rows.append((a, b, explicit, svg_pair, len(source), len(endpoints[a]), len(target), len(endpoints[b]),
-                     int(bool(set(src_owned) & set(dst_owned))), result, caller, callee))
+                     int(bool(set(src_owned) & set(dst_owned))), result, caller, callee, reverse_result, reverse_caller, reverse_callee, int(exact_reverse) if opposite else ""))
     return rows

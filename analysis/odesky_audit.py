@@ -24,6 +24,16 @@ def report(cites, links, entries):
     entry_hits = defaultdict(set)
     for r in cites:
         entry_hits[r[0]].add(r[3])
+    exact_entries = sum("exact line" in states for states in entry_hits.values())
+    off_entries = sum("exact line" not in states and "off by line" in states for states in entry_hits.values())
+    no_line = [url for url,states in entry_hits.items() if "file without line" in states and not states & {"exact line","off by line"}]
+    absent = sum(states == {"miss"} for states in entry_hits.values())
+    secondary = sum(r[3] == "off by line" and "exact line" in entry_hits[r[0]] for r in cites)
+    reversed_paths = sum(bool(r[12]) for r in links if r[2] and r[9] == "no path")
+    literal_reverse = sum(r[15] == 1 for r in links)
+    extra = [r for r in links if r[12] and not r[15]]
+    if (exact_entries, off_entries, len(no_line), absent, reversed_paths, literal_reverse) != (1869, 13, 1, 3, 15, 14):
+        raise ValueError("Entry-level or opposite-direction counts changed")
     other = sum(r[3] == "miss" and bool(r[8]) for r in cites)
     counts = Counter((r[2],r[9]) for r in links)
     confirmed = counts[1,"direct"] + counts[1,"transitive"]
@@ -32,6 +42,8 @@ def report(cites, links, entries):
     theorem = "UpperTheory.Gal.Int.galoisLocalGlobalStrong_recParameter"
     weights = "Development/AutomorphicArithmetic/Foundations/GaloisRepresentations/TypeConditions/WeightsConjBis.lean"
     return f"""# Private catalogue audit
+
+**{exact_entries:,} of {len(entries):,} entries cite a line where at least one of their named declarations starts.** Another {off_entries + len(no_line)} name a declaration in a cited file without an exact line match. Of these, {off_entries} point to a different line and [one entry]({no_line[0]}) supplies file paths without line numbers. The remaining {absent} name no declaration we could locate in a cited file. Most off-by-line rows are additional names in the same entry: {secondary} of {c['off by line']} accompany a name whose starting line matches. [Citation evidence]({CITATIONS})
 
 Across {len(entries):,} catalogue entries, {c['exact line']:,} of {len(cites):,} entry–name citations land at a declaration’s starting line in a listed file. Of {explicit:,} explicit entry dependencies, {confirmed:,} have a positive-length path in the original project declaration graph. A path establishes a formal dependency between at least one pair of named endpoints. The remaining {explicit-confirmed:,} explicit links are unconfirmed. These counts check citations and dependencies, and the readings remain open for mathematical review. [Citation evidence]({CITATIONS}) · [Dependency evidence]({LINKS})
 
@@ -54,6 +66,8 @@ The source check verifies each consulted file against the frozen inventory, incl
 |---|---:|---:|---:|---:|---:|
 {dependency_line("Explicit “Depends on”",1,counts)}
 {dependency_line("Additional reverse “Used by” links",0,counts)}
+
+Of the {counts[1,"no path"]} explicit links with fully resolved endpoints and no forward path, **{literal_reverse} have a positive-length path in the opposite direction using names exactly as printed**. The same namespace resolution used for the forward check adds one, for {reversed_paths} reverse links in all. The [{extra[0][0].split("/")[-1][:-5]}]({extra[0][0]}) entry spells the target `FrameLA1`. Its source-qualified name `{extra[0][14]}` is reached from `{extra[0][13]}` in the [other entry]({extra[0][1]}). The table records each reverse witness and whether an exact-spelling reverse witness exists. This describes the orientation in the compiled graph. [Directional evidence]({LINKS})
 
 For each ordered pair we ask whether a named project declaration of A reaches one of B’s named project declarations. We use exact compiled owners and accept a namespace-relative endpoint when the citation resolves uniquely in its source files and has a compiled declaration row. A generated field without its own declaration row remains unresolved in this graph. We retain both type and value edges and traverse standalone auxiliary constants as intermediate vertices. The two positive columns are disjoint. The table supplies a witness pair for each confirmation and prefers a direct witness when one exists. A declaration shared by two entries is recorded separately. Among explicit links lacking a positive path, {positive:,} share an owned declaration. The projected graph drops self-loops and omits external libraries, literal edges and block membership. An unresolved or external endpoint leaves an unconfirmed result open. A formal path can run through intermediate declarations beyond those singled out in the catalogue. [James Shore’s v0.2.1 schema](https://github.com/james-shore/rh-proof-dependencies/blob/v0.2.1/docs/dataset.md#decl_edges-the-project-declaration-graph-over-the-whole-environment-20372294-rows)
 
@@ -127,7 +141,7 @@ def main():
     table(dest/CITATIONS,("entry_url","cited_name","file_citations","result","matching_source_sites",
                           "best_file_citations","qualified_name","spelling","compiled_owner","owner_start_line"),cites)
     table(dest/LINKS,(*REL_FIELDS,"caller_names","caller_names_resolved","dependency_names","dependency_names_resolved",
-                      "shared_owned_declaration","result","witness_caller","witness_dependency"),links)
+                      "shared_owned_declaration","result","witness_caller","witness_dependency","opposite_path","opposite_witness_caller","opposite_witness_dependency","opposite_with_exact_names"),links)
     (dest/REPORT).write_text(report(cites,links,entries))
     put_json(dest/MANIFEST,{f:content_digest(dest/f) for f in sorted([RELATIONS,CITATIONS,LINKS,REPORT])})
 
