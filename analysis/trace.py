@@ -40,7 +40,30 @@ def ancestors(ns):
     yield ""
 
 
-def index_file(lines, mid):
+def declaration_opens(lines, line_no, opened):
+    """Add simple, consecutive top-level 'open A B in' prefixes for this declaration."""
+    groups = []
+    while line_no:
+        line_no -= 1
+        line = lines[line_no].partition("--")[0].rstrip()
+        if not line:
+            continue
+        if not (line.startswith("open ") and line.endswith(" in")):
+            break
+        names = line[5:-3].split()
+        if not names or any(name in {"scoped", "hiding", "renaming", "in"} or
+                            not NAME_RE.fullmatch(name) for name in names):
+            break
+        groups.append(names)
+    if not groups:
+        return opened
+    names = list(opened)
+    for group in reversed(groups):
+        names.extend(group)
+    return tuple(dict.fromkeys(names))
+
+
+def index_file(lines, mid, *, command_local_opens=False):
     frames, ns, opened, found = [], "", (), []
     current = None
     for line_no, line in enumerate(lines):
@@ -68,7 +91,8 @@ def index_file(lines, mid):
             kind, name = match.groups()
             if kind == "instance" and name in {"where", "of", "in", "nonempty"}:
                 continue
-            current = D(scope(ns, name), mid, line_no, len(lines), match.end(), ns, opened, kind,
+            visible = declaration_opens(lines, line_no, opened) if command_local_opens else opened
+            current = D(scope(ns, name), mid, line_no, len(lines), match.end(), ns, visible, kind,
                         "private " in line[:match.start(1)])
     if current is not None:
         found.append(current)
@@ -78,7 +102,14 @@ def index_file(lines, mid):
 def main():
     cli = argparse.ArgumentParser()
     cli.add_argument("proof", type=Path)
-    proof = cli.parse_args().proof
+    cli.add_argument("--command-local-opens", action="store_true",
+                     help="include simple namespace opens on the following declaration (post-baseline trace)")
+    args = cli.parse_args()
+    proof = args.proof
+    output = RESULTS
+    if args.command_local_opens:
+        output = RESULTS / "command-local-opens"
+        output.mkdir(exist_ok=True)
     adj, meta = archive_data()
     names = sorted(m for m in meta if meta[m]["category"] == "Novel")
     ids = {m: i for i, m in enumerate(names)}
@@ -99,7 +130,7 @@ def main():
     def lines(mid):
         return paths[mid].read_text().splitlines()
     for mid in range(len(names)):
-        for decl in index_file(lines(mid), mid):
+        for decl in index_file(lines(mid), mid, command_local_opens=args.command_local_opens):
             idx = len(decls)
             decls.append(decl)
             key = decl.name
@@ -174,9 +205,9 @@ def main():
             d, caller = decls[i], decls[p]
             yield (names[d.module], d.name, d.line + 1, d.kind, depths[i], names[caller.module],
                    caller.name, caller.line + 1, use[i], spelling[i])
-    table(RESULTS / "rh-trace.tsv.gz", ["module", "name", "line", "kind", "depth", "caller_module",
+    table(output / "rh-trace.tsv.gz", ["module", "name", "line", "kind", "depth", "caller_module",
           "caller", "caller_decl_line", "use_line", "token"], evidence())
-    put_json(RESULTS / "trace-summary.json", {"indexed_named_sites": len(decls), "reached_sites": len(parent),
+    put_json(output / "trace-summary.json", {"indexed_named_sites": len(decls), "reached_sites": len(parent),
              "reached_modules": len({decls[i].module for i in parent}), "max_witness_length": max(depths.values())})
     print("source trace complete", flush=True)
 
