@@ -42,7 +42,7 @@ ROUTE = [
     ANY,
 ]
 TONG_STEP = "UpperTheory.Lit.nonempty_hyps_definite_side_of_closed_bound"
-TONG_REPORT = "https://github.com/harrytong/rh-verification/blob/f2f706c1e625702ea2f5f7be09604b264eca305b/RH_critics_dependency_findings.md#exact-witness-paths"
+TONG_REPORT = "https://github.com/harrytong/rh-verification/blob/16b88c701bd7abddd93d49a9896cd4daab41f680/stage1/code/RH_critics_dependency_findings.md#exact-witness-paths"
 USED = [
     ANY,
     BL + "GeoCl",
