@@ -4,7 +4,7 @@ The constant-True predicate `GlobalTheory.Mem.Top.Bl.anyGeometry` is eight depen
 
 The final statement is Mathlib’s `RiemannHypothesis` and its proof uses the standard three axioms, so the predicate choice does not bear on whether this theorem is proved. The checked route does not use the geometric conditions suggested by these names. These tables do not locate the argument’s mathematical content. [Main theorem](https://github.com/leanprover-community/riemann-hypothesis/blob/40e56bab026552e089d7afcfeff08d2defb9c005/src/Main.lean#L4) · [Mathlib statement](https://github.com/leanprover-community/mathlib4/blob/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean#L185) · [Axioms](anygeometry-axioms.tsv)
 
-On 24 November 2026, the maintained repository merged Visio-Vanitas’s change removing `GeoP`, `anyGeometry`, the `geo` field and the predicate argument of `OAt` and `OX`. The change deleted the file defining `GeoCl` and left `lam` as the single field of `OAt`. By then `geoOf` had already disappeared from this file. The figures on this page describe the original proof at `40e56bab`. [Upstream change](https://github.com/leanprover-community/riemann-hypothesis/pull/466)
+On 24 November 2026, the maintained repository merged Visio-Vanitas’s change removing `GeoP`, `anyGeometry`, the `geo` field and the predicate argument of `OAt` and `OX`. The change deleted the file defining `GeoCl` and left `lam` as the single field of `OAt`. By then `geoOf` had already disappeared from `OverIx.lean`. The figures on this page describe the original proof at `40e56bab`. [Upstream change](https://github.com/leanprover-community/riemann-hypothesis/pull/466)
 
 ## The eight edges
 
